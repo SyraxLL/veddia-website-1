@@ -107,7 +107,7 @@
                                             <li><a href="#">Kurumsal Web Sitesi</a></li>
                                             <li><a href="#">E-Ticaret Sitesi</a></li>
                                             <li><a href="#">Kişisel Web Sitesi</a></li>
-                                            <li><a href="#">Ürün Tanıtım Sitesi</a></li>
+                                            <li><a href="urun-tanitim-sitesi.php">Ürün Tanıtım Sitesi</a></li>
                                         </ul>
                                     </div>
 
