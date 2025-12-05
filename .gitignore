@@ -1,0 +1,17 @@
+# IDE & System
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Dependencies
+/node_modules/
+
+# Build files
+*.cache

@@ -1,0 +1,200 @@
+/* ========================================
+   MODERN CREATIVE TOP BAR STYLES
+   ======================================== */
+.topbar {
+    background: linear-gradient(to right, #1a1c20, #2e3237);
+    height: 50px;
+    width: 100%;
+    font-size: 0.9rem;
+    color: #ffffff;
+    position: relative;
+    z-index: 1050;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Altına ince bir rainbow çizgi ekleyelim - Kreatif dokunuş */
+.topbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EC4899, #06B6D4);
+    opacity: 0.5;
+}
+
+.topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 6px;
+}
+
+.topbar-left,
+.topbar-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    /* Yükseklik %100 olsun ki dikey ortalama çalışsın */
+}
+
+.topbar-left {
+    gap: 8px;
+}
+
+/* Sol Bölüm - Sosyal Medya İkonları */
+.topbar-left a {
+    color: rgba(255, 255, 255, 0.7);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.topbar-left a i {
+    font-size: 15px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+/* İkon Hover Efektleri - Glassmorphism & Glow */
+.topbar-left a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: scale(0.5);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.topbar-left a:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.topbar-left a:hover::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.topbar-left a:hover i {
+    transform: scale(1.1);
+}
+
+/* İkonlara özel renkler (Hover'da) */
+.topbar-left a:nth-child(1):hover {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+}
+
+/* Facebook */
+.topbar-left a:nth-child(2):hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+/* X */
+.topbar-left a:nth-child(3):hover {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+/* Youtube */
+.topbar-left a:nth-child(4):hover {
+    background: rgba(10, 102, 194, 0.2);
+    color: #0a66c2;
+}
+
+/* Linkedin */
+.topbar-left a:nth-child(5):hover {
+    background: rgba(230, 0, 35, 0.2);
+    color: #e60023;
+}
+
+/* Pinterest */
+.topbar-left a:nth-child(6):hover {
+    background: linear-gradient(45deg, rgba(245, 133, 41, 0.2), rgba(221, 42, 123, 0.2), rgba(129, 52, 175, 0.2));
+    color: #e1306c;
+}
+
+/* Instagram */
+.topbar-left a:nth-child(7):hover {
+    background: rgba(234, 76, 137, 0.2);
+    color: #ea4c89;
+}
+
+/* Dribbble */
+
+
+/* Sağ Bölüm - İletişim Bilgileri */
+.topbar-right {
+    gap: 30px;
+}
+
+.contact-item {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-item i {
+    font-size: 14px;
+    color: #8B5CF6;
+    /* Mor ikon rengi */
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover i {
+    color: #EC4899;
+    /* Hover'da pembe */
+    transform: scale(1.1) rotate(-10deg);
+}
+
+/* Responsive Yapı */
+@media (max-width: 991px) {
+    .topbar {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .topbar-inner {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .topbar-right {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
