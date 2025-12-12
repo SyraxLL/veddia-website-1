@@ -1,0 +1,950 @@
+/* ========================================
+   PRODUCT HERO SLIDER - LIGHT CORPORATE THEME
+   Based on Gloddia Logo Colors
+   ======================================== */
+
+:root {
+    /* Product Hero Color Palette */
+    --ph-primary-blue: #1d4ed8;
+    --ph-primary-green: #16a34a;
+    --ph-primary-orange: #ea580c;
+    --ph-primary-yellow: #f59e0b;
+    --ph-primary-red: #ef4444;
+    --ph-text-main: #111827;
+    --ph-text-muted: #6b7280;
+    --ph-text-secondary: #4b5563;
+    --ph-surface: #ffffff;
+    --ph-surface-soft: #f3f4f6;
+    --ph-border-soft: rgba(148, 163, 184, 0.5);
+    --ph-bg-base: #f5f7fb;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero-premium-kurumsal {
+    background: linear-gradient(135deg, #f9fafb 0%, #eef2ff 45%, #f5f7fb 100%);
+    border-top: 2px solid rgba(209, 213, 219, 0.6);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    min-height: auto;
+}
+
+/* ========================================
+   RISING BUBBLE PARTICLES
+   ======================================== */
+.hero-premium-kurumsal .bubble-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-premium-kurumsal .bubble {
+    position: absolute;
+    bottom: -50px;
+    background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.35), rgba(147, 197, 253, 0.20));
+    border-radius: 50%;
+    animation: bubble-rise linear infinite;
+    opacity: 0;
+}
+
+/* Different bubble sizes (smaller) and speeds (slower) */
+.hero-premium-kurumsal .bubble:nth-child(1) {
+    left: 3%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 22s;
+    animation-delay: 0s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(2) {
+    left: 8%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 25s;
+    animation-delay: 2s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(3) {
+    left: 14%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 20s;
+    animation-delay: 4s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(4) {
+    left: 20%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 28s;
+    animation-delay: 1s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(5) {
+    left: 26%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 24s;
+    animation-delay: 6s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(6) {
+    left: 32%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 22s;
+    animation-delay: 3s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(7) {
+    left: 38%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 30s;
+    animation-delay: 8s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(8) {
+    left: 44%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 26s;
+    animation-delay: 5s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(9) {
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 20s;
+    animation-delay: 0s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(10) {
+    left: 56%;
+    width: 9px;
+    height: 9px;
+    animation-duration: 28s;
+    animation-delay: 2s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(11) {
+    left: 62%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 24s;
+    animation-delay: 7s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(12) {
+    left: 68%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 22s;
+    animation-delay: 10s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(13) {
+    left: 74%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 26s;
+    animation-delay: 4s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(14) {
+    left: 80%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 30s;
+    animation-delay: 9s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(15) {
+    left: 86%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 20s;
+    animation-delay: 1s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(16) {
+    left: 92%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 25s;
+    animation-delay: 6s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(17) {
+    left: 11%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 28s;
+    animation-delay: 12s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(18) {
+    left: 23%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 22s;
+    animation-delay: 8s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(19) {
+    left: 41%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 26s;
+    animation-delay: 14s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(20) {
+    left: 59%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 24s;
+    animation-delay: 3s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(21) {
+    left: 77%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 30s;
+    animation-delay: 11s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(22) {
+    left: 95%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 20s;
+    animation-delay: 5s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(23) {
+    left: 17%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 28s;
+    animation-delay: 15s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(24) {
+    left: 53%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 24s;
+    animation-delay: 7s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(25) {
+    left: 71%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 26s;
+    animation-delay: 13s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(26) {
+    left: 6%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 24s;
+    animation-delay: 16s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(27) {
+    left: 19%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 22s;
+    animation-delay: 9s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(28) {
+    left: 33%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 28s;
+    animation-delay: 17s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(29) {
+    left: 47%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 25s;
+    animation-delay: 10s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(30) {
+    left: 61%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 30s;
+    animation-delay: 18s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(31) {
+    left: 73%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 22s;
+    animation-delay: 6s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(32) {
+    left: 84%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 26s;
+    animation-delay: 19s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(33) {
+    left: 28%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 24s;
+    animation-delay: 11s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(34) {
+    left: 64%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 28s;
+    animation-delay: 20s;
+}
+
+.hero-premium-kurumsal .bubble:nth-child(35) {
+    left: 89%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 22s;
+    animation-delay: 8s;
+}
+
+@keyframes bubble-rise {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: translateY(-60vh) translateX(var(--drift, 15px));
+    }
+
+    90% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-120vh) translateX(calc(var(--drift, 15px) * -0.5));
+        opacity: 0;
+    }
+}
+
+.hero-premium-kurumsal .container {
+    max-width: 1220px;
+    padding-left: clamp(24px, 6vw, 64px);
+    padding-right: clamp(24px, 6vw, 64px);
+    position: relative;
+    z-index: 1;
+}
+
+.hero-premium-kurumsal .row {
+    align-items: center;
+}
+
+/* Left Column - 50% aligned left */
+.hero-premium-kurumsal .col-lg-7 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 0;
+}
+
+/* Right Column - 50% aligned right */
+.hero-premium-kurumsal .col-lg-5 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0;
+}
+
+.hero-premium-kurumsal .mockup-visual-wrapper {
+    margin-left: 80px;
+}
+
+/* ========================================
+   EYEBROW LABEL (Premium Chip Style)
+   ======================================== */
+.hero-premium-kurumsal .eyebrow-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(249, 250, 251, 0.9));
+    border: 1.5px solid transparent;
+    background-clip: padding-box;
+    border-radius: 999px;
+    padding: 6px 16px;
+    margin-bottom: 24px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(29, 78, 216, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    overflow: hidden;
+}
+
+/* Gradient border effect */
+.hero-premium-kurumsal .eyebrow-label::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #1d4ed8, #22c55e, #f59e0b, #ef4444);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.hero-premium-kurumsal .eyebrow-label:hover::before {
+    opacity: 1;
+}
+
+/* Shimmer animation */
+.hero-premium-kurumsal .eyebrow-label::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 150%;
+    }
+}
+
+.hero-premium-kurumsal .eyebrow-dot {
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(22, 163, 74, 0.6),
+        0 0 16px rgba(22, 163, 74, 0.3);
+    animation: pulse-dot 2s infinite;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(22, 163, 74, 0.6), 0 0 16px rgba(22, 163, 74, 0.3);
+    }
+
+    50% {
+        transform: scale(1.15);
+        box-shadow: 0 0 12px rgba(22, 163, 74, 0.8), 0 0 24px rgba(22, 163, 74, 0.4);
+    }
+}
+
+.hero-premium-kurumsal .eyebrow-label span:not(.eyebrow-dot) {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1d4ed8, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   HERO TITLE
+   ======================================== */
+.hero-premium-kurumsal .hero-title {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: clamp(36px, 3.6vw, 48px);
+    font-weight: 800;
+    color: var(--ph-text-main);
+    line-height: 1.15;
+    margin-bottom: 24px;
+    min-height: 2.6em;
+    /* Fixed height for 2 lines */
+}
+
+/* Highlighted word - no underline, just bold */
+.hero-premium-kurumsal .hero-title .highlight-word {
+    font-weight: 800;
+    color: var(--ph-text-main);
+}
+
+/* ========================================
+   HERO DESCRIPTION
+   ======================================== */
+.hero-premium-kurumsal .hero-description {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ph-text-secondary);
+    max-width: 540px;
+    margin-bottom: 32px;
+    min-height: 5.1em;
+    /* Fixed height for 3 lines */
+}
+
+/* ========================================
+   CTA BUTTONS - Clean Modern Style
+   ======================================== */
+.hero-premium-kurumsal .hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+/* Primary CTA Button - Teal to Blue Gradient */
+.hero-premium-kurumsal .btn-premium-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #14b8a6, #0ea5e9, #6366f1);
+    background-size: 200% 200%;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border: none;
+    box-shadow: 0 4px 15px rgba(20, 184, 166, 0.3);
+    transition: all 0.4s ease;
+}
+
+.hero-premium-kurumsal .btn-premium-primary:hover {
+    background-position: 100% 0;
+    box-shadow: 0 6px 25px rgba(20, 184, 166, 0.4);
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
+/* Secondary CTA Button - White with Border */
+.hero-premium-kurumsal .btn-premium-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #374151;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1.5px solid #d1d5db;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.hero-premium-kurumsal .btn-premium-secondary:hover {
+    border-color: #9ca3af;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SLIDER CONTROLS
+   ======================================== */
+.hero-premium-kurumsal .slider-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Slider Arrows */
+.hero-premium-kurumsal .slider-arrows {
+    display: flex;
+    gap: 8px;
+}
+
+.hero-premium-kurumsal .slider-arrow {
+    width: 30px;
+    height: 30px;
+    background: var(--ph-surface);
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-premium-kurumsal .slider-arrow i {
+    font-size: 10px;
+    color: var(--ph-text-muted);
+    transition: color 0.3s ease;
+}
+
+.hero-premium-kurumsal .slider-arrow:hover {
+    background: #e5e7eb;
+    box-shadow: 0 6px 20px rgba(148, 163, 184, 0.5);
+}
+
+.hero-premium-kurumsal .slider-arrow:hover i {
+    color: var(--ph-text-main);
+}
+
+/* Slider Dots */
+.hero-premium-kurumsal .slider-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.hero-premium-kurumsal .slider-dot {
+    width: 7px;
+    height: 7px;
+    background: rgba(148, 163, 184, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-premium-kurumsal .slider-dot.active {
+    background: var(--ph-primary-blue);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.25);
+}
+
+.hero-premium-kurumsal .slider-dot:hover:not(.active) {
+    background: rgba(148, 163, 184, 1);
+}
+
+/* ========================================
+   SLIDE TRANSITIONS - FIXED POSITION
+   ======================================== */
+.hero-premium-kurumsal .hero-slider-container {
+    position: relative;
+    min-height: 220px;
+    overflow: hidden;
+}
+
+.hero-premium-kurumsal .hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+}
+
+.hero-premium-kurumsal .hero-slide.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ========================================
+   RIGHT COLUMN - PRODUCT MOCKUP
+   ======================================== */
+.hero-premium-kurumsal .mockup-visual-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1200px;
+}
+
+.hero-premium-kurumsal .mockup-container {
+    /* Beige/Cream background with gradient */
+    background: linear-gradient(145deg, #faf8f5 0%, #f5f0e8 50%, #ebe5db 100%);
+    border-radius: 28px;
+    border: 2px solid rgba(214, 204, 186, 0.6);
+    box-shadow:
+        0 30px 80px rgba(139, 119, 92, 0.25),
+        0 15px 40px rgba(139, 119, 92, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 0.8),
+        inset 0 -2px 4px rgba(139, 119, 92, 0.1);
+    padding: 20px;
+    max-width: 580px;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    /* Default tilted state */
+    transform: rotateY(-4deg) rotateX(2deg);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+/* Decorative beige glow behind the container */
+.hero-premium-kurumsal .mockup-container::before {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(ellipse at center, rgba(214, 195, 165, 0.3) 0%, transparent 70%);
+    border-radius: 40px;
+    z-index: -1;
+    filter: blur(20px);
+}
+
+/* On hover: straighten up and shrink slightly */
+.hero-premium-kurumsal .mockup-container:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(0.97);
+    box-shadow:
+        0 25px 60px rgba(139, 119, 92, 0.2),
+        0 12px 30px rgba(139, 119, 92, 0.12),
+        inset 0 2px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -2px 4px rgba(139, 119, 92, 0.1);
+}
+
+@keyframes float-gentle {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: translateY(-6px) rotateX(0deg) rotateY(0deg);
+    }
+}
+
+/* Mockup Top Bar (Browser-like) */
+.hero-premium-kurumsal .mockup-top-bar {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background: #f8fafc;
+    border-radius: 12px 12px 0 0;
+    border-bottom: 1px solid rgba(209, 213, 219, 0.5);
+}
+
+.hero-premium-kurumsal .mockup-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.hero-premium-kurumsal .mockup-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Product Showcase Image Container */
+.hero-premium-kurumsal .product-showcase-mockup {
+    border-radius: 0 0 18px 18px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+}
+
+.hero-premium-kurumsal .product-showcase-mockup img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Remove old background styling if exists */
+.hero-premium-kurumsal .product-mockup-bg {
+    background: transparent !important;
+}
+
+/* ========================================
+   FLOATING BADGES
+   ======================================== */
+.hero-premium-kurumsal .floating-badge {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+    animation: badge-float 3s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes badge-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Top Left Badge - Dark Style (Inside Image) */
+.hero-premium-kurumsal .floating-badge.badge-seo {
+    top: 70px;
+    left: -10px;
+    background: rgba(17, 24, 39, 0.78);
+    color: #f9fafb;
+    animation-delay: 0s;
+}
+
+/* Bottom Right Badge - Trust */
+.hero-premium-kurumsal .floating-badge.badge-trust {
+    bottom: 80px;
+    right: -10px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--ph-text-main);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+    animation-delay: 0.5s;
+}
+
+/* Stats Chip */
+.hero-premium-kurumsal .stats-chip {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--ph-text-main);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.25);
+    animation: badge-float 3s ease-in-out infinite;
+    animation-delay: 1s;
+    z-index: 10;
+}
+
+.hero-premium-kurumsal .stats-chip-sales {
+    bottom: 30px;
+    left: 20px;
+}
+
+/* ========================================
+   ON-LOAD ANIMATIONS
+   ======================================== */
+.hero-premium-kurumsal .hero-content-wrapper {
+    animation: fade-up 0.6s ease-out 0.05s both;
+}
+
+.hero-premium-kurumsal .mockup-visual-wrapper {
+    animation: fade-in-scale 0.6s ease-out 0.15s both;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-scale {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   CANVAS REMOVAL (Hide old animation)
+   ======================================== */
+.hero-premium-kurumsal #hero-canvas {
+    display: none !important;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 991.98px) {
+
+    .hero-premium-kurumsal .col-lg-7,
+    .hero-premium-kurumsal .col-lg-5 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .hero-premium-kurumsal {
+        padding: 60px 0;
+    }
+
+    .hero-premium-kurumsal .hero-title {
+        font-size: clamp(28px, 5vw, 40px);
+    }
+
+    .hero-premium-kurumsal .hero-description {
+        max-width: 100%;
+    }
+
+    .hero-premium-kurumsal .mockup-container {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .hero-premium-kurumsal .floating-badge.badge-seo {
+        left: 10px;
+    }
+
+    .hero-premium-kurumsal .floating-badge.badge-trust {
+        right: 10px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-premium-kurumsal .hero-cta-group {
+        flex-direction: column;
+    }
+
+    .hero-premium-kurumsal .btn-premium-primary,
+    .hero-premium-kurumsal .btn-premium-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-premium-kurumsal .slider-controls {
+        justify-content: center;
+    }
+}
