@@ -314,36 +314,76 @@
         </div>
     </section>
 
-    <!-- Product Discovery Section (Relocated) -->
-    <section class="py-5 bg-light">
+    <!-- Product Discovery Section with Mock 360° Viewer -->
+    <section class="py-5 bg-light" id="product-discovery">
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                    <div class="product-discovery-image">
-                        <!-- Placeholder for product image -->
-                        <div
-                            class="ratio ratio-4x3 bg-white rounded shadow-sm d-flex align-items-center justify-content-center">
-                            <i class="fas fa-cube fa-5x text-muted opacity-25"></i>
+                <!-- Mock 3D Viewer - Sol Taraf -->
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="mock-3d-viewer">
+                        <!-- 360° Badge -->
+                        <div class="viewer-badge-360">
+                            <span class="badge-number">360</span>
+                            <span class="badge-degree">°</span>
                         </div>
+
+                        <!-- Rotating Ring Effect -->
+                        <div class="rotating-ring"></div>
+                        <div class="rotating-ring ring-2"></div>
+
+                        <!-- Central Product Placeholder -->
+                        <div class="product-placeholder">
+                            <div class="product-cube">
+                                <div class="cube-face front"></div>
+                                <div class="cube-face back"></div>
+                                <div class="cube-face left"></div>
+                                <div class="cube-face right"></div>
+                                <div class="cube-face top"></div>
+                                <div class="cube-face bottom"></div>
+                            </div>
+                            <!-- Glow Effect -->
+                            <div class="product-glow"></div>
+                        </div>
+
+                        <!-- Floating Particles -->
+                        <div class="floating-particle p1"></div>
+                        <div class="floating-particle p2"></div>
+                        <div class="floating-particle p3"></div>
+                        <div class="floating-particle p4"></div>
                     </div>
                 </div>
+
+                <!-- Content - Sağ Taraf -->
                 <div class="col-lg-6" data-aos="fade-left">
-                    <h2 class="section-title gradient-text-main mb-4">Ürünü Keşfedin</h2>
-                    <p class="lead text-muted mb-4">
-                        Ürününüzün benzersiz özelliklerini, kullanım kolaylığını ve hayatı nasıl kolaylaştırdığını
-                        anlatan etkileyici bir bölüm. Müşterileriniz ürününüzle bağ kursun.
-                    </p>
-                    <ul class="list-unstyled product-features-list">
-                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Ergonomik ve Şık Tasarım
-                        </li>
-                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Dayanıklı Malzeme
-                            Kalitesi
-                        </li>
-                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> Kullanıcı Dostu Arayüz
-                        </li>
-                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> 2 Yıl Garanti</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary mt-3">Detaylı Bilgi Alın</a>
+                    <div class="discovery-content">
+                        <div class="discovery-badge mb-3">
+                            <span class="badge-icon"><i class="fas fa-cube"></i></span>
+                            <span>Ürün Deneyimi</span>
+                        </div>
+                        <h2 class="discovery-title mb-4">Ürünü <span class="text-highlight">Keşfedin</span></h2>
+                        <p class="discovery-desc mb-4">
+                            Ürününüzün benzersiz özelliklerini, kullanım kolaylığını ve hayatı nasıl kolaylaştırdığını
+                            anlatan etkileyici bir bölüm. Müşterileriniz ürününüzle bağ kursun.
+                        </p>
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <div class="feature-icon blue"><i class="fas fa-palette"></i></div>
+                                <span>Ergonomik ve Şık Tasarım</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon purple"><i class="fas fa-shield-alt"></i></div>
+                                <span>Dayanıklı Malzeme Kalitesi</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon cyan"><i class="fas fa-hand-pointer"></i></div>
+                                <span>Kullanıcı Dostu Arayüz</span>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon pink"><i class="fas fa-award"></i></div>
+                                <span>2 Yıl Garanti</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -361,7 +401,10 @@
                     <!-- Vertical Zigzag Timeline -->
                     <div class="timeline-section">
                         <div class="timeline-header">
-                            <h3 class="timeline-title">Ürün Tanıtım Sitenizi Oluştururken Neler Yapıyoruz?</h3>
+                            <span class="timeline-badge"><i class="fas fa-tools me-2"></i>Sürecimiz</span>
+                            <h3 class="timeline-title gradient-text-main">Ürün Tanıtım Sitenizi Oluştururken Neler
+                                Yapıyoruz?</h3>
+                            <div class="timeline-divider"></div>
                         </div>
 
                         <div class="timeline-wrapper">
@@ -555,133 +598,137 @@
         </div>
     </section>
 
-    <!-- Process Timeline -->
-    <section class="py-5">
+    <!-- Process Timeline - Path Design -->
+    <section class="py-5 process-section">
         <div class="container py-5">
             <div class="text-center mb-5" data-aos="fade-up">
                 <h2 class="section-title gradient-text-main">Tanıtım Süreci</h2>
                 <p class="section-subtitle">Ürününüzü pazara sunarken izlediğimiz yol</p>
             </div>
 
+            <div class="timeline-path" data-aos="fade-up">
+                <!-- Timeline Line -->
+                <div class="timeline-line"></div>
+
+                <!-- Step 1 -->
+                <div class="timeline-step">
+                    <div class="step-marker blue">
+                        <span>01</span>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon blue"><i class="fas fa-search"></i></div>
+                        <h4>Ürün Analizi</h4>
+                        <p>Ürününüzü inceliyor ve öne çıkacak özellikleri belirliyoruz.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-step">
+                    <div class="step-marker purple">
+                        <span>02</span>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon purple"><i class="fas fa-palette"></i></div>
+                        <h4>Konsept Tasarım</h4>
+                        <p>Ürüne uygun renk ve görsel dili oluşturuyoruz.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-step">
+                    <div class="step-marker cyan">
+                        <span>03</span>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon cyan"><i class="fas fa-pen-nib"></i></div>
+                        <h4>İçerik Üretimi</h4>
+                        <p>Etkileyici metinler ve görseller hazırlıyoruz.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-step">
+                    <div class="step-marker pink">
+                        <span>04</span>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon pink"><i class="fas fa-rocket"></i></div>
+                        <h4>Yayın & Reklam</h4>
+                        <p>Sitenizi yayına alıp reklamları başlatıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title gradient-text-main">Sıkça Sorulan Sorular</h2>
+                <p class="section-subtitle">Merak edilenler</p>
+            </div>
+
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="row g-4">
-                        <!-- 01 -->
-                        <div class="col-md-6">
-                            <div class="process-step" data-aos="fade-right" data-aos-delay="100">
-                                <span class="step-number">01</span>
-                                <h3>Ürün Analizi</h3>
-                                <p class="mb-0">
-                                    Ürününüzü inceliyor, rakipleri analiz ediyor ve öne çıkacak özellikleri
-                                    belirliyoruz.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- 02 -->
-                        <div class="col-md-6">
-                            <div class="process-step" data-aos="fade-left" data-aos-delay="150">
-                                <span class="step-number">02</span>
-                                <h3>Konsept Tasarım</h3>
-                                <p class="mb-0">
-                                    Ürünün ruhuna uygun renk, tipografi ve görsel dili oluşturuyoruz.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- 03 -->
-                        <div class="col-md-6">
-                            <div class="process-step" data-aos="fade-right" data-aos-delay="200">
-                                <span class="step-number">03</span>
-                                <h3>İçerik Üretimi</h3>
-                                <p class="mb-0">
-                                    Etkileyici sloganlar, ürün açıklamaları ve gerekirse fotoğraf çekimi yapıyoruz.
-                                </p>
-                            </div>
-                        </div>
-                        <!-- 04 -->
-                        <div class="col-md-6">
-                            <div class="process-step" data-aos="fade-left" data-aos-delay="250">
-                                <span class="step-number">04</span>
-                                <h3>Yayın ve Reklam</h3>
-                                <p class="mb-0">
-                                    Sitenizi yayına alıyor ve dilerseniz Google/Sosyal Medya reklamlarını kurguluyoruz.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ -->
-                    <div class="text-center my-5" data-aos="fade-up">
-                        <h2 class="section-title gradient-text-main">Sıkça Sorulan Sorular</h2>
-                    </div>
-
-                    <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
-                        <div class="row g-4">
-                            <div class="col-lg-6">
-                                <div class="accordion faq-modern" id="faqAccordionLeft">
-                                    <div class="accordion-item" data-aos="fade-right" data-aos-delay="100">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                data-bs-target="#faq1">
-                                                <i class="fas fa-box-open faq-icon me-2"></i>Tek bir ürün için site
-                                                yapılır
-                                                mı?
-                                            </button>
-                                        </h2>
-                                        <div id="faq1" class="accordion-collapse collapse show"
-                                            data-bs-parent="#faqAccordionLeft">
-                                            <div class="accordion-body">Evet, "Landing Page" dediğimiz tek sayfalık ürün
-                                                tanıtım siteleri, özellikle tek bir ürüne odaklanmak ve satışları
-                                                artırmak
-                                                için çok etkilidir.</div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-item" data-aos="fade-right" data-aos-delay="150">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#faq2">
-                                                <i class="fas fa-shopping-basket faq-icon me-2"></i>Siteden satış
-                                                yapılabilir mi?
-                                            </button>
-                                        </h2>
-                                        <div id="faq2" class="accordion-collapse collapse"
-                                            data-bs-parent="#faqAccordionLeft">
-                                            <div class="accordion-body">Elbette. Basit bir sipariş formu veya kredi
-                                                kartı
-                                                ile ödeme altyapısı (iyzico, PayTR vb.) entegre edebiliriz.</div>
-                                        </div>
+                        <!-- Sol Sütun -->
+                        <div class="col-lg-6">
+                            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="100">
+                                <div class="faq-item">
+                                    <button class="faq-question"
+                                        onclick="this.parentElement.classList.toggle('active')">
+                                        <div class="faq-icon"><i class="fas fa-box-open"></i></div>
+                                        <span>Tek bir ürün için site yapılır mı?</span>
+                                        <i class="fas fa-chevron-down faq-arrow"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Evet, "Landing Page" tek sayfalık ürün tanıtım siteleri, satışları artırmak
+                                            için çok etkilidir.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="accordion faq-modern" id="faqAccordionRight">
-                                    <div class="accordion-item" data-aos="fade-left" data-aos-delay="100">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#faq3">
-                                                <i class="fas fa-video faq-icon me-2"></i>Video ekleyebilir miyiz?
-                                            </button>
-                                        </h2>
-                                        <div id="faq3" class="accordion-collapse collapse"
-                                            data-bs-parent="#faqAccordionRight">
-                                            <div class="accordion-body">Kesinlikle. Ürün tanıtım videoları, dönüşüm
-                                                oranlarını ciddi oranda artırmaktadır. Sitenize yüksek kaliteli videolar
-                                                ekleyebiliriz.</div>
-                                        </div>
+                            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="200">
+                                <div class="faq-item">
+                                    <button class="faq-question"
+                                        onclick="this.parentElement.classList.toggle('active')">
+                                        <div class="faq-icon"><i class="fas fa-shopping-basket"></i></div>
+                                        <span>Siteden satış yapılabilir mi?</span>
+                                        <i class="fas fa-chevron-down faq-arrow"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Elbette. Sipariş formu veya ödeme altyapısı (iyzico, PayTR vb.) entegre
+                                            edebiliriz.</p>
                                     </div>
-                                    <div class="accordion-item" data-aos="fade-left" data-aos-delay="150">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#faq4">
-                                                <i class="fas fa-chart-line faq-icon me-2"></i>Reklam yönetimi yapıyor
-                                                musunuz?
-                                            </button>
-                                        </h2>
-                                        <div id="faq4" class="accordion-collapse collapse"
-                                            data-bs-parent="#faqAccordionRight">
-                                            <div class="accordion-body">Evet, siteniz hazırlandıktan sonra Google Ads ve
-                                                Facebook/Instagram reklamlarınızı yöneterek hedef kitlenize ulaşmanızı
-                                                sağlıyoruz.</div>
-                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Sağ Sütun -->
+                        <div class="col-lg-6">
+                            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="150">
+                                <div class="faq-item">
+                                    <button class="faq-question"
+                                        onclick="this.parentElement.classList.toggle('active')">
+                                        <div class="faq-icon"><i class="fas fa-clock"></i></div>
+                                        <span>Süreç ne kadar sürer?</span>
+                                        <i class="fas fa-chevron-down faq-arrow"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Tipik bir ürün tanıtım sitesi 1-2 hafta içinde hazır olabilir.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="250">
+                                <div class="faq-item">
+                                    <button class="faq-question"
+                                        onclick="this.parentElement.classList.toggle('active')">
+                                        <div class="faq-icon"><i class="fas fa-chart-line"></i></div>
+                                        <span>Reklam yönetimi yapıyor musunuz?</span>
+                                        <i class="fas fa-chevron-down faq-arrow"></i>
+                                    </button>
+                                    <div class="faq-answer">
+                                        <p>Evet, Google Ads ve sosyal medya reklamlarınızı yöneterek hedef kitlenize
+                                            ulaşmanızı sağlıyoruz.</p>
                                     </div>
                                 </div>
                             </div>
@@ -695,10 +742,21 @@
     <!-- Final CTA -->
     <section id="contact" class="py-5">
         <div class="container">
-            <div class="final-cta" data-aos="zoom-in">
-                <h2>Ürününüzü Zirveye Taşıyalım</h2>
-                <p class="lead mb-4 text-white-50">Etkileyici bir lansman için hemen iletişime geçin.</p>
-                <a href="contact.php" class="btn btn-light btn-xl">Hemen İletişime Geçin</a>
+            <div class="cta-modern p-5 rounded-5 position-relative overflow-hidden" data-aos="zoom-in">
+                <div class="cta-glow-bg"></div>
+                <div class="row align-items-center position-relative z-2">
+                    <div class="col-lg-8 text-lg-start text-center mb-4 mb-lg-0">
+                        <h3 class="display-6 fw-bold text-white mb-3">Ürününüzü Zirveye Taşıyalım</h3>
+                        <p class="lead text-white-50 mb-0">
+                            Etkileyici bir ürün tanıtım sitesi ile markanızı güçlendirin ve satışlarınızı artırın.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end text-center">
+                        <a href="contact.php" class="btn btn-gradient btn-xl shadow-lg">
+                            Hemen Başlayın <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -874,6 +932,7 @@
 
     <!-- Custom Scripts -->
     <script src="assets/js/three-minimal.js"></script>
+    <script src="assets/js/product-360-viewer.js"></script>
     <script src="assets/js/main.js"></script>
 
     <!-- Footer Scripts -->
