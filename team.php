@@ -41,8 +41,8 @@
                     Tutkulu, yaratıcı ve deneyimli profesyonellerimizle tanışın
                 </p>
                 <div class="team-count-badge">
-                    <span class="count-number">15+</span>
-                    <span class="count-label">Profesyonel</span>
+                    <span class="count-number"><i class="fas fa-star text-warning"></i></span>
+                    <span class="count-label">Kurucu Ortaklar</span>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
     .creative-hero-team {
         position: relative;
         overflow: hidden;
-        background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        background: var(--premium-gradient);
         z-index: 1;
     }
 
@@ -282,254 +282,442 @@
 <!-- Team Section -->
 <section class="py-5">
     <div class="container">
-        <div class="section-header text-center mb-5">
-            <h2 class="section-title gradient-text-main" data-aos="fade-up">Tüm Ekibimiz</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                Her biri alanında uzman, yaratıcı ve müşteri odaklı profesyonellerimiz
-            </p>
-        </div>
 
-        <div class="row g-4">
-            <!-- Team Member 1 -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-card text-center h-100">
-                    <div class="mb-4">
-                        <div class="rounded-circle bg-gradient-primary d-inline-flex align-items-center justify-content-center"
-                            style="width: 120px; height: 120px; background: var(--rainbow-gradient);">
-                            <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
+
+        <div class="position-relative">
+            <div class="vertical-brand-text d-none d-xl-block">VEDDIA MEDIA</div>
+            <div class="vertical-brand-text-right d-none d-xl-block">VEDDIA MEDIA</div>
+            <div class="row g-5 justify-content-center">
+                <!-- Leader 1: Genel Müdür -->
+                <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+                    <div class="leader-card">
+                        <div class="leader-header">
+                            <div class="leader-avatar-wrapper">
+                                <div class="leader-avatar">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="leader-badge">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <h4 class="mb-2">Ahmet Yılmaz</h4>
-                    <p class="text-muted mb-3">
-                        <i class="fas fa-briefcase me-1"></i>
-                        Genel Müdür
-                    </p>
-                    <p class="small text-muted mb-3">
-                        Dijital pazarlama ve strateji uzmanı. 10+ yıllık deneyim.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle">
-                            <i class="fas fa-envelope"></i>
-                        </a>
+                        <div class="leader-body">
+                            <h3 class="leader-name">Ahmet Yılmaz</h3>
+                            <p class="leader-role">Genel Müdür & Kurucu Ortak</p>
+                            <div class="leader-divider"></div>
+                            <p class="leader-bio">
+                                10 yılı aşkın dijital pazarlama ve stratejik yönetim tecrübesiyle, markanızı zirveye
+                                taşıyacak vizyoner stratejileri kurguluyor. Liderliğiyle projenizin her aşamasında
+                                yanınızda.
+                            </p>
+
+                            <div class="leader-skills">
+                                <span class="skill-tag">Strateji</span>
+                                <span class="skill-tag">Yönetim</span>
+                                <span class="skill-tag">Liderlik</span>
+                            </div>
+
+                            <div class="leader-social">
+                                <a href="#" class="social-btn social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-btn social-twitter"><i class="fab fa-x-twitter"></i></a>
+                                <a href="mailto:ahmet@gloddia.com" class="social-btn social-email"><i
+                                        class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Team Member 2 -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-card text-center h-100">
-                    <div class="mb-4">
-                        <div class="rounded-circle bg-gradient-primary d-inline-flex align-items-center justify-content-center"
-                            style="width: 120px; height: 120px; background: var(--rainbow-gradient);">
-                            <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
+                <!-- Leader 2: Kreatif Direktör -->
+                <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+                    <div class="leader-card">
+                        <div class="leader-header">
+                            <div class="leader-avatar-wrapper">
+                                <div class="leader-avatar">
+                                    <i class="fas fa-pencil-ruler"></i>
+                                </div>
+                                <div class="leader-badge">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <h4 class="mb-2">Ayşe Demir</h4>
-                    <p class="text-muted mb-3">
-                        <i class="fas fa-briefcase me-1"></i>
-                        Kreatif Direktör
-                    </p>
-                    <p class="small text-muted mb-3">
-                        Grafik tasarım ve marka yönetimi uzmanı. 8+ yıllık deneyim.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                        <div class="leader-body">
+                            <h3 class="leader-name">Ayşe Demir</h3>
+                            <p class="leader-role">Kreatif Direktör & Kurucu Ortak</p>
+                            <div class="leader-divider"></div>
+                            <p class="leader-bio">
+                                Tasarıma olan tutkusu ile markanızın görsel kimliğini baştan yaratıyor. Modern tasarım
+                                trendlerini, kullanıcı deneyimini sanatla buluşturan arayüzler tasarlıyor.
+                            </p>
 
-            <!-- Team Member 3 -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-card text-center h-100">
-                    <div class="mb-4">
-                        <div class="rounded-circle bg-gradient-primary d-inline-flex align-items-center justify-content-center"
-                            style="width: 120px; height: 120px; background: var(--rainbow-gradient);">
-                            <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
-                        </div>
-                    </div>
-                    <h4 class="mb-2">Mehmet Kaya</h4>
-                    <p class="text-muted mb-3">
-                        <i class="fas fa-briefcase me-1"></i>
-                        Yazılım Geliştirme Müdürü
-                    </p>
-                    <p class="small text-muted mb-3">
-                        Full-stack geliştirici ve sistem mimarı. 12+ yıllık deneyim.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                            <div class="leader-skills">
+                                <span class="skill-tag">UI/UX</span>
+                                <span class="skill-tag">Marka Yönetimi</span>
+                                <span class="skill-tag">Sanat Yön.</span>
+                            </div>
 
-            <!-- Team Member 4 -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="service-card text-center h-100">
-                    <div class="mb-4">
-                        <div class="rounded-circle bg-gradient-primary d-inline-flex align-items-center justify-content-center"
-                            style="width: 120px; height: 120px; background: var(--rainbow-gradient);">
-                            <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
+                            <div class="leader-social">
+                                <a href="#" class="social-btn social-linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-btn social-instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="mailto:ayse@gloddia.com" class="social-btn social-email"><i
+                                        class="fas fa-envelope"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <h4 class="mb-2">Zeynep Öztürk</h4>
-                    <p class="text-muted mb-3">
-                        <i class="fas fa-briefcase me-1"></i>
-                        Sosyal Medya Uzmanı
-                    </p>
-                    <p class="small text-muted mb-3">
-                        Sosyal medya stratejisi ve içerik üretimi. 6+ yıllık deneyim.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 5 -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="service-card text-center h-100">
-                    <div class="mb-4">
-                        <div class="rounded-circle bg-gradient-primary d-inline-flex align-items-center justify-content-center"
-                            style="width: 120px; height: 120px; background: var(--rainbow-gradient);">
-                            <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
-                        </div>
-                    </div>
-                    <h4 class="mb-2">Can Arslan</h4>
-                    <p class="text-muted mb-3">
-                        <i class="fas fa-briefcase me-1"></i>
-                        SEO Uzmanı
-                    </p>
-                    <p class="small text-muted mb-3">
-                        Arama motoru optimizasyonu ve analitik. 7+ yıllık deneyim.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 6 -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
-                <div class="service-card text-center h-100">
-                    <div class="mb-4">
-                        <div class="rounded-circle bg-gradient-primary d-inline-flex align-items-center justify-content-center"
-                            style="width: 120px; height: 120px; background: var(--rainbow-gradient);">
-                            <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
-                        </div>
-                    </div>
-                    <h4 class="mb-2">Elif Şahin</h4>
-                    <p class="text-muted mb-3">
-                        <i class="fas fa-briefcase me-1"></i>
-                        UI/UX Tasarımcı
-                    </p>
-                    <p class="small text-muted mb-3">
-                        Kullanıcı deneyimi ve arayüz tasarımı. 5+ yıllık deneyim.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 7 -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="700">
-                <div class="service-card text-center h-100">
-                    <div class="mb-4">
-                        <div class="rounded-circle bg-gradient-primary d-inline-flex align-items-center justify-content-center"
-                            style="width: 120px; height: 120px; background: var(--rainbow-gradient);">
-                            <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
-                        </div>
-                    </div>
-                    <h4 class="mb-2">Burak Çelik</h4>
-                    <p class="text-muted mb-3">
-                        <i class="fas fa-briefcase me-1"></i>
-                        İçerik Editörü
-                    </p>
-                    <p class="small text-muted mb-3">
-                        Metin yazarlığı ve içerik stratejisi. 4+ yıllık deneyim.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Team Member 8 -->
-            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="800">
-                <div class="service-card text-center h-100">
-                    <div class="mb-4">
-                        <div class="rounded-circle bg-gradient-primary d-inline-flex align-items-center justify-content-center"
-                            style="width: 120px; height: 120px; background: var(--rainbow-gradient);">
-                            <i class="fas fa-user text-white" style="font-size: 3rem;"></i>
-                        </div>
-                    </div>
-                    <h4 class="mb-2">Selin Aydın</h4>
-                    <p class="text-muted mb-3">
-                        <i class="fas fa-briefcase me-1"></i>
-                        Müşteri İlişkileri
-                    </p>
-                    <p class="small text-muted mb-3">
-                        Müşteri deneyimi ve destek yönetimi. 5+ yıllık deneyim.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle me-2">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle">
-                            <i class="fas fa-envelope"></i>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Join Team CTA -->
-        <div class="row mt-5">
-            <div class="col-12">
-                <div class="cta-box text-center" data-aos="zoom-in">
-                    <h3 class="text-white mb-3">Ekibimize Katılmak İster Misiniz?</h3>
-                    <p class="text-white-50 mb-4">
-                        Yetenekli ve tutkulu profesyonelleri arıyoruz. Hep beraber harika işler yapalım!
+    <style>
+        .vertical-brand-text,
+        .vertical-brand-text-right {
+            position: absolute;
+            top: 50%;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-size: 5rem;
+            font-weight: 900;
+            background: var(--premium-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.06;
+            z-index: 0;
+            white-space: nowrap;
+            letter-spacing: 15px;
+            user-select: none;
+            pointer-events: none;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .vertical-brand-text {
+            left: -100px;
+            transform: translateY(-50%) rotate(180deg);
+        }
+
+        .vertical-brand-text-right {
+            right: -100px;
+            transform: translateY(-50%);
+        }
+
+        .leader-card {
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .leader-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 80px rgba(14, 165, 233, 0.15);
+        }
+
+        .leader-header {
+            height: 140px;
+            background: var(--premium-gradient);
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            border-radius: 30px 30px 50% 50% / 0px 0px 30px 30px;
+        }
+
+        .leader-avatar-wrapper {
+            position: absolute;
+            bottom: -60px;
+            width: 120px;
+            height: 120px;
+        }
+
+        .leader-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: white;
+            border: 4px solid white;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #555;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .leader-avatar i {
+            background: var(--premium-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .leader-badge {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 35px;
+            height: 35px;
+            background: #FFD700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9rem;
+            border: 3px solid white;
+            z-index: 3;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .leader-body {
+            padding: 70px 40px 40px;
+            text-align: center;
+        }
+
+        .leader-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .leader-role {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0ea5e9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .leader-divider {
+            width: 50px;
+            height: 3px;
+            background: var(--premium-gradient);
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            opacity: 0.5;
+        }
+
+        .leader-bio {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .leader-skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .skill-tag {
+            background: rgba(14, 165, 233, 0.08);
+            color: #0ea5e9;
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .leader-card:hover .skill-tag {
+            background: var(--premium-gradient);
+            color: white;
+        }
+
+        .leader-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            font-size: 1.2rem;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-5px);
+            color: white;
+        }
+
+        .social-linkedin:hover {
+            background: #0077b5;
+            box-shadow: 0 10px 20px rgba(0, 119, 181, 0.3);
+        }
+
+        .social-twitter:hover {
+            background: #000000;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            box-shadow: 0 10px 20px rgba(220, 39, 67, 0.3);
+        }
+
+        .social-email:hover {
+            background: #ea4335;
+            box-shadow: 0 10px 20px rgba(234, 67, 53, 0.3);
+        }
+    </style>
+
+    <!-- Join Team CTA -->
+    <div class="row mt-5 justify-content-center">
+        <div class="col-lg-8">
+            <div class="cta-box-premium text-center" data-aos="zoom-in">
+                <div class="cta-content">
+                    <div class="cta-icon mb-4">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="cta-title mb-3">Ekibimize Katılmak İster Misiniz?</h3>
+                    <p class="cta-text mb-4">
+                        Yetenekli ve tutkulu profesyonelleri arıyoruz. <br>Bizimle birlikte geleceği inşa etmek için
+                        hemen başvurun!
                     </p>
-                    <a href="contact.php" class="btn btn-light btn-lg">
-                        <i class="fas fa-paper-plane me-2"></i>
-                        İletişime Geçin
+                    <a href="contact.php" class="btn btn-premium-cta btn-lg">
+                        <span class="btn-text">İletişime Geçin</span>
+                        <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
                     </a>
                 </div>
+                <div class="cta-bg-glow"></div>
             </div>
         </div>
+    </div>
+
+    <style>
+        .cta-box-premium {
+            position: relative;
+            padding: 60px 40px;
+            background: var(--premium-gradient);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(14, 165, 233, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-icon {
+            font-size: 3rem;
+            color: white;
+            background: none;
+            -webkit-text-fill-color: initial;
+            display: inline-block;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .cta-title {
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-text {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .btn-premium-cta {
+            background: white;
+            border: none;
+            color: #0ea5e9;
+            border-radius: 50px;
+            padding: 18px 45px;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-premium-cta:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            color: #6366f1;
+            background: white;
+        }
+
+        .btn-text {
+            background: var(--premium-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-premium-cta:hover .btn-text {
+            /* Keep gradient text on hover */
+        }
+
+        .btn-icon {
+            color: #0ea5e9;
+        }
+
+        .cta-bg-glow {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+            z-index: 1;
+            animation: pulse-glow 6s infinite ease-in-out;
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.6;
+            }
+        }
+    </style>
     </div>
 </section>
 

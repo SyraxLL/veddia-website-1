@@ -1,27 +1,127 @@
 <?php include 'includes/header.php'; ?>
 
-<!-- Hero Section -->
-<section id="hero" class="hero-section d-flex align-items-center justify-content-center text-center">
-    <!-- Canvas for Space Background -->
-    <canvas id="hero-canvas"></canvas>
+<!-- Dark Wave Hero Styles -->
+<link rel="stylesheet" href="assets/css/hero-dark-wave.css">
 
-    <div class="container position-relative z-2">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <h1 class="hero-title-large mb-4" data-aos="fade-up">DÜNYAYI BİZİMLE KEŞFEDİN.</h1>
+<!-- Dark Wave Hero Section -->
+<section class="hero-dark-wave">
+    <div class="container">
+        <div class="row align-items-center">
 
-                <div class="d-flex justify-content-center gap-4 mt-5" data-aos="fade-up" data-aos-delay="200">
-                    <a href="#services" class="btn-space-1">
-                        Hizmetlerimiz
+            <!-- Left Column: Content -->
+            <div class="col-lg-7 hero-left-content parallax-layer" data-speed="0.01">
+                <div class="dw-badge">
+                    <i class="fas fa-rocket"></i> #1 Dijital Pazarlama Ajansı
+                </div>
+
+                <h1 class="dw-title">
+                    Markanızı Dijitalde<br>
+                    <span class="typing-text" data-text="Zirveye Taşıyoruz">Zirveye Taşıyoruz</span>
+                </h1>
+
+                <p class="dw-desc">
+                    <strong>SEO, Sosyal Medya, Web Tasarım ve Google Ads</strong> ile markanızın görünürlüğünü
+                    artırıyor,
+                    dönüşüm odaklı stratejilerle <em>hedef kitlenizle güçlü bağlar</em> kuruyoruz.
+                    Türkiye genelinde online hizmet.
+                </p>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <i class="fab fa-google"></i>
+                        <span>Google Partner</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-award"></i>
+                        <span>100+ Proje</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Güvenli Ödeme</span>
+                    </div>
+                </div>
+
+                <div class="dw-btn-group">
+                    <a href="#contact" class="dw-btn dw-btn-primary">
+                        Ücretsiz Teklif Alın <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#contact" class="btn-space-2">
-                        Bizimle İletişime Geç
+                    <a href="#services" class="dw-btn dw-btn-outline">
+                        <i class="fas fa-play-circle"></i> Demo İzle
                     </a>
                 </div>
+
+                <div class="dw-stats-row">
+                    <div class="dw-stat">
+                        <h4><span class="counter-value" data-count="50">0</span>+</h4>
+                        <p>Mutlu Müşteri</p>
+                    </div>
+                    <div class="dw-stat">
+                        <h4><span class="counter-value" data-count="100">0</span>%</h4>
+                        <p>Memnuniyet</p>
+                    </div>
+                    <div class="dw-stat">
+                        <h4><span class="counter-value" data-count="7">0</span>/24</h4>
+                        <p>Destek</p>
+                    </div>
+                </div>
             </div>
+
+            <!-- Right Column: Technology Logos Grid -->
+            <div class="col-lg-5 hero-right-visual">
+                <div class="tech-logos-grid">
+                    <!-- Row 1 -->
+                    <div class="tech-logo" style="--float-delay: 0s;">
+                        <i class="fab fa-wordpress" style="color: #21759b;"></i>
+                        <span>WordPress</span>
+                    </div>
+                    <div class="tech-logo" style="--float-delay: 0.5s;">
+                        <i class="fab fa-php" style="color: #777BB4;"></i>
+                        <span>PHP</span>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="tech-logo" style="--float-delay: 1s;">
+                        <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="tech-logo featured" style="--float-delay: 0.3s;">
+                        <i class="fab fa-js-square" style="color: #F7DF1E;"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-logo" style="--float-delay: 0.8s;">
+                        <img src="assets/img/google-ads-logo.png" alt="Google Ads" style="width: 40px; height: 40px;">
+                        <span>Google Ads</span>
+                    </div>
+
+                    <!-- Row 3 -->
+                    <div class="tech-logo" style="--float-delay: 1.2s;">
+                        <i class="fab fa-react" style="color: #61DAFB;"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="tech-logo" style="--float-delay: 0.6s;">
+                        <i class="fab fa-python" style="color: #3776AB;"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-logo" style="--float-delay: 1.5s;">
+                        <i class="fab fa-figma" style="color: #F24E1E;"></i>
+                        <span>Figma</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
+
+<!-- Hero Interactive JS -->
+<script src="assets/js/hero-interactive.js"></script>
+
+
+
+
+<!-- Logic Script -->
+
 
 <!-- Service Category Links -->
 <section class="service-links-section py-5">
@@ -66,7 +166,8 @@
     <div class="container">
         <div class="section-header text-center mb-5">
             <h2 class="section-title gradient-text-main" data-aos="fade-up">Hizmetlerimiz</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Size nasıl yardımcı olabiliriz?</p>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Size nasıl yardımcı olabiliriz?
+            </p>
         </div>
 
         <div class="row g-4">
@@ -148,7 +249,8 @@
         <div class="row align-items-center">
             <div class="col-lg-6" data-aos="fade-right">
                 <h2 class="section-title gradient-text-main mb-4">Teknoloji ve Tasarımın Uyumu</h2>
-                <p class="showcase-desc">Modern teknolojileri estetik tasarımla buluşturuyoruz. Sadece kod yazmıyor,
+                <p class="showcase-desc">Modern teknolojileri estetik tasarımla buluşturuyoruz. Sadece kod
+                    yazmıyor,
                     markanız için yaşayan dijital deneyimler tasarlıyoruz.</p>
                 <div class="stats-row d-flex gap-4 mt-4">
                     <div class="stat-item">
@@ -173,7 +275,8 @@
     <div class="container">
         <div class="section-header text-center mb-5">
             <h2 class="section-title gradient-text-main" data-aos="fade-up">Portfolyomuz</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Son çalışmalarımızdan seçkiler</p>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Son çalışmalarımızdan seçkiler
+            </p>
         </div>
 
         <div class="row g-4">
@@ -223,10 +326,13 @@
                     <h2 class="section-title gradient-text-main text-center mb-4">Neden Gloddia Media?</h2>
 
                     <div class="why-content text-center mb-5">
-                        <p class="lead">İhtiyaçlarınıza özel tasarlanmış akıllı çözüm önerilerimizle, projelerinizin
-                            başarıya ulaşması için doğru adımları atmanıza yardımcı olmaktan büyük mutluluk duyuyoruz.
+                        <p class="lead">İhtiyaçlarınıza özel tasarlanmış akıllı çözüm önerilerimizle,
+                            projelerinizin
+                            başarıya ulaşması için doğru adımları atmanıza yardımcı olmaktan büyük mutluluk
+                            duyuyoruz.
                         </p>
-                        <p>Yeniliklere açık, genç ve dinamik ekibimiz, müşteri memnuniyetini en üst seviyede tutmak için
+                        <p>Yeniliklere açık, genç ve dinamik ekibimiz, müşteri memnuniyetini en üst seviyede
+                            tutmak için
                             gece gündüz demeden çalışmaya devam ediyor.</p>
                     </div>
 
@@ -235,7 +341,8 @@
                             <div class="feature-box">
                                 <i class="fas fa-rocket gradient-icon"></i>
                                 <h4>Hızlı & Güvenilir</h4>
-                                <p>Üstün teknoloji altyapımız sayesinde hızlı, güvenilir ve verimli çözümler sunuyoruz.
+                                <p>Üstün teknoloji altyapımız sayesinde hızlı, güvenilir ve verimli çözümler
+                                    sunuyoruz.
                                 </p>
                             </div>
                         </div>
@@ -263,7 +370,8 @@
                     </div>
 
                     <div class="text-center mt-5">
-                        <p class="fst-italic text-muted">"Sizin memnuniyetiniz için daima daha iyisini hedefliyor ve her
+                        <p class="fst-italic text-muted">"Sizin memnuniyetiniz için daima daha iyisini
+                            hedefliyor ve her
                             projede kalite standartlarımızı yükseltiyoruz."</p>
                     </div>
                 </div>
@@ -312,14 +420,15 @@
     <div class="container">
         <div class="cta-box text-center" data-aos="zoom-in">
             <h2 class="text-white mb-3">Projenizi Hayata Geçirelim</h2>
-            <p class="text-white-50 mb-4">Hemen bizimle iletişime geçin, markanız için en doğru stratejiyi belirleyelim.
+            <p class="text-white-50 mb-4">Hemen bizimle iletişime geçin, markanız için en doğru stratejiyi
+                belirleyelim.
             </p>
             <a href="contact.php" class="btn btn-light btn-lg">İletişime Geç</a>
         </div>
     </div>
 </section>
 
-<script src="assets/js/space-interaction.js"></script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({

@@ -61,6 +61,7 @@
     </header>
 
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.php">
@@ -69,8 +70,8 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
                     <!-- Anasayfa -->
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Anasayfa</a>
@@ -82,12 +83,12 @@
                             aria-expanded="false">
                             Kurumsal
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about.php"><i
-                                        class="fas fa-info-circle me-2"></i>Hakkımızda</a></li>
-                            <li><a class="dropdown-item" href="team.php"><i class="fas fa-users me-2"></i>Ekibimiz</a>
-                            </li>
-                        </ul>
+                        <div class="dropdown-menu" style="min-width: 200px; padding: 1rem;">
+                            <ul class="list-unstyled mega-menu-list mb-0">
+                                <li><a href="about.php">Hakkımızda</a></li>
+                                <li><a href="team.php">Ekibimiz</a></li>
+                            </ul>
+                        </div>
                     </li>
 
                     <!-- Hizmetlerimiz (Mega Menu) -->
@@ -104,9 +105,9 @@
                                             <i class="fas fa-laptop-code me-2"></i>Web Tasarım
                                         </h6>
                                         <ul class="list-unstyled mega-menu-list">
-                                            <li><a href="#">Kurumsal Web Sitesi</a></li>
-                                            <li><a href="#">E-Ticaret Sitesi</a></li>
-                                            <li><a href="#">Kişisel Web Sitesi</a></li>
+                                            <li><a href="kurumsal-web-sitesi.php">Kurumsal Web Sitesi</a></li>
+                                            <li><a href="e-ticaret-web.php">E-Ticaret Sitesi</a></li>
+                                            <li><a href="kisisel-web-sitesi.php">Kişisel Web Sitesi</a></li>
                                             <li><a href="urun-tanitim-sitesi.php">Ürün Tanıtım Sitesi</a></li>
                                         </ul>
                                     </div>
@@ -171,7 +172,7 @@
 
                     <!-- CTA Button -->
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-gradient" href="#contact">Hemen Teklif Al</a>
+                        <a class="btn btn-gradient" href="contact.php">Hemen Teklif Al</a>
                     </li>
                 </ul>
             </div>

@@ -1,5 +1,5 @@
 /* ========================================
-   GLODDIA MEDIA - RAINBOW GRADIENT THEME
+   VEDDIA MEDIA - CREATED BY MUSTAFA ADSAN
    ======================================== */
 
 :root {
@@ -24,6 +24,7 @@
 
     /* Gradients (Use sparingly) */
     --rainbow-gradient: linear-gradient(135deg, #3B82F6, #8B5CF6, #EC4899, #06B6D4);
+    --premium-gradient: linear-gradient(135deg, #14b8a6, #0ea5e9, #6366f1);
     --rainbow-text: linear-gradient(135deg, #3B82F6, #8B5CF6, #EC4899);
     --soft-glow: 0 0 20px rgba(139, 92, 246, 0.3);
 
@@ -61,21 +62,23 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
+/* Default Button Colors - Teal→Blue→Indigo Gradient */
+/* This is the "Ücretsiz Teklif Alın" button color */
 .btn-gradient {
-    background: var(--rainbow-gradient);
+    background: linear-gradient(135deg, #14b8a6, #0ea5e9, #6366f1);
+    background-size: 200% auto;
     color: white;
     border: none;
     padding: 0.7rem 2rem;
     border-radius: 50px;
     font-weight: 600;
     transition: var(--transition);
-    background-size: 200% auto;
 }
 
 .btn-gradient:hover {
     background-position: right center;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 5px 15px rgba(20, 184, 166, 0.4);
     color: white;
 }
 
@@ -140,8 +143,8 @@ a {
     height: 100%;
     background: linear-gradient(90deg,
             transparent,
-            rgba(139, 92, 246, 0.1),
-            rgba(59, 130, 246, 0.1),
+            rgba(20, 184, 166, 0.1),
+            rgba(14, 165, 233, 0.1),
             transparent);
     transition: left 0.6s ease;
     z-index: -1;
@@ -154,7 +157,7 @@ a {
 .nav-link:hover,
 .nav-link.active {
     color: transparent !important;
-    background: var(--rainbow-gradient);
+    background: var(--premium-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -169,7 +172,7 @@ a {
     left: 50%;
     width: 0;
     height: 3px;
-    background: var(--rainbow-gradient);
+    background: var(--premium-gradient);
     background-size: 200% 100%;
     transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     transform: translateX(-50%);
@@ -192,8 +195,8 @@ a {
 
 .nav-link:hover::after {
     width: 100%;
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.8),
-        0 0 30px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.8),
+        0 0 30px rgba(99, 102, 241, 0.4);
 }
 
 /* Dropdown & Mega Menu */
@@ -216,6 +219,17 @@ a {
     z-index: 1000;
     min-width: 240px;
     border: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+/* Fix for hover gap sensitivity */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: transparent;
 }
 
 .nav-item.dropdown:hover .dropdown-menu,
@@ -245,7 +259,7 @@ a {
     top: 0;
     height: 100%;
     width: 4px;
-    background: var(--rainbow-gradient);
+    background: var(--premium-gradient);
     transform: scaleY(0);
     transition: transform 0.3s ease;
 }
@@ -255,17 +269,17 @@ a {
 }
 
 .dropdown-item:hover {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(59, 130, 246, 0.05));
-    color: var(--primary-purple);
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.08), rgba(14, 165, 233, 0.05));
+    color: #0ea5e9;
     transform: translateX(8px);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.1);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.1);
 }
 
 .dropdown-item i {
     font-size: 1.1rem;
     margin-right: 0.75rem;
     transition: all 0.3s ease;
-    background: var(--rainbow-text);
+    background: var(--premium-gradient);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -323,7 +337,7 @@ a {
     top: 50%;
     width: 3px;
     height: 0%;
-    background: var(--rainbow-gradient);
+    background: var(--premium-gradient);
     border-radius: 8px;
     transform: translateY(-50%);
     transition: height 0.25s ease;
@@ -332,10 +346,10 @@ a {
 .mega-menu-list a:hover {
     color: #fff;
     background: linear-gradient(90deg,
-            #a855f7,
-            #ec4899,
-            #60a5fa,
-            #3b82f6);
+            #14b8a6,
+            #0ea5e9,
+            #6366f1,
+            #14b8a6);
     background-size: 400% 400%;
     animation: rainbowMove 2.5s ease infinite;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
@@ -2543,5 +2557,187 @@ a {
 
     .step-card .step-icon {
         margin: 0 0 10px 0;
+    }
+}
+
+/* ========================================
+   MOBILE MENU - Modern Design
+   ======================================== */
+@media (max-width: 991px) {
+
+    /* Navbar Container */
+    .navbar {
+        padding: 12px 0;
+    }
+
+    /* Custom Hamburger Button */
+    .navbar-toggler {
+        border: none;
+        padding: 8px;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: rgba(96, 165, 250, 0.1);
+        position: relative;
+        z-index: 1001;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+        background: rgba(96, 165, 250, 0.15);
+    }
+
+    .navbar-toggler-icon {
+        background-image: none;
+        width: 22px;
+        height: 2px;
+        background: var(--soft-blue);
+        position: relative;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--soft-blue);
+        transition: all 0.3s ease;
+    }
+
+    .navbar-toggler-icon::before {
+        top: -7px;
+    }
+
+    .navbar-toggler-icon::after {
+        bottom: -7px;
+    }
+
+    /* Animated X when open */
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        background: transparent;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* Mobile Menu Panel */
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .navbar-collapse:not(.show) {
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        display: block;
+    }
+
+    .navbar-nav {
+        gap: 5px;
+    }
+
+    /* Menu Items */
+    .navbar-nav .nav-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-nav .nav-link {
+        padding: 15px 0 !important;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+        color: var(--soft-blue);
+    }
+
+    /* Dropdown in Mobile */
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        border: none;
+        box-shadow: none;
+        background: rgba(96, 165, 250, 0.03);
+        border-radius: 12px;
+        margin: 0 0 10px 0;
+        padding: 10px 15px;
+    }
+
+    .navbar-nav .dropdown-item {
+        padding: 12px 15px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .navbar-nav .dropdown-item:hover {
+        background: rgba(96, 165, 250, 0.1);
+        color: var(--soft-blue);
+    }
+
+    /* Mega Menu Mobile */
+    .mega-menu {
+        position: static !important;
+        width: 100% !important;
+        border: none;
+        box-shadow: none;
+        background: rgba(96, 165, 250, 0.03);
+        border-radius: 12px;
+        padding: 15px;
+    }
+
+    .mega-menu .row {
+        flex-direction: column;
+    }
+
+    .mega-menu-title {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .mega-menu-list li a {
+        padding: 8px 0;
+        display: block;
+    }
+
+    /* CTA Button Mobile */
+    .navbar-nav .btn-gradient {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+        padding: 15px 30px;
+        font-size: 1rem;
+        border-radius: 12px;
+    }
+
+    /* Hide topbar on mobile */
+    .topbar {
+        display: none;
     }
 }

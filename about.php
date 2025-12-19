@@ -121,15 +121,20 @@
     }
 
     @keyframes float {
-        0%, 100% {
+
+        0%,
+        100% {
             transform: translateY(0) rotate(0deg);
         }
+
         25% {
             transform: translateY(-30px) rotate(5deg);
         }
+
         50% {
             transform: translateY(-60px) rotate(-5deg);
         }
+
         75% {
             transform: translateY(-30px) rotate(3deg);
         }
@@ -193,9 +198,12 @@
     }
 
     @keyframes floatCard {
-        0%, 100% {
+
+        0%,
+        100% {
             transform: translateY(0);
         }
+
         50% {
             transform: translateY(-20px);
         }
@@ -205,6 +213,7 @@
         from {
             transform: rotate(0deg);
         }
+
         to {
             transform: rotate(360deg);
         }
@@ -223,7 +232,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: 
+        background:
             radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
             radial-gradient(circle at 100% 100%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
         pointer-events: none;
@@ -236,23 +245,33 @@
         <!-- Intro Block -->
         <div class="row justify-content-center mb-5">
             <div class="col-lg-10 text-center">
-                <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 mb-3" data-aos="fade-up">2013'den beri</span>
+                <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-3 py-2 mb-3"
+                    data-aos="fade-up">2020'den beri</span>
                 <h2 class="section-title gradient-text-main mb-4" data-aos="fade-up">Biz Kimiz, Neler Yapıyoruz?</h2>
-                <div class="divider mx-auto mb-4" data-aos="fade-up" data-aos-delay="50" style="width: 60px; height: 3px; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px;"></div>
-                
-                <div class="about-text-box p-4 p-md-5 rounded-4 bg-white shadow-sm border position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="divider mx-auto mb-4" data-aos="fade-up" data-aos-delay="50"
+                    style="width: 60px; height: 3px; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px;">
+                </div>
+
+                <div class="about-text-box p-4 p-md-5 rounded-4 bg-white shadow-sm border position-relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="100">
                     <!-- Decorative Background -->
-                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10" style="background: radial-gradient(circle at top right, rgba(102, 126, 234, 0.1), transparent 70%); pointer-events: none;"></div>
-                    
+                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10"
+                        style="background: radial-gradient(circle at top right, rgba(102, 126, 234, 0.1), transparent 70%); pointer-events: none;">
+                    </div>
+
                     <p class="lead mb-4 position-relative z-2">
-                        Biz dijital pazarlama dünyasında adınızı duyurmanın ve işletmenizi büyütmenin en etkili yolu olan dijital pazarlama stratejilerini benimseyen bir ekibiz.
+                        Veddia Media olarak, dijital pazarlama dünyasında adınızı duyurmanın ve işletmenizi büyütmenin
+                        en etkili yolu olan dijital pazarlama stratejilerini benimseyen bir ekibiz.
                     </p>
                     <p class="text-muted mb-0 position-relative z-2">
-                        Müşterilerimizin hedeflerini gerçekleştirmek ve markalarını dijital alanda güçlendirmek için yenilikçi çözümler sunuyoruz. Biz, dijital dünyadaki potansiyeli en iyi şekilde kullanmanıza yardımcı olmak için buradayız.
+                        Müşterilerimizin hedeflerini gerçekleştirmek ve markalarını dijital alanda güçlendirmek için
+                        yenilikçi çözümler sunuyoruz. Biz, dijital dünyadaki potansiyeli en iyi şekilde kullanmanıza
+                        yardımcı olmak için buradayız.
                     </p>
-                    
+
                     <!-- Decorative Icon -->
-                    <i class="fas fa-quote-right position-absolute bottom-0 end-0 mb-n2 me-3 text-primary opacity-10 fa-4x"></i>
+                    <i
+                        class="fas fa-quote-right position-absolute bottom-0 end-0 mb-n2 me-3 text-primary opacity-10 fa-4x"></i>
                 </div>
             </div>
         </div>
@@ -263,24 +282,29 @@
                 <div class="about-content-card p-4 rounded-4 bg-light h-100 border">
                     <h3 class="h4 mb-3 gradient-text-main">Deneyimli ve Tutkulu Bir Ekip</h3>
                     <p>
-                        Deneyimli ve tutkulu bir ekip olarak, her projeye benzersiz bir yaklaşım getiriyoruz. Müşterilerimizin ihtiyaçlarını anlamak ve onların hedeflerine ulaşmalarını sağlamak için özelleştirilmiş stratejiler geliştiriyoruz.
+                        Deneyimli ve tutkulu bir ekip olarak, her projeye benzersiz bir yaklaşım getiriyoruz.
+                        Müşterilerimizin ihtiyaçlarını anlamak ve onların hedeflerine ulaşmalarını sağlamak için
+                        özelleştirilmiş stratejiler geliştiriyoruz.
                     </p>
                     <p class="mb-0">
-                        Arama motoru optimizasyonundan (SEO) sosyal medya yönetimine, içerik pazarlamasından reklam kampanyalarına kadar geniş bir yelpazede hizmetler sunuyoruz.
+                        Arama motoru optimizasyonundan (SEO) sosyal medya yönetimine, içerik pazarlamasından reklam
+                        kampanyalarına kadar geniş bir yelpazede hizmetler sunuyoruz.
                     </p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
                 <div class="row g-3">
                     <div class="col-6">
-                        <div class="stat-card text-center p-4 rounded-4 bg-white shadow-sm border h-100 d-flex flex-column justify-content-center">
+                        <div
+                            class="stat-card text-center p-4 rounded-4 bg-white shadow-sm border h-100 d-flex flex-column justify-content-center">
                             <i class="fas fa-users fa-2x text-primary mb-3"></i>
                             <h4 class="h2 fw-bold gradient-text-main">50+</h4>
                             <p class="mb-0 text-muted">Mutlu Müşteri</p>
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="stat-card text-center p-4 rounded-4 bg-white shadow-sm border h-100 d-flex flex-column justify-content-center">
+                        <div
+                            class="stat-card text-center p-4 rounded-4 bg-white shadow-sm border h-100 d-flex flex-column justify-content-center">
                             <i class="fas fa-check-circle fa-2x text-primary mb-3"></i>
                             <h4 class="h2 fw-bold gradient-text-main">100+</h4>
                             <p class="mb-0 text-muted">Başarılı Proje</p>
@@ -299,7 +323,9 @@
                     </div>
                     <h4 class="h5 fw-bold">Müşterilerimizin Başarısı</h4>
                     <p class="text-muted mb-0">
-                        Müşterilerimizin başarısı bizim başarımızdır. Bu nedenle, iş ortaklarımızın başarılarını desteklemek için ellerinden gelenin en iyisini yapıyoruz. İşbirliği ve iletişimde yüksek standartlarımız sayesinde, müşterilerimizle güçlü ve uzun vadeli ilişkiler kuruyoruz.
+                        Müşterilerimizin başarısı bizim başarımızdır. Bu nedenle, iş ortaklarımızın başarılarını
+                        desteklemek için ellerinden gelenin en iyisini yapıyoruz. İşbirliği ve iletişimde yüksek
+                        standartlarımız sayesinde, müşterilerimizle güçlü ve uzun vadeli ilişkiler kuruyoruz.
                     </p>
                 </div>
             </div>
@@ -310,7 +336,9 @@
                     </div>
                     <h4 class="h5 fw-bold">Sürekli Gelişim</h4>
                     <p class="text-muted mb-0">
-                        Sektördeki gelişmeleri yakından takip ediyor ve sürekli olarak stratejilerimizi güncelliyoruz. Dijital pazarlama dünyasında ön planda kalmak ve müşterilerimize en son trendleri ve en iyi uygulamaları sunmak için çaba gösteriyoruz.
+                        Sektördeki gelişmeleri yakından takip ediyor ve sürekli olarak stratejilerimizi güncelliyoruz.
+                        Dijital pazarlama dünyasında ön planda kalmak ve müşterilerimize en son trendleri ve en iyi
+                        uygulamaları sunmak için çaba gösteriyoruz.
                     </p>
                 </div>
             </div>
@@ -325,7 +353,9 @@
                         <div class="col-lg-8 text-lg-start text-center mb-4 mb-lg-0">
                             <h3 class="display-6 fw-bold text-white mb-3">Dijital Dünyada Fark Yaratın</h3>
                             <p class="lead text-white-50 mb-0">
-                                Dijitalleşmeye bizimle başlayarak, markanızı güçlendirmek ve dijital dünyada fark yaratmak için doğru adımı atmış olacaksınız. Sizi, işletmenizin dijital potansiyelini gerçekleştirmek için bizimle birlikte çalışmaya davet ediyoruz.
+                                Dijitalleşmeye Veddia Media ile başlayarak, markanızı güçlendirmek ve dijital dünyada
+                                fark yaratmak için doğru adımı atmış olacaksınız. Sizi, işletmenizin dijital
+                                potansiyelini gerçekleştirmek için bizimle birlikte çalışmaya davet ediyoruz.
                             </p>
                         </div>
                         <div class="col-lg-4 text-lg-end text-center">
