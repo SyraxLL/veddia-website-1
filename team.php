@@ -320,7 +320,7 @@
                             <div class="leader-social">
                                 <a href="#" class="social-btn social-linkedin"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="#" class="social-btn social-twitter"><i class="fab fa-x-twitter"></i></a>
-                                <a href="mailto:ahmet@gloddia.com" class="social-btn social-email"><i
+                                <a href="mailto:ahmet@veddia.com" class="social-btn social-email"><i
                                         class="fas fa-envelope"></i></a>
                             </div>
                         </div>
@@ -358,7 +358,7 @@
                             <div class="leader-social">
                                 <a href="#" class="social-btn social-linkedin"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="#" class="social-btn social-instagram"><i class="fab fa-instagram"></i></a>
-                                <a href="mailto:ayse@gloddia.com" class="social-btn social-email"><i
+                                <a href="mailto:ayse@veddia.com" class="social-btn social-email"><i
                                         class="fas fa-envelope"></i></a>
                             </div>
                         </div>

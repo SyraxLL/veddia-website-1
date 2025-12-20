@@ -11,7 +11,7 @@
             <!-- Left Column: Content -->
             <div class="col-lg-7 hero-left-content parallax-layer" data-speed="0.01">
                 <div class="dw-badge">
-                    <i class="fas fa-rocket"></i> #1 Dijital Pazarlama Ajansı
+                    <i class="fas fa-crown"></i> Veddia Dijital Pazarlama Ajansı
                 </div>
 
                 <h1 class="dw-title">
@@ -34,7 +34,7 @@
                     </div>
                     <div class="trust-badge">
                         <i class="fas fa-award"></i>
-                        <span>100+ Proje</span>
+                        <span>50+ Proje</span>
                     </div>
                     <div class="trust-badge">
                         <i class="fas fa-shield-alt"></i>
@@ -47,7 +47,7 @@
                         Ücretsiz Teklif Alın <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="#services" class="dw-btn dw-btn-outline">
-                        <i class="fas fa-play-circle"></i> Demo İzle
+                        Hizmetlerimiz
                     </a>
                 </div>
 
@@ -96,16 +96,21 @@
 
                     <!-- Row 3 -->
                     <div class="tech-logo" style="--float-delay: 1.2s;">
-                        <i class="fab fa-react" style="color: #61DAFB;"></i>
-                        <span>React</span>
+                        <i class="fab fa-instagram"
+                            style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"></i>
+                        <span>Instagram</span>
                     </div>
                     <div class="tech-logo" style="--float-delay: 0.6s;">
-                        <i class="fab fa-python" style="color: #3776AB;"></i>
-                        <span>Python</span>
+                        <i class="fab fa-facebook-f" style="color: #1877F2;"></i>
+                        <span>Facebook</span>
                     </div>
                     <div class="tech-logo" style="--float-delay: 1.5s;">
-                        <i class="fab fa-figma" style="color: #F24E1E;"></i>
-                        <span>Figma</span>
+                        <i class="fab fa-linkedin-in" style="color: #0A66C2;"></i>
+                        <span>LinkedIn</span>
+                    </div>
+                    <div class="tech-logo" style="--float-delay: 0.9s;">
+                        <i class="fab fa-python" style="color: #3776AB;"></i>
+                        <span>Python</span>
                     </div>
                 </div>
             </div>
@@ -117,313 +122,460 @@
 <!-- Hero Interactive JS -->
 <script src="assets/js/hero-interactive.js"></script>
 
-
-
-
-<!-- Logic Script -->
-
-
-<!-- Service Category Links -->
-<section class="service-links-section py-5">
+<!-- Services Section - New Premium Design -->
+<link rel="stylesheet" href="assets/css/services-new.css">
+<section id="services" class="services-section-new">
     <div class="container">
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
-                <a href="/web-tasarim" class="service-link-card">
-                    <div class="icon-wrapper"><i class="fas fa-laptop-code"></i></div>
-                    <span>Web Tasarım</span>
-                </a>
+        <!-- Section Header -->
+        <div class="services-header">
+            <div class="services-badge">
+                <i class="fas fa-sparkles"></i>
+                Neler Yapıyoruz?
             </div>
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
-                <a href="/dijital-pazarlama" class="service-link-card">
-                    <div class="icon-wrapper"><i class="fas fa-bullhorn"></i></div>
-                    <span>Dijital Pazarlama</span>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
-                <a href="/sosyal-medya" class="service-link-card">
-                    <div class="icon-wrapper"><i class="fas fa-share-alt"></i></div>
-                    <span>Sosyal Medya</span>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
-                <a href="/grafik-tasarim" class="service-link-card">
-                    <div class="icon-wrapper"><i class="fas fa-palette"></i></div>
-                    <span>Grafik Tasarım</span>
-                </a>
-            </div>
-            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
-                <a href="/yazilim-sistemleri" class="service-link-card">
-                    <div class="icon-wrapper"><i class="fas fa-code"></i></div>
-                    <span>Yazılım & Sistem</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Services Section -->
-<section id="services" class="services-section py-5">
-    <div class="container">
-        <div class="section-header text-center mb-5">
-            <h2 class="section-title gradient-text-main" data-aos="fade-up">Hizmetlerimiz</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Size nasıl yardımcı olabiliriz?
+            <h2 class="services-title">Dijital <span>Hizmetlerimiz</span></h2>
+            <p class="services-subtitle">
+                İşinizi büyütmek için ihtiyacınız olan tüm dijital çözümler tek çatı altında
             </p>
         </div>
 
-        <div class="row g-4">
+        <!-- Services Grid -->
+        <div class="services-grid">
             <!-- Web Tasarım -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Web Tasarım</h3>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Kurumsal Web Sitesi</li>
-                        <li><i class="fas fa-check"></i> E-Ticaret Sitesi</li>
-                        <li><i class="fas fa-check"></i> Kişisel Web Sitesi</li>
-                        <li><i class="fas fa-check"></i> Ürün Tanıtım Sitesi</li>
-                    </ul>
+            <div class="service-card-new card-teal" data-aos="fade-up" data-aos-delay="0">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
                 </div>
+                <h3 class="service-card-title">Web Tasarım</h3>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Kurumsal Web Sitesi</li>
+                    <li><i class="fas fa-check"></i> E-Ticaret Sitesi</li>
+                    <li><i class="fas fa-check"></i> Kişisel Web Sitesi</li>
+                    <li><i class="fas fa-check"></i> Ürün Tanıtım Sitesi</li>
+                </ul>
             </div>
 
             <!-- Dijital Pazarlama -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3>Dijital Pazarlama</h3>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Google Reklamı</li>
-                        <li><i class="fas fa-check"></i> YouTube Reklamı</li>
-                        <li><i class="fas fa-check"></i> Instagram & TikTok Reklamı</li>
-                        <li><i class="fas fa-check"></i> X (Twitter) Reklamı</li>
-                    </ul>
+            <div class="service-card-new card-indigo" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-bullhorn"></i>
                 </div>
+                <h3 class="service-card-title">Dijital Pazarlama</h3>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Google Reklamı</li>
+                    <li><i class="fas fa-check"></i> YouTube Reklamı</li>
+                    <li><i class="fas fa-check"></i> Instagram Reklamı</li>
+                </ul>
             </div>
 
             <!-- Sosyal Medya -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-users"></i></div>
-                    <h3>Sosyal Medya Yönetimi</h3>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Facebook Yönetimi</li>
-                        <li><i class="fas fa-check"></i> Instagram Yönetimi</li>
-                        <li><i class="fas fa-check"></i> X (Twitter) Yönetimi</li>
-                        <li><i class="fas fa-check"></i> LinkedIn Yönetimi</li>
-                    </ul>
+            <div class="service-card-new card-purple" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fas fa-share-nodes"></i>
                 </div>
+                <h3 class="service-card-title">Sosyal Medya Yönetimi</h3>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Facebook Yönetimi</li>
+                    <li><i class="fas fa-check"></i> Instagram Yönetimi</li>
+                    <li><i class="fas fa-check"></i> X (Twitter) Yönetimi</li>
+                    <li><i class="fas fa-check"></i> LinkedIn Yönetimi</li>
+                </ul>
             </div>
 
             <!-- Grafik Tasarım -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-paint-brush"></i></div>
-                    <h3>Grafik Tasarım</h3>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Logo Tasarımı</li>
-                        <li><i class="fas fa-check"></i> Broşür Tasarımı ve Basımı</li>
-                        <li><i class="fas fa-check"></i> Katalog Tasarımı ve Basımı</li>
-                    </ul>
+            <div class="service-card-new card-pink" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
                 </div>
+                <h3 class="service-card-title">Grafik Tasarım</h3>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Logo Tasarımı</li>
+                    <li><i class="fas fa-check"></i> Broşür Tasarımı</li>
+                    <li><i class="fas fa-check"></i> Katalog Tasarımı</li>
+                </ul>
             </div>
 
             <!-- Yazılım & Sistem -->
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="service-card">
-                    <div class="card-icon"><i class="fas fa-cogs"></i></div>
-                    <h3>Yazılım & Sistem</h3>
-                    <ul class="service-list">
-                        <li><i class="fas fa-check"></i> Özel Yazılım Geliştirme</li>
-                        <li><i class="fas fa-check"></i> Web Uygulamaları</li>
-                        <li><i class="fas fa-check"></i> API & Entegrasyonlar</li>
-                        <li><i class="fas fa-check"></i> Otomasyon Sistemleri</li>
-                    </ul>
+            <div class="service-card-new card-orange" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
                 </div>
+                <h3 class="service-card-title">Yazılım & Sistem</h3>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Özel Yazılım Geliştirme</li>
+                    <li><i class="fas fa-check"></i> Web Uygulamaları</li>
+                    <li><i class="fas fa-check"></i> API & Entegrasyonlar</li>
+                    <li><i class="fas fa-check"></i> Otomasyon Sistemleri</li>
+                </ul>
+            </div>
+
+            <!-- SEO -->
+            <div class="service-card-new card-teal" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="service-card-title">SEO & Analitik</h3>
+                <ul class="service-features">
+                    <li><i class="fas fa-check"></i> Arama Motoru Optimizasyonu</li>
+                    <li><i class="fas fa-check"></i> İçerik Stratejisi</li>
+                    <li><i class="fas fa-check"></i> Performans Analizi</li>
+                    <li><i class="fas fa-check"></i> Rakip Analizi</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Minimal 3D Showcase -->
-<section id="showcase" class="showcase-section py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-                <h2 class="section-title gradient-text-main mb-4">Teknoloji ve Tasarımın Uyumu</h2>
-                <p class="showcase-desc">Modern teknolojileri estetik tasarımla buluşturuyoruz. Sadece kod
-                    yazmıyor,
-                    markanız için yaşayan dijital deneyimler tasarlıyoruz.</p>
-                <div class="stats-row d-flex gap-4 mt-4">
-                    <div class="stat-item">
-                        <h3 class="gradient-text-main">50+</h3>
-                        <p>Mutlu Müşteri</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3 class="gradient-text-main">100+</h3>
-                        <p>Başarılı Proje</p>
-                    </div>
+<!-- Why Gloddia Media Section -->
+<link rel="stylesheet" href="assets/css/why-gloddia.css">
+<section class="why-gloddia-section">
+    <div class="why-gloddia-wrapper">
+        <div class="why-gloddia-container">
+
+            <!-- Left Column - Sticky Text -->
+            <div class="why-gloddia-left">
+                <div class="why-gloddia-badge">
+                    <i class="fas fa-star"></i>
+                    Neden Veddia?
+                </div>
+                <h2 class="why-gloddia-title">
+                    Dijital Başarının<br>
+                    <span>Adresi</span>
+                </h2>
+                <p class="why-gloddia-desc">
+                    Markanızı dijital dünyada zirveye taşımak için ihtiyacınız olan her şey burada.
+                    Profesyonel ekibimiz, kanıtlanmış stratejilerimiz ve yenilikçi yaklaşımımızla
+                    başarıya giden yolda yanınızdayız.
+                </p>
+
+                <ul class="why-gloddia-features">
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Dijital dünyada fark yaratmak için yenilikçi stratejiler
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Hedef odaklı çözümlerle ölçülebilir başarı
+                    </li>
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Profesyonel ekip ve 7/24 destek hizmeti
+                    </li>
+                </ul>
+
+                <a href="#contact" class="why-gloddia-cta">
+                    Teklif Alın <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <!-- Card Indicator Dots -->
+                <div class="why-gloddia-dots">
+                    <span class="wg-dot active"></span>
+                    <span class="wg-dot"></span>
+                    <span class="wg-dot"></span>
+                    <span class="wg-dot"></span>
                 </div>
             </div>
-            <div class="col-lg-6" data-aos="fade-left">
-                <div id="showcase-3d-container"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Portfolio Section -->
-<section id="portfolio" class="portfolio-section py-5">
-    <div class="container">
-        <div class="section-header text-center mb-5">
-            <h2 class="section-title gradient-text-main" data-aos="fade-up">Portfolyomuz</h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Son çalışmalarımızdan seçkiler
-            </p>
-        </div>
+            <!-- Right Column - Big Cards -->
+            <div class="why-gloddia-right">
+                <div class="why-gloddia-cards">
 
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://via.placeholder.com/600x400/1a1a2e/6366F1?text=E-Ticaret" alt="Proje 1">
-                        <div class="portfolio-overlay">
-                            <h4>E-Ticaret Projesi</h4>
-                            <a href="#" class="btn btn-sm btn-outline-light">Detayları Gör</a>
+                    <!-- Card 1 -->
+                    <div class="wg-big-card active">
+                        <span class="wg-card-number">01</span>
+                        <div class="wg-big-card-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://via.placeholder.com/600x400/1a1a2e/8B5CF6?text=Kurumsal" alt="Proje 2">
-                        <div class="portfolio-overlay">
-                            <h4>Kurumsal Web Sitesi</h4>
-                            <a href="#" class="btn btn-sm btn-outline-light">Detayları Gör</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="portfolio-item">
-                    <div class="portfolio-img">
-                        <img src="https://via.placeholder.com/600x400/1a1a2e/A78BFA?text=Mobil+App" alt="Proje 3">
-                        <div class="portfolio-overlay">
-                            <h4>Mobil Uygulama</h4>
-                            <a href="#" class="btn btn-sm btn-outline-light">Detayları Gör</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Us Section -->
-<section id="why-us" class="why-us-section py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="why-us-card" data-aos="fade-up">
-                    <h2 class="section-title gradient-text-main text-center mb-4">Neden Gloddia Media?</h2>
-
-                    <div class="why-content text-center mb-5">
-                        <p class="lead">İhtiyaçlarınıza özel tasarlanmış akıllı çözüm önerilerimizle,
-                            projelerinizin
-                            başarıya ulaşması için doğru adımları atmanıza yardımcı olmaktan büyük mutluluk
-                            duyuyoruz.
+                        <h3 class="wg-big-card-title">Veri Odaklı Dijital Stratejiler</h3>
+                        <p class="wg-big-card-desc">
+                            Google Analytics, Search Console ve sektörel analizlerle desteklenen stratejilerimiz
+                            sayesinde
+                            rakiplerinizin önüne geçin. Her kararımız veriye dayanır, her adımımız ölçülebilir.
+                            Hedef kitlenizi tanıyor, davranışlarını analiz ediyor ve en etkili kanallarda onlara
+                            ulaşıyoruz.
                         </p>
-                        <p>Yeniliklere açık, genç ve dinamik ekibimiz, müşteri memnuniyetini en üst seviyede
-                            tutmak için
-                            gece gündüz demeden çalışmaya devam ediyor.</p>
-                    </div>
-
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="feature-box">
-                                <i class="fas fa-rocket gradient-icon"></i>
-                                <h4>Hızlı & Güvenilir</h4>
-                                <p>Üstün teknoloji altyapımız sayesinde hızlı, güvenilir ve verimli çözümler
-                                    sunuyoruz.
-                                </p>
+                        <div class="wg-card-stats">
+                            <div class="wg-stat-item">
+                                <div class="wg-stat-icon"><i class="fas fa-arrow-up"></i></div>
+                                <div class="wg-stat-content">
+                                    <div class="wg-stat-value">%450</div>
+                                    <div class="wg-stat-label">Organik Trafik Artışı</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box">
-                                <i class="fas fa-puzzle-piece gradient-icon"></i>
-                                <h4>Esnek Çözümler</h4>
-                                <p>İhtiyaçlara birebir uygun, akılcı ve esnek çözümler geliştiriyoruz.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box">
-                                <i class="fas fa-users gradient-icon"></i>
-                                <h4>Dinamik Ekip</h4>
-                                <p>Genç, yaratıcı ve enerjik ekibimizle projelere değer katıyoruz.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box">
-                                <i class="fas fa-handshake gradient-icon"></i>
-                                <h4>Şeffaf Süreç</h4>
-                                <p>İletişime açık, şeffaf ve güvenilir bir iş süreci sunuyoruz.</p>
+                            <div class="wg-stat-item">
+                                <div class="wg-stat-icon"><i class="fas fa-bullseye"></i></div>
+                                <div class="wg-stat-content">
+                                    <div class="wg-stat-value">Top 3</div>
+                                    <div class="wg-stat-label">Google Sıralama Hedefi</div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="text-center mt-5">
-                        <p class="fst-italic text-muted">"Sizin memnuniyetiniz için daima daha iyisini
-                            hedefliyor ve her
-                            projede kalite standartlarımızı yükseltiyoruz."</p>
+                    <!-- Card 2 -->
+                    <div class="wg-big-card">
+                        <span class="wg-card-number">02</span>
+                        <div class="wg-big-card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="wg-big-card-title">Modern Web Teknolojileri</h3>
+                        <p class="wg-big-card-desc">
+                            React, Next.js, PHP ve WordPress ile SEO dostu, hızlı yüklenen ve mobil uyumlu
+                            web siteleri geliştiriyoruz. Core Web Vitals optimizasyonu, SSL güvenliği ve CDN
+                            entegrasyonu ile hem kullanıcı deneyimini hem de arama motoru performansını maksimize
+                            ediyoruz.
+                        </p>
+                        <div class="wg-card-stats">
+                            <div class="wg-stat-item">
+                                <div class="wg-stat-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="wg-stat-content">
+                                    <div class="wg-stat-value">100%</div>
+                                    <div class="wg-stat-label">Responsive Tasarım</div>
+                                </div>
+                            </div>
+                            <div class="wg-stat-item">
+                                <div class="wg-stat-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="wg-stat-content">
+                                    <div class="wg-stat-value">95+</div>
+                                    <div class="wg-stat-label">PageSpeed Skoru</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Card 3 -->
+                    <div class="wg-big-card">
+                        <span class="wg-card-number">03</span>
+                        <div class="wg-big-card-icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <h3 class="wg-big-card-title">SEO & Google Ads Uzmanlığı</h3>
+                        <p class="wg-big-card-desc">
+                            Anahtar kelime araştırması, teknik SEO, içerik optimizasyonu ve Google Ads kampanyalarıyla
+                            markanızın görünürlüğünü maksimuma çıkarıyoruz. Backlink stratejisi, yerel SEO ve
+                            e-ticaret SEO dahil tüm alanlarda uzmanlaşmış ekibimizle tanışın.
+                        </p>
+                        <div class="wg-card-stats">
+                            <div class="wg-stat-item">
+                                <div class="wg-stat-icon"><i class="fas fa-search"></i></div>
+                                <div class="wg-stat-content">
+                                    <div class="wg-stat-value">500+</div>
+                                    <div class="wg-stat-label">Anahtar Kelime İlk Sayfa</div>
+                                </div>
+                            </div>
+                            <div class="wg-stat-item">
+                                <div class="wg-stat-icon"><i class="fas fa-percentage"></i></div>
+                                <div class="wg-stat-content">
+                                    <div class="wg-stat-value">%35</div>
+                                    <div class="wg-stat-label">Dönüşüm Oranı Artışı</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="wg-big-card">
+                        <span class="wg-card-number">04</span>
+                        <div class="wg-big-card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="wg-big-card-title">Şeffaf Süreç & Sürekli Destek</h3>
+                        <p class="wg-big-card-desc">
+                            Haftalık raporlar, canlı dashboard erişimi ve 7/24 destek hattımızla sürecinizi
+                            şeffaf bir şekilde takip edin. Proje yöneticilerimiz size özel tahsis edilir ve
+                            sorularınız anında yanıtlanır. Her adımda bilgilendirilirsiniz.
+                        </p>
+                        <div class="wg-card-stats">
+                            <div class="wg-stat-item">
+                                <div class="wg-stat-icon"><i class="fas fa-file-alt"></i></div>
+                                <div class="wg-stat-content">
+                                    <div class="wg-stat-value">Haftalık</div>
+                                    <div class="wg-stat-label">Detaylı Raporlama</div>
+                                </div>
+                            </div>
+                            <div class="wg-stat-item">
+                                <div class="wg-stat-icon"><i class="fas fa-headset"></i></div>
+                                <div class="wg-stat-content">
+                                    <div class="wg-stat-value">7/24</div>
+                                    <div class="wg-stat-label">Canlı Destek</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
         </div>
     </div>
 </section>
+<script src="assets/js/why-gloddia.js"></script>
 
-<!-- References Section -->
-<section class="references-section py-5">
-    <div class="container">
-        <div class="section-header text-center mb-5">
-            <h2 class="section-title gradient-text-main" data-aos="fade-up">Referanslarımız</h2>
-        </div>
-        <div class="row g-4 justify-content-center align-items-center">
-            <div class="col-6 col-md-2" data-aos="fade-in" data-aos-delay="100">
-                <div class="ref-logo"><img src="https://via.placeholder.com/150x80/f8f9fa/ccc?text=REF+1" alt="Ref 1">
-                </div>
-            </div>
-            <div class="col-6 col-md-2" data-aos="fade-in" data-aos-delay="200">
-                <div class="ref-logo"><img src="https://via.placeholder.com/150x80/f8f9fa/ccc?text=REF+2" alt="Ref 2">
-                </div>
-            </div>
-            <div class="col-6 col-md-2" data-aos="fade-in" data-aos-delay="300">
-                <div class="ref-logo"><img src="https://via.placeholder.com/150x80/f8f9fa/ccc?text=REF+3" alt="Ref 3">
-                </div>
-            </div>
-            <div class="col-6 col-md-2" data-aos="fade-in" data-aos-delay="400">
-                <div class="ref-logo"><img src="https://via.placeholder.com/150x80/f8f9fa/ccc?text=REF+4" alt="Ref 4">
-                </div>
-            </div>
-            <div class="col-6 col-md-2" data-aos="fade-in" data-aos-delay="500">
-                <div class="ref-logo"><img src="https://via.placeholder.com/150x80/f8f9fa/ccc?text=REF+5" alt="Ref 5">
-                </div>
-            </div>
-            <div class="col-6 col-md-2" data-aos="fade-in" data-aos-delay="600">
-                <div class="ref-logo"><img src="https://via.placeholder.com/150x80/f8f9fa/ccc?text=REF+6" alt="Ref 6">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<!-- Roadmap Section Styles -->
+<link rel="stylesheet" href="assets/css/roadmap.css">
 
-<!-- CTA Section -->
-<section id="contact" class="cta-section py-5">
+<!-- Roadmap Section - Başarıya Giden 6 Adım -->
+<section class="roadmap-section">
     <div class="container">
-        <div class="cta-box text-center" data-aos="zoom-in">
-            <h2 class="text-white mb-3">Projenizi Hayata Geçirelim</h2>
-            <p class="text-white-50 mb-4">Hemen bizimle iletişime geçin, markanız için en doğru stratejiyi
-                belirleyelim.
+        <!-- Section Header -->
+        <div class="roadmap-header">
+            <div class="roadmap-badge">
+                <i class="fas fa-route"></i>
+                Çalışma Sürecimiz
+            </div>
+            <h2 class="roadmap-title">Başarıya Giden</h2>
+            <div class="roadmap-highlight">
+                <span class="highlight-text">6 Adım</span>
+            </div>
+            <p class="roadmap-subtitle">
+                Projelerinizi hayata geçirirken izlediğimiz sistematik ve kanıtlanmış metodoloji
             </p>
-            <a href="contact.php" class="btn btn-light btn-lg">İletişime Geç</a>
+        </div>
+
+        <!-- Roadmap Container -->
+        <div class="roadmap-container">
+            <!-- SVG Path will be generated by JavaScript -->
+
+            <!-- Steps Container -->
+            <div class="roadmap-steps">
+                <!-- Step 1: Strateji (LEFT) -->
+                <div class="roadmap-step step-left">
+                    <div class="roadmap-card">
+                        <span class="step-number">01</span>
+                        <div class="step-icon">
+                            <i class="fas fa-chess"></i>
+                        </div>
+                        <h3 class="step-title">Strateji</h3>
+                        <p class="step-description">
+                            İş hedeflerinizi analiz ediyor, hedef kitlenizi belirliyoruz. Rakip analizi ve pazar
+                            araştırması ile size özel stratejik yol haritası oluşturuyoruz.
+                        </p>
+                    </div>
+                    <div class="roadmap-node">
+                        <div class="node-dot"></div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Tasarım (RIGHT) -->
+                <div class="roadmap-step step-right">
+                    <div class="roadmap-card">
+                        <span class="step-number">02</span>
+                        <div class="step-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="step-title">Tasarım</h3>
+                        <p class="step-description">
+                            Markanızın kimliğini yansıtan, kullanıcı deneyimi odaklı modern tasarımlar oluşturuyoruz.
+                            Her detay özenle planlanır.
+                        </p>
+                    </div>
+                    <div class="roadmap-connector"></div>
+                    <div class="roadmap-node">
+                        <div class="node-dot"></div>
+                    </div>
+                </div>
+
+                <!-- Step 3: İçerik (LEFT) -->
+                <div class="roadmap-step step-left">
+                    <div class="roadmap-card">
+                        <span class="step-number">03</span>
+                        <div class="step-icon">
+                            <i class="fas fa-pen-fancy"></i>
+                        </div>
+                        <h3 class="step-title">İçerik</h3>
+                        <p class="step-description">
+                            SEO uyumlu, özgün ve etkili içerikler hazırlıyoruz. Metin, görsel ve multimedya içerikler
+                            ile markanızı öne çıkarıyoruz.
+                        </p>
+                    </div>
+                    <div class="roadmap-connector"></div>
+                    <div class="roadmap-node">
+                        <div class="node-dot"></div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Uygulama (RIGHT) -->
+                <div class="roadmap-step step-right">
+                    <div class="roadmap-card">
+                        <span class="step-number">04</span>
+                        <div class="step-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="step-title">Uygulama</h3>
+                        <p class="step-description">
+                            Onaylanan tasarımları en güncel teknolojilerle hayata geçiriyoruz. Responsive, hızlı ve
+                            güvenli çözümler sunuyoruz.
+                        </p>
+                    </div>
+                    <div class="roadmap-connector"></div>
+                    <div class="roadmap-node">
+                        <div class="node-dot"></div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Analiz (LEFT) -->
+                <div class="roadmap-step step-left">
+                    <div class="roadmap-card">
+                        <span class="step-number">05</span>
+                        <div class="step-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="step-title">Analiz</h3>
+                        <p class="step-description">
+                            Detaylı performans analizleri ve raporlamalar yapıyoruz. Veriye dayalı kararlarla sürekli
+                            iyileştirme sağlıyoruz.
+                        </p>
+                    </div>
+                    <div class="roadmap-connector"></div>
+                    <div class="roadmap-node">
+                        <div class="node-dot"></div>
+                    </div>
+                </div>
+
+                <!-- Step 6: Sonuç (CENTER - Final Step) -->
+                <div class="roadmap-step step-center">
+                    <div class="roadmap-card">
+                        <span class="step-number">06</span>
+                        <div class="step-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="step-title">Sonuç</h3>
+                        <p class="step-description">
+                            Hedeflenen sonuçlara ulaşıyor, başarıyı birlikte kutluyoruz. Sürekli destek ve bakım
+                            hizmetimizle yanınızdayız.
+                        </p>
+                    </div>
+                    <div class="roadmap-node">
+                        <div class="node-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Roadmap Animation Script -->
+<script src="assets/js/roadmap.js"></script>
+
+
+<!-- Final CTA -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="cta-modern p-5 rounded-5 position-relative overflow-hidden" data-aos="zoom-in">
+            <div class="cta-glow-bg"></div>
+            <div class="row align-items-center position-relative z-2">
+                <div class="col-lg-8 text-lg-start text-center mb-4 mb-lg-0">
+                    <h3 class="display-6 fw-bold text-white mb-3">Projenizi Hayata Geçirelim</h3>
+                    <p class="lead text-white-50 mb-0">
+                        Dijital dünyada fark yaratmak için hemen bizimle iletişime geçin. Markanız için en doğru
+                        stratejiyi birlikte belirleyelim.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end text-center">
+                    <a href="contact.php" class="btn btn-gradient btn-xl shadow-lg">
+                        Hemen Başlayın <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

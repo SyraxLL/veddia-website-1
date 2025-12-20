@@ -1,0 +1,622 @@
+/* ============================================
+   ROADMAP SECTION - Corner-Based Stepped Path
+   Cards positioned at path corners
+   ============================================ */
+
+.roadmap-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Section Header */
+.roadmap-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.roadmap-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6366f1;
+    margin-bottom: 20px;
+}
+
+.roadmap-badge i {
+    font-size: 0.875rem;
+}
+
+.roadmap-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+/* 6 Adım Highlight - Simple & Clean */
+.roadmap-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.highlight-text {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+}
+
+.roadmap-highlight::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #06b6d4, #0891b2);
+    border-radius: 2px;
+    margin-top: 16px;
+}
+
+.roadmap-subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Roadmap Container */
+.roadmap-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================================
+   SVG PATH CONTAINER
+   ============================================ */
+
+.roadmap-path-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.roadmap-path-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+/* Background path (static, light) */
+.roadmap-path-bg {
+    fill: none;
+    stroke: #e2e8f0;
+    stroke-width: 4;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+}
+
+/* Animated path (gradient colored) */
+.roadmap-path-progress {
+    fill: none;
+    stroke: url(#pathGradient);
+    stroke-width: 4;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+    stroke-dasharray: var(--path-length);
+    stroke-dashoffset: var(--path-length);
+    transition: stroke-dashoffset 0.05s linear;
+}
+
+/* Path glow effect */
+.roadmap-path-glow {
+    fill: none;
+    stroke: url(#pathGradient);
+    stroke-width: 12;
+    stroke-linecap: square;
+    stroke-linejoin: miter;
+    opacity: 0.2;
+    filter: blur(8px);
+    stroke-dasharray: var(--path-length);
+    stroke-dashoffset: var(--path-length);
+    transition: stroke-dashoffset 0.05s linear;
+}
+
+/* ============================================
+   ROADMAP STEPS - CORNER ALIGNED
+   ============================================ */
+
+.roadmap-steps {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Individual Step */
+.roadmap-step {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Left aligned steps (01, 03, 05) - Cards on LEFT side */
+.roadmap-step.step-left {
+    justify-content: flex-start;
+    padding-left: 2%;
+    padding-right: 55%;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.roadmap-step.step-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Right aligned steps (02, 04) - Cards on RIGHT side */
+.roadmap-step.step-right {
+    justify-content: flex-end;
+    padding-right: 2%;
+    padding-left: 55%;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.roadmap-step.step-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Centered final step (06) */
+.roadmap-step.step-center {
+    justify-content: center;
+    padding: 0 20%;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.roadmap-step.step-center.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================
+   STEP CARD - With Creative Hover Animations
+   ============================================ */
+
+.roadmap-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 2px solid transparent;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    max-width: 420px;
+    z-index: 3;
+    overflow: hidden;
+    background-clip: padding-box;
+}
+
+/* Animated gradient border on hover */
+.roadmap-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4, #8b5cf6, #6366f1);
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+/* Colored fog/mist effect on hover */
+.roadmap-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 50% 50%,
+            rgba(99, 102, 241, 0.15) 0%,
+            rgba(139, 92, 246, 0.1) 30%,
+            rgba(6, 182, 212, 0.05) 60%,
+            transparent 80%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    border-radius: 20px;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow:
+        0 25px 50px rgba(99, 102, 241, 0.2),
+        0 0 40px rgba(99, 102, 241, 0.1);
+}
+
+.roadmap-card:hover::before {
+    opacity: 1;
+    animation: gradientBorder 3s ease infinite;
+}
+
+.roadmap-card:hover::after {
+    opacity: 1;
+}
+
+@keyframes gradientBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Center step card wider */
+.roadmap-step.step-center .roadmap-card {
+    max-width: 480px;
+    text-align: center;
+}
+
+.roadmap-step.step-center .step-icon {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Step Number Badge - Top Right Corner (Inside Card) */
+.step-number {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Number badge pulse animation on hover */
+.roadmap-card:hover .step-number {
+    animation: numberPulse 1.5s ease-in-out infinite;
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.5);
+}
+
+@keyframes numberPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 20px rgba(99, 102, 241, 0.5);
+    }
+
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 8px 35px rgba(99, 102, 241, 0.7);
+    }
+}
+
+.roadmap-step.step-center .step-number {
+    right: 20px;
+    left: auto;
+    transform: none;
+}
+
+/* Step Icon */
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.step-icon i {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.4s ease;
+}
+
+/* Icon hover - subtle lift and prominent */
+.roadmap-card:hover .step-icon {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    transform: translateY(-5px) scale(1.08);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(99, 102, 241, 0.45);
+}
+
+.roadmap-card:hover .step-icon i {
+    -webkit-text-fill-color: #ffffff;
+    background: none;
+}
+
+/* Step Content */
+.step-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.roadmap-card:hover .step-title {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.step-description {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.roadmap-card:hover .step-description {
+    color: #475569;
+}
+
+/* Node dot - hidden on desktop */
+.roadmap-node {
+    display: none;
+}
+
+/* ============================================
+   RESPONSIVE - TABLET
+   ============================================ */
+
+@media (max-width: 992px) {
+    .roadmap-section {
+        padding: 80px 0;
+    }
+
+    .roadmap-header {
+        margin-bottom: 60px;
+    }
+
+    .roadmap-steps {
+        gap: 60px;
+    }
+
+    .roadmap-step.step-left {
+        padding-left: 3%;
+        padding-right: 48%;
+    }
+
+    .roadmap-step.step-right {
+        padding-right: 3%;
+        padding-left: 48%;
+    }
+
+    .roadmap-step.step-center {
+        padding: 0 15%;
+    }
+
+    .roadmap-card {
+        padding: 28px;
+        max-width: 360px;
+    }
+
+    .roadmap-step.step-center .roadmap-card {
+        max-width: 400px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE (Single Column Stack)
+   ============================================ */
+
+@media (max-width: 768px) {
+    .roadmap-section {
+        padding: 60px 0;
+    }
+
+    .roadmap-header {
+        margin-bottom: 50px;
+    }
+
+    /* Hide SVG path on mobile */
+    .roadmap-path-container {
+        display: none;
+    }
+
+    /* Show node dots on mobile */
+    .roadmap-node {
+        display: flex;
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 5;
+    }
+
+    .node-dot {
+        width: 20px;
+        height: 20px;
+        background: #ffffff;
+        border: 4px solid #e2e8f0;
+        border-radius: 50%;
+        transition: all 0.4s ease;
+    }
+
+    .roadmap-step.visible .node-dot {
+        border-color: #6366f1;
+        background: #6366f1;
+        box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+    }
+
+    .roadmap-step.visible .node-dot::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        background: #ffffff;
+        border-radius: 50%;
+    }
+
+    /* Mobile vertical line */
+    .roadmap-steps::before {
+        content: '';
+        position: absolute;
+        left: 38px;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: #e2e8f0;
+        border-radius: 2px;
+        z-index: 0;
+    }
+
+    .roadmap-steps {
+        gap: 40px;
+    }
+
+    /* All steps become single column */
+    .roadmap-step {
+        padding-left: 70px !important;
+        padding-right: 20px !important;
+        justify-content: flex-start !important;
+    }
+
+    .roadmap-step.step-left,
+    .roadmap-step.step-right,
+    .roadmap-step.step-center {
+        opacity: 0;
+        transform: translateY(30px) translateX(0);
+    }
+
+    .roadmap-step.step-left.visible,
+    .roadmap-step.step-right.visible,
+    .roadmap-step.step-center.visible {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+
+    .roadmap-card {
+        width: 100%;
+        max-width: none !important;
+        padding: 28px 24px;
+        text-align: left !important;
+    }
+
+    .roadmap-step.step-center .step-icon {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .step-number {
+        top: -12px;
+        left: 24px !important;
+        transform: none !important;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .step-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .step-icon i {
+        font-size: 1.25rem;
+    }
+
+    .step-title {
+        font-size: 1.25rem;
+    }
+
+    .step-description {
+        font-size: 0.9375rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .roadmap-badge {
+        font-size: 0.8125rem;
+        padding: 6px 16px;
+    }
+
+    .roadmap-title {
+        font-size: 1.75rem;
+    }
+
+    .roadmap-subtitle {
+        font-size: 1rem;
+    }
+
+    .roadmap-step {
+        padding-left: 60px !important;
+    }
+
+    .roadmap-steps::before {
+        left: 33px;
+    }
+
+    .roadmap-node {
+        left: 25px;
+    }
+}

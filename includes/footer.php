@@ -8,10 +8,10 @@
             <!-- Company Info -->
             <div class="col-lg-4 col-md-6">
                 <div class="footer-widget">
-                    <img src="assets/img/logo.png" alt="Gloddia Media" class="footer-logo mb-3">
-                    <p class="footer-desc">Gloddia Media ile web tasarım, yazılım geliştirme ve dijital pazarlamada
+                    <img src="assets/img/logo.png" alt="Veddia Media" class="footer-logo mb-3">
+                    <p class="footer-desc">Veddia Media ile web tasarım, yazılım geliştirme ve dijital pazarlamada
                         profesyonel çözümler. Dijital dünyada fark yaratıyoruz!</p>
-                    
+
                     <!-- Social Links -->
                     <div class="social-links mt-4">
                         <a href="#" class="social-link" title="Facebook">
@@ -104,7 +104,7 @@
                             </div>
                             <div class="contact-info">
                                 <span class="contact-label">E-posta</span>
-                                <a href="mailto:info@gloddia.com" class="contact-value">info@gloddia.com</a>
+                                <a href="mailto:info@veddia.com" class="contact-value">info@veddia.com</a>
                             </div>
                         </li>
                         <li>
@@ -126,7 +126,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <p class="mb-0">
-                        &copy; <?php echo date('Y'); ?> <strong>Gloddia Media</strong>. Tüm hakları saklıdır.
+                        &copy; <?php echo date('Y'); ?> <strong>Veddia Media</strong>. Tüm hakları saklıdır.
                     </p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
@@ -140,8 +140,8 @@
             <div class="row mt-3">
                 <div class="col-12 text-center">
                     <p class="mb-0 small">
-                        Tasarlandı ve Geliştirildi <i class="fas fa-heart text-gradient"></i> ile 
-                        <strong>Gloddia Team</strong> tarafından
+                        Tasarlandı ve Geliştirildi <i class="fas fa-heart text-gradient"></i> ile
+                        <strong>Veddia Team</strong> tarafından
                     </p>
                 </div>
             </div>
@@ -176,31 +176,32 @@
 
 <!-- Footer Scripts -->
 <script>
-// AOS Init
-AOS.init({
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true
-});
-
-// Back to Top Button
-const backToTopBtn = document.getElementById('backToTop');
-
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopBtn.classList.add('show');
-    } else {
-        backToTopBtn.classList.remove('show');
-    }
-});
-
-backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+    // AOS Init
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
     });
-});
+
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 </script>
 
 </body>
+
 </html>

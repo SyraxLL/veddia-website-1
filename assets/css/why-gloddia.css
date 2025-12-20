@@ -1,0 +1,351 @@
+/* ============================================
+   WHY GLODDIA SECTION - Single Card View
+   Only one card visible, switches on scroll
+   ============================================ */
+
+.why-gloddia-section {
+    position: relative;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.why-gloddia-wrapper {
+    position: relative;
+    /* 4 cards = 4x viewport height for scroll space */
+    height: 300vh;
+}
+
+.why-gloddia-container {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    gap: 60px;
+}
+
+/* ============================================
+   LEFT COLUMN
+   ============================================ */
+
+.why-gloddia-left {
+    flex: 0 0 45%;
+    max-width: 45%;
+    z-index: 2;
+}
+
+.why-gloddia-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #06b6d4;
+    margin-bottom: 24px;
+    width: fit-content;
+}
+
+.why-gloddia-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.why-gloddia-title span {
+    background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.why-gloddia-desc {
+    font-size: 1.1rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 32px;
+}
+
+.why-gloddia-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+}
+
+.why-gloddia-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    color: #475569;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.why-gloddia-features li:last-child {
+    border-bottom: none;
+}
+
+.why-gloddia-features li i {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    color: #06b6d4;
+}
+
+.why-gloddia-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3);
+}
+
+.why-gloddia-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(6, 182, 212, 0.4);
+    color: #ffffff;
+}
+
+/* Dots */
+.why-gloddia-dots {
+    display: flex;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+.wg-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wg-dot.active {
+    background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+    transform: scale(1.2);
+}
+
+/* ============================================
+   RIGHT COLUMN - Single Card Display
+   ============================================ */
+
+.why-gloddia-right {
+    flex: 0 0 55%;
+    max-width: 55%;
+    position: relative;
+    height: 420px;
+}
+
+.why-gloddia-cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Cards stacked - only active one visible */
+.wg-big-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(40px);
+    pointer-events: none;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wg-big-card.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Card styling */
+.wg-card-number {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.wg-big-card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.wg-big-card-icon i {
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.wg-big-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.wg-big-card-desc {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.wg-card-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.wg-stat-item {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 140px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
+    border-radius: 12px;
+    border: 1px solid rgba(6, 182, 212, 0.1);
+}
+
+.wg-stat-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wg-stat-icon i {
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.wg-stat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.wg-stat-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* ============================================
+   RESPONSIVE - Mobile shows all cards
+   ============================================ */
+
+@media (max-width: 992px) {
+    .why-gloddia-wrapper {
+        height: auto;
+    }
+
+    .why-gloddia-container {
+        position: relative;
+        height: auto;
+        flex-direction: column;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .why-gloddia-left,
+    .why-gloddia-right {
+        flex: none;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .why-gloddia-left {
+        text-align: center;
+    }
+
+    .why-gloddia-right {
+        height: auto;
+    }
+
+    .why-gloddia-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+    }
+
+    .wg-big-card {
+        position: relative;
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+    }
+
+    .why-gloddia-dots {
+        display: none;
+    }
+
+    .why-gloddia-features {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .wg-big-card {
+        padding: 24px;
+    }
+
+    .wg-card-number {
+        font-size: 3rem;
+    }
+
+    .wg-stat-item {
+        flex: 1 1 100%;
+    }
+}

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Gloddia Media - Modern Dijital Çözümler, Web Tasarım, Yazılım ve Dijital Pazarlama Ajansı">
+        content="Veddia Media - Modern Dijital Çözümler, Web Tasarım, Yazılım ve Dijital Pazarlama Ajansı">
     <title>
-        <?php echo isset($pageTitle) ? $pageTitle . ' - Gloddia Media' : 'Gloddia Media - Modern Dijital Çözümler'; ?>
+        <?php echo isset($pageTitle) ? $pageTitle . ' - Veddia Media' : 'Veddia Media - Modern Dijital Çözümler'; ?>
     </title>
 
     <!-- Google Fonts -->
@@ -52,8 +52,8 @@
                     <a href="tel:05325906804" class="contact-item">
                         <i class="fas fa-phone-alt"></i> 0 532 590 68 04
                     </a>
-                    <a href="mailto:info@gloddia.com" class="contact-item">
-                        <i class="fas fa-envelope"></i> info@gloddia.com
+                    <a href="mailto:info@veddia.com" class="contact-item">
+                        <i class="fas fa-envelope"></i> info@veddia.com
                     </a>
                 </div>
             </div>
@@ -65,7 +65,7 @@
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <img src="assets/img/logo.png" alt="Gloddia Media" class="logo-img">
+                <img src="assets/img/logo.png" alt="Veddia Media" class="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -121,8 +121,6 @@
                                             <li><a href="#">Google Reklamı</a></li>
                                             <li><a href="#">Youtube Reklamı</a></li>
                                             <li><a href="#">Instagram Reklamı</a></li>
-                                            <li><a href="#">X (Twitter) Reklamı</a></li>
-                                            <li><a href="#">TikTok Reklamı</a></li>
                                         </ul>
                                     </div>
 

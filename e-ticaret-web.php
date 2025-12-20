@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="E-Ticaret Web Sitesi Tasarımı - Profesyonel, güvenli ve satış odaklı online mağaza çözümleri. Gloddia Media ile dijitalde satışa başlayın.">
-    <title>E-Ticaret Web Sitesi Tasarımı - Gloddia Media</title>
+        content="E-Ticaret Web Sitesi Tasarımı - Profesyonel, güvenli ve satış odaklı online mağaza çözümleri. Veddia Media ile dijitalde satışa başlayın.">
+    <title>E-Ticaret Web Sitesi Tasarımı - Veddia Media</title>
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
     <!-- Google Fonts -->
@@ -51,8 +51,8 @@
                     <a href="tel:05325906804" class="contact-item">
                         <i class="fas fa-phone-alt"></i> 0 532 590 68 04
                     </a>
-                    <a href="mailto:info@gloddia.com" class="contact-item">
-                        <i class="fas fa-envelope"></i> info@gloddia.com
+                    <a href="mailto:info@veddia.com" class="contact-item">
+                        <i class="fas fa-envelope"></i> info@veddia.com
                     </a>
                 </div>
             </div>
@@ -63,7 +63,7 @@
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.php">
-                <img src="assets/img/logo.png" alt="Gloddia Media" class="logo-img">
+                <img src="assets/img/logo.png" alt="Veddia Media" class="logo-img">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -622,8 +622,8 @@
                 <!-- Company Info -->
                 <div class="col-lg-4 col-md-6">
                     <div class="footer-widget">
-                        <img src="assets/img/logo.png" alt="Gloddia Media" class="footer-logo mb-3">
-                        <p class="footer-desc">Gloddia Media ile web tasarım, yazılım geliştirme ve dijital pazarlamada
+                        <img src="assets/img/logo.png" alt="Veddia Media" class="footer-logo mb-3">
+                        <p class="footer-desc">Veddia Media ile web tasarım, yazılım geliştirme ve dijital pazarlamada
                             profesyonel çözümler. Dijital dünyada fark yaratıyoruz!</p>
 
                         <!-- Social Links -->
@@ -715,7 +715,7 @@
                                 </div>
                                 <div class="contact-info">
                                     <span class="contact-label">E-posta</span>
-                                    <a href="mailto:info@gloddia.com" class="contact-value">info@gloddia.com</a>
+                                    <a href="mailto:info@veddia.com" class="contact-value">info@veddia.com</a>
                                 </div>
                             </li>
                             <li>
@@ -737,7 +737,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         <p class="mb-0">
-                            &copy; 2025 <strong>Gloddia Media</strong>. Tüm hakları saklıdır.
+                            &copy; 2025 <strong>Veddia Media</strong>. Tüm hakları saklıdır.
                         </p>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
@@ -752,7 +752,7 @@
                     <div class="col-12 text-center">
                         <p class="mb-0 small">
                             Tasarlandı ve Geliştirildi <i class="fas fa-heart text-gradient"></i> ile
-                            <strong>Gloddia Team</strong> tarafından
+                            <strong>Veddia Team</strong> tarafından
                         </p>
                     </div>
                 </div>
