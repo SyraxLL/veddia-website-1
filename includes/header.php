@@ -167,11 +167,6 @@
                         <a class="nav-link" href="#references">Referans</a>
                     </li>
 
-                    <!-- Blog -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.php">Blog</a>
-                    </li>
-
                     <!-- İletişim -->
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">İletişim</a>
