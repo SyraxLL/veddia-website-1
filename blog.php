@@ -2,6 +2,9 @@
 $pageTitle = "Blog";
 require_once 'includes/database.php';
 
+// Zamanı gelen planlı blogları yayınla
+publishScheduledBlogs();
+
 // Blogları getir
 $category = $_GET['category'] ?? '';
 

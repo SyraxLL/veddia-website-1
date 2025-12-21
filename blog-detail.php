@@ -37,13 +37,12 @@ include 'includes/header.php';
 <style>
     .blog-detail-hero {
         position: relative;
-        min-height: 60vh;
+        min-height: 55vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        overflow: hidden;
     }
 
     .blog-detail-hero::before {
@@ -53,7 +52,75 @@ include 'includes/header.php';
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+        background:
+            radial-gradient(circle at 20% 80%, rgba(20, 184, 166, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(99, 102, 241, 0.1) 0%, transparent 40%);
+    }
+
+    .blog-detail-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2314b8a6' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    /* Floating shapes */
+    .hero-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .hero-shape {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.1;
+        animation: float 8s ease-in-out infinite;
+    }
+
+    .hero-shape-1 {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(135deg, #14b8a6, #0ea5e9);
+        top: -100px;
+        right: -50px;
+        animation-delay: 0s;
+    }
+
+    .hero-shape-2 {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(135deg, #6366f1, #8b5cf6);
+        bottom: -50px;
+        left: -50px;
+        animation-delay: 2s;
+    }
+
+    .hero-shape-3 {
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(135deg, #f59e0b, #ef4444);
+        top: 50%;
+        left: 10%;
+        animation-delay: 4s;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0) rotate(0deg);
+        }
+
+        50% {
+            transform: translateY(-20px) rotate(10deg);
+        }
     }
 
     .blog-detail-hero .container {
@@ -63,9 +130,10 @@ include 'includes/header.php';
 
     .blog-detail-category {
         display: inline-block;
-        background: rgba(255, 255, 255, 0.2);
+        background: linear-gradient(135deg, rgba(20, 184, 166, 0.2), rgba(14, 165, 233, 0.2));
+        border: 1px solid rgba(20, 184, 166, 0.3);
         backdrop-filter: blur(10px);
-        color: white;
+        color: #5eead4;
         padding: 8px 20px;
         border-radius: 50px;
         font-size: 0.85rem;
@@ -74,18 +142,21 @@ include 'includes/header.php';
     }
 
     .blog-detail-title {
-        font-size: 3rem;
+        font-size: 2.8rem;
         font-weight: 800;
         color: white;
-        margin-bottom: 20px;
-        line-height: 1.2;
+        margin-bottom: 25px;
+        line-height: 1.3;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .blog-detail-meta {
         display: flex;
         flex-wrap: wrap;
         gap: 25px;
-        color: rgba(255, 255, 255, 0.9);
+        color: #94a3b8;
         font-size: 0.95rem;
     }
 
@@ -96,13 +167,13 @@ include 'includes/header.php';
     }
 
     .blog-detail-meta i {
-        opacity: 0.8;
+        color: #14b8a6;
     }
 
     /* Content */
     .blog-content-section {
         padding: 80px 0;
-        background: #f8f9ff;
+        background: #f8fafc;
     }
 
     .blog-content-wrapper {
@@ -130,7 +201,7 @@ include 'includes/header.php';
     .blog-content h2,
     .blog-content h3,
     .blog-content h4 {
-        color: #1a1a2e;
+        color: #1e293b;
         margin-top: 2rem;
         margin-bottom: 1rem;
     }
@@ -160,7 +231,7 @@ include 'includes/header.php';
     }
 
     .blog-content blockquote {
-        border-left: 4px solid #667eea;
+        border-left: 4px solid #14b8a6;
         padding-left: 20px;
         margin: 2rem 0;
         font-style: italic;
@@ -168,7 +239,7 @@ include 'includes/header.php';
     }
 
     .blog-content a {
-        color: #667eea;
+        color: #14b8a6;
         text-decoration: underline;
     }
 
@@ -230,14 +301,14 @@ include 'includes/header.php';
         gap: 20px;
         margin-top: 40px;
         padding: 30px;
-        background: #f8f9ff;
+        background: #f8fafc;
         border-radius: 16px;
     }
 
     .author-avatar {
         width: 70px;
         height: 70px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
+        background: linear-gradient(135deg, #14b8a6, #0ea5e9);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -249,7 +320,7 @@ include 'includes/header.php';
 
     .author-info h4 {
         font-size: 1.1rem;
-        color: #1a1a2e;
+        color: #1e293b;
         margin-bottom: 5px;
     }
 
@@ -267,13 +338,13 @@ include 'includes/header.php';
 
     .section-title-sm {
         font-size: 1.75rem;
-        color: #1a1a2e;
+        color: #1e293b;
         margin-bottom: 40px;
         text-align: center;
     }
 
     .related-card {
-        background: #f8f9ff;
+        background: #f8fafc;
         border-radius: 16px;
         overflow: hidden;
         transition: all 0.3s ease;
@@ -298,7 +369,7 @@ include 'includes/header.php';
     .related-card-title {
         font-size: 1.1rem;
         font-weight: 700;
-        color: #1a1a2e;
+        color: #1e293b;
         margin-bottom: 10px;
         line-height: 1.4;
     }
@@ -309,7 +380,7 @@ include 'includes/header.php';
     }
 
     .related-card-title a:hover {
-        color: #667eea;
+        color: #14b8a6;
     }
 
     .related-card-meta {
@@ -320,7 +391,7 @@ include 'includes/header.php';
     /* Responsive */
     @media (max-width: 768px) {
         .blog-detail-title {
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         .blog-content-card {
@@ -335,8 +406,12 @@ include 'includes/header.php';
 </style>
 
 <!-- Blog Detail Hero -->
-<section class="blog-detail-hero"
-    style="background-image: url('<?php echo htmlspecialchars($blog['image'] ?: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200'); ?>');">
+<section class="blog-detail-hero">
+    <div class="hero-shapes">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+        <div class="hero-shape hero-shape-3"></div>
+    </div>
     <div class="container text-center" style="padding: 180px 0 100px;">
         <span class="blog-detail-category"><?php echo htmlspecialchars($blog['category']); ?></span>
         <h1 class="blog-detail-title" data-aos="fade-up"><?php echo htmlspecialchars($blog['title']); ?></h1>
