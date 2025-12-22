@@ -23,11 +23,22 @@
                 <i class="fas fa-newspaper"></i> Blog Yazıları
             </a>
         </li>
+        <li>
+            <a href="references.php"
+                class="<?php echo in_array(basename($_SERVER['PHP_SELF']), ['references.php', 'reference-add.php', 'reference-edit.php']) ? 'active' : ''; ?>">
+                <i class="fas fa-briefcase"></i> Referanslar
+            </a>
+        </li>
 
         <li class="sidebar-menu-label">Hızlı İşlemler</li>
         <li>
             <a href="blog-add.php">
                 <i class="fas fa-plus-circle"></i> Yeni Blog Ekle
+            </a>
+        </li>
+        <li>
+            <a href="reference-add.php">
+                <i class="fas fa-plus-square"></i> Yeni Referans Ekle
             </a>
         </li>
 

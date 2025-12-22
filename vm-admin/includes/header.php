@@ -7,7 +7,116 @@
     <title><?php echo $pageTitle ?? 'Admin Panel'; ?> - Veddia Media</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Flatpickr Date Picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/tr.js"></script>
+    <!-- Choices.js Select -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
     <style>
+        /* Choices.js Custom Styles */
+        /* Choices.js Custom Styles */
+        .choices {
+            margin-bottom: 0;
+            overflow: visible;
+        }
+
+        .choices__inner {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            /* Daha ince border */
+            border-radius: 8px;
+            /* Daha az radius */
+            padding: 4px 8px;
+            /* Daha az padding */
+            min-height: 42px;
+            /* Standart yükseklik */
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .choices__inner:hover {
+            border-color: #cbd5e1;
+        }
+
+        .choices.is-focused .choices__inner {
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .choices__list--dropdown {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            /* Daha hafif gölge */
+            margin-top: 4px;
+            z-index: 9999;
+            /* Çok yüksek z-index */
+        }
+
+        .choices__list--dropdown .choices__item {
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            color: #334155;
+            transition: all 0.1s ease;
+        }
+
+        .choices__list--dropdown .choices__item--selectable.is-highlighted {
+            background-color: #f1f5f9;
+            color: #6366f1;
+        }
+
+        .choices__input {
+            background: transparent !important;
+            border: none !important;
+            /* Mavi border'ı kaldır */
+            box-shadow: none !important;
+            padding: 4px 0 !important;
+            margin-bottom: 0 !important;
+            font-size: 0.9rem !important;
+            outline: none !important;
+            /* Focus ring'i iptal et */
+        }
+
+        .choices__input:focus {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .choices__list--multiple .choices__item {
+            background-color: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 4px;
+            color: #3b82f6;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .choices[data-type*='select-multiple'] .choices__button {
+            border-left: 1px solid #bfdbfe;
+            margin: 0 -4px 0 8px;
+            padding-left: 8px;
+            opacity: 0.6;
+            color: #3b82f6;
+        }
+
+        .choices__list--dropdown .choices__group .choices__heading {
+            color: #94a3b8;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border-bottom: 1px solid #f1f5f9;
+            padding: 8px 12px;
+        }
+
+        .choices[data-type*='select-one'].is-open::after {
+            border-color: transparent transparent #6366f1;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -119,7 +228,7 @@
             padding: 12px 12px 8px;
             font-size: 0.7rem;
             font-weight: 700;
-            color: #475569;
+            color: #94a3b8;
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
@@ -343,7 +452,8 @@
             border-radius: 20px;
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
+            overflow: visible;
+            /* Dropdown taşabilsin */
             transition: all 0.3s ease;
         }
 
@@ -361,6 +471,8 @@
             gap: 12px;
             font-size: 1rem;
             color: #1e293b;
+            border-radius: 20px 20px 0 0;
+            /* Köşeleri koru */
         }
 
         .card-header i {
@@ -512,7 +624,7 @@
         .table td {
             padding: 18px 20px;
             text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            border-bottom: 1px solid #f1f5f9;
         }
 
         .table th {
@@ -521,7 +633,7 @@
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            background: rgba(0, 0, 0, 0.2);
+            background: #f8fafc;
         }
 
         .table tbody tr {
@@ -529,11 +641,12 @@
         }
 
         .table tbody tr:hover {
-            background: rgba(99, 102, 241, 0.05);
+            background: rgba(99, 102, 241, 0.03);
         }
 
         .table td {
             font-size: 0.925rem;
+            color: #334155;
         }
 
         /* ==========================================
@@ -552,26 +665,26 @@
         }
 
         .badge-success {
-            background: rgba(16, 185, 129, 0.15);
-            color: #34d399;
+            background: rgba(16, 185, 129, 0.1);
+            color: #059669;
             border: 1px solid rgba(16, 185, 129, 0.2);
         }
 
         .badge-warning {
-            background: rgba(245, 158, 11, 0.15);
-            color: #fbbf24;
+            background: rgba(245, 158, 11, 0.1);
+            color: #d97706;
             border: 1px solid rgba(245, 158, 11, 0.2);
         }
 
         .badge-danger {
-            background: rgba(239, 68, 68, 0.15);
-            color: #f87171;
+            background: rgba(239, 68, 68, 0.1);
+            color: #dc2626;
             border: 1px solid rgba(239, 68, 68, 0.2);
         }
 
         .badge-info {
-            background: rgba(99, 102, 241, 0.15);
-            color: #a5b4fc;
+            background: rgba(99, 102, 241, 0.1);
+            color: #4f46e5;
             border: 1px solid rgba(99, 102, 241, 0.2);
         }
 
@@ -587,31 +700,31 @@
             display: block;
             margin-bottom: 10px;
             font-weight: 600;
-            color: #94a3b8;
+            color: #475569;
             font-size: 0.875rem;
         }
 
         .form-control {
             width: 100%;
             padding: 14px 18px;
-            background: rgba(15, 23, 42, 0.6);
-            border: 2px solid rgba(100, 116, 139, 0.2);
+            background: white;
+            border: 2px solid #e2e8f0;
             border-radius: 12px;
-            color: #e2e8f0;
+            color: #1e293b;
             font-size: 0.95rem;
             font-family: inherit;
             transition: all 0.3s ease;
         }
 
         .form-control::placeholder {
-            color: #475569;
+            color: #94a3b8;
         }
 
         .form-control:focus {
             outline: none;
             border-color: #6366f1;
-            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
-            background: rgba(15, 23, 42, 0.8);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+            background: white;
         }
 
         textarea.form-control {

@@ -1,5 +1,22 @@
 <?php
 $pageTitle = 'Referanslar';
+require_once 'includes/database.php';
+$projects = getProjects();
+$categories = [];
+foreach ($projects as $project) {
+    if (!empty($project['category'])) {
+        $cats = explode(',', $project['category']);
+        foreach ($cats as $cat) {
+            $catName = trim($cat);
+            if (!empty($catName)) {
+                $categories[] = $catName;
+            }
+        }
+    }
+}
+$categories = array_unique($categories);
+sort($categories);
+
 include 'includes/header.php';
 ?>
 
@@ -219,8 +236,10 @@ include 'includes/header.php';
 
     .reference-card:hover {
         transform: translateY(-12px);
-        box-shadow: 0 25px 50px rgba(99, 102, 241, 0.15);
-        border-color: rgba(99, 102, 241, 0.2);
+        box-shadow: 0 25px 50px rgba(20, 184, 166, 0.15);
+        /* Teal Shadow */
+        border-color: rgba(20, 184, 166, 0.2);
+        /* Teal Border */
     }
 
     .reference-card-image {
@@ -246,7 +265,8 @@ include 'includes/header.php';
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(99, 102, 241, 0.9) 0%, rgba(139, 92, 246, 0.9) 100%);
+        background: linear-gradient(135deg, rgba(20, 184, 166, 0.4) 0%, rgba(13, 148, 136, 0.4) 100%);
+        /* Teal & Şeffaf */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -267,7 +287,8 @@ include 'includes/header.php';
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #6366f1;
+        color: #0d9488;
+        /* Teal Text */
         font-size: 1.1rem;
         text-decoration: none;
         transition: all 0.3s ease;
@@ -283,7 +304,8 @@ include 'includes/header.php';
     }
 
     .overlay-btn:hover {
-        background: #6366f1;
+        background: #0d9488;
+        /* Teal Background */
         color: #ffffff;
         transform: scale(1.1);
     }
@@ -314,7 +336,8 @@ include 'includes/header.php';
     }
 
     .reference-card:hover .reference-card-title {
-        color: #6366f1;
+        color: #0d9488;
+        /* Teal Title */
     }
 
     .reference-card-desc {
@@ -341,8 +364,8 @@ include 'includes/header.php';
     }
 
     .ref-tag:hover {
-        background: rgba(99, 102, 241, 0.1);
-        color: #6366f1;
+        background: rgba(20, 184, 166, 0.1);
+        color: #0d9488;
     }
 
     /* ==========================================
@@ -605,6 +628,104 @@ include 'includes/header.php';
             font-size: 0.85rem;
         }
     }
+
+    /* Yeni Kart Hover Efektleri */
+    .reference-card {
+        display: block;
+        /* Link olduğu için blok yap */
+        text-decoration: none;
+        /* Alt çizgiyi kaldır */
+        color: inherit;
+        /* Rengi miras al */
+        position: relative;
+        overflow: visible !important;
+        /* Tooltip dışarı taşabilsin */
+        z-index: 1;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border-radius: 20px;
+        background: transparent;
+        /* Wrapper transparent olsun */
+    }
+
+    /* Görsel ve İçerik wrapper'ları arka planı sağlasın */
+    .reference-card-image,
+    .reference-card-content {
+        position: relative;
+        z-index: 2;
+        /* Tooltip'in üstünde kalsın */
+        background: white;
+    }
+
+    .reference-card-image {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        overflow: hidden;
+        /* Resim radius dışına taşmasın */
+    }
+
+    .reference-card-content {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .reference-card:hover {
+        transform: translateY(-10px);
+        z-index: 100 !important;
+        /* Diğer kartların üzerine çıksın */
+    }
+
+    .visit-hint {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) translateX(0);
+        background: linear-gradient(to bottom, #14b8a6 0%, #0d9488 100%);
+        /* Teal Gradient */
+        color: white;
+        padding: 20px 4px;
+        /* Daha ince */
+        border-radius: 0 12px 12px 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: -1;
+        box-shadow: 5px 0 20px rgba(20, 184, 166, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        /* Daha küçük font */
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        height: auto;
+        white-space: nowrap;
+        letter-spacing: 1px;
+    }
+
+    .reference-card:hover .visit-hint {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-50%) translateX(100%);
+        right: -3px;
+        /* Kartla daha bitişik */
+    }
+
+    .visit-hint i {
+        transform: rotate(90deg);
+        font-size: 0.9rem;
+    }
+
+    /* Kartın sağ kenarını düzeltmek için (opsiyonel) */
+    .reference-card-content h3 {
+        transition: color 0.3s ease;
+    }
+
+    .reference-card:hover .reference-card-content h3 {
+        color: #3b82f6;
+    }
 </style>
 
 <!-- Hero Section -->
@@ -618,10 +739,12 @@ include 'includes/header.php';
                 <i class="fas fa-briefcase"></i>
                 Başarı Hikayeleri
             </div>
-            <h1>Tamamladığımız <span>Projeler</span></h1>
+            <h1>En Büyük Referansımız: <span>Kendimiz</span></h1>
             <p>
-                Dijital dünyada birlikte yol aldığımız markalar ve başarıyla tamamladığımız projelerden örnekler.
-                Her proje, müşterilerimizin hedeflerine ulaşması için özenle tasarlandı.
+                Şu an gezdiğiniz bu site; hazır altyapılara meydan okuyan bir ustalık eseridir.
+                <strong>Saf PHP</strong>, <strong>JavaScript</strong>, <strong>CSS</strong> ve <strong>MySQL</strong>
+                ile
+                %100 özgün, satır satır kodlandı.
             </p>
 
             <div class="ref-stats-bar">
@@ -652,158 +775,117 @@ include 'includes/header.php';
         <!-- Filter Tabs -->
         <div class="ref-filter-tabs" data-aos="fade-up">
             <button class="ref-filter-btn active" data-filter="all">Tümü</button>
-            <button class="ref-filter-btn" data-filter="web">Web Tasarım</button>
-            <button class="ref-filter-btn" data-filter="ecommerce">E-Ticaret</button>
-            <button class="ref-filter-btn" data-filter="marketing">Dijital Pazarlama</button>
-            <button class="ref-filter-btn" data-filter="social">Sosyal Medya</button>
+            <?php foreach ($categories as $cat): ?>
+                <button class="ref-filter-btn" data-filter="<?php echo htmlspecialchars($cat); ?>">
+                    <?php echo htmlspecialchars($cat); ?>
+                </button>
+            <?php endforeach; ?>
         </div>
 
         <!-- References Grid -->
         <div class="references-grid">
-            <!-- Reference Card 1 -->
-            <div class="reference-card" data-category="web" data-aos="fade-up" data-aos-delay="0">
-                <div class="reference-card-image">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop"
-                        alt="Kurumsal Web Sitesi">
-                    <span class="reference-card-category">Web Tasarım</span>
-                    <div class="reference-card-overlay">
-                        <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
-                    </div>
+            <?php if (empty($projects)): ?>
+                <div style="grid-column: 1/-1; text-align: center; padding: 60px;">
+                    <i class="fas fa-briefcase" style="font-size: 3rem; color: #cbd5e1; margin-bottom: 20px;"></i>
+                    <h3 style="color: #64748b;">Henüz proje eklenmemiş</h3>
                 </div>
-                <div class="reference-card-content">
-                    <h3 class="reference-card-title">TechCorp Kurumsal Site</h3>
-                    <p class="reference-card-desc">
-                        Teknoloji firması için modern ve profesyonel kurumsal web sitesi tasarımı ve geliştirmesi.
-                    </p>
-                    <div class="reference-card-tags">
-                        <span class="ref-tag">WordPress</span>
-                        <span class="ref-tag">Responsive</span>
-                        <span class="ref-tag">SEO</span>
-                    </div>
-                </div>
-            </div>
+            <?php else: ?>
+                <?php foreach ($projects as $project): ?>
+                    <a href="<?php echo !empty($project['url']) ? $project['url'] : '#'; ?>" class="reference-card"
+                        target="<?php echo !empty($project['url']) ? '_blank' : '_self'; ?>"
+                        data-category="<?php echo htmlspecialchars($project['category']); ?>" data-aos="fade-up">
 
-            <!-- Reference Card 2 -->
-            <div class="reference-card" data-category="ecommerce" data-aos="fade-up" data-aos-delay="100">
-                <div class="reference-card-image">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop"
-                        alt="E-Ticaret Sitesi">
-                    <span class="reference-card-category">E-Ticaret</span>
-                    <div class="reference-card-overlay">
-                        <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="reference-card-content">
-                    <h3 class="reference-card-title">ModaStore E-Ticaret</h3>
-                    <p class="reference-card-desc">
-                        Giyim markası için kapsamlı e-ticaret platformu. Ödeme entegrasyonları ve stok yönetimi.
-                    </p>
-                    <div class="reference-card-tags">
-                        <span class="ref-tag">WooCommerce</span>
-                        <span class="ref-tag">Ödeme Sistemi</span>
-                        <span class="ref-tag">Kargo</span>
-                    </div>
-                </div>
-            </div>
+                        <!-- Yandan Çıkan Badge -->
+                        <div class="visit-hint">
+                            <span>Projeyi İncele</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
 
-            <!-- Reference Card 3 -->
-            <div class="reference-card" data-category="marketing" data-aos="fade-up" data-aos-delay="200">
-                <div class="reference-card-image">
-                    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&h=400&fit=crop"
-                        alt="Dijital Pazarlama">
-                    <span class="reference-card-category">Dijital Pazarlama</span>
-                    <div class="reference-card-overlay">
-                        <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="reference-card-content">
-                    <h3 class="reference-card-title">FoodDelivery Kampanyası</h3>
-                    <p class="reference-card-desc">
-                        Yemek teslimat uygulaması için Google Ads ve sosyal medya reklam kampanyası yönetimi.
-                    </p>
-                    <div class="reference-card-tags">
-                        <span class="ref-tag">Google Ads</span>
-                        <span class="ref-tag">Facebook Ads</span>
-                        <span class="ref-tag">%280 ROI</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reference Card 4 -->
-            <div class="reference-card" data-category="social" data-aos="fade-up" data-aos-delay="0">
-                <div class="reference-card-image">
-                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop"
-                        alt="Sosyal Medya">
-                    <span class="reference-card-category">Sosyal Medya</span>
-                    <div class="reference-card-overlay">
-                        <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="reference-card-content">
-                    <h3 class="reference-card-title">BeautyBrand Instagram</h3>
-                    <p class="reference-card-desc">
-                        Kozmetik markası için Instagram hesap yönetimi ve içerik stratejisi. +50K takipçi artışı.
-                    </p>
-                    <div class="reference-card-tags">
-                        <span class="ref-tag">Instagram</span>
-                        <span class="ref-tag">İçerik</span>
-                        <span class="ref-tag">Influencer</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reference Card 5 -->
-            <div class="reference-card" data-category="web" data-aos="fade-up" data-aos-delay="100">
-                <div class="reference-card-image">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop"
-                        alt="Kurumsal Site">
-                    <span class="reference-card-category">Web Tasarım</span>
-                    <div class="reference-card-overlay">
-                        <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="reference-card-content">
-                    <h3 class="reference-card-title">LawFirm Hukuk Bürosu</h3>
-                    <p class="reference-card-desc">
-                        Hukuk bürosu için profesyonel ve güven veren web sitesi. Randevu sistemi entegrasyonu.
-                    </p>
-                    <div class="reference-card-tags">
-                        <span class="ref-tag">PHP</span>
-                        <span class="ref-tag">Randevu</span>
-                        <span class="ref-tag">Blog</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reference Card 6 -->
-            <div class="reference-card" data-category="ecommerce" data-aos="fade-up" data-aos-delay="200">
-                <div class="reference-card-image">
-                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop"
-                        alt="E-Ticaret">
-                    <span class="reference-card-category">E-Ticaret</span>
-                    <div class="reference-card-overlay">
-                        <a href="#" class="overlay-btn"><i class="fas fa-eye"></i></a>
-                        <a href="#" class="overlay-btn"><i class="fas fa-link"></i></a>
-                    </div>
-                </div>
-                <div class="reference-card-content">
-                    <h3 class="reference-card-title">HomeDecor Mobilya</h3>
-                    <p class="reference-card-desc">
-                        Mobilya ve dekorasyon markası için gelişmiş filtreleme ve 3D ürün görüntüleme özellikli site.
-                    </p>
-                    <div class="reference-card-tags">
-                        <span class="ref-tag">Shopify</span>
-                        <span class="ref-tag">3D Görünüm</span>
-                        <span class="ref-tag">AR</span>
-                    </div>
-                </div>
-            </div>
+                        <div class="reference-card-image">
+                            <!-- Görsel -->
+                            <img src="<?php echo !empty($project['image']) ? $project['image'] : 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop'; ?>"
+                                alt="<?php echo htmlspecialchars($project['title']); ?>">
+                            <?php
+                            $cats = explode(',', $project['category']);
+                            $mainCat = trim($cats[0]);
+                            ?>
+                            <span class="reference-card-category"><?php echo htmlspecialchars($mainCat); ?></span>
+                            <!-- Overlay artık sadece görsel efekt için, fonksiyonel değil -->
+                            <div class="reference-card-overlay">
+                                <div class="overlay-btn">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reference-card-content">
+                            <h3 class="reference-card-title"><?php echo htmlspecialchars($project['title']); ?></h3>
+                            <p class="reference-card-desc">
+                                <?php echo htmlspecialchars($project['description']); ?>
+                            </p>
+                            <?php if (!empty($project['tags'])): ?>
+                                <div class="reference-card-tags">
+                                    <?php
+                                    $tags = explode(',', $project['tags']);
+                                    foreach ($tags as $tag):
+                                        $tag = trim($tag);
+                                        if (empty($tag))
+                                            continue;
+                                        ?>
+                                        <span class="ref-tag"><?php echo htmlspecialchars($tag); ?></span>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
+
+        <!-- JS Filter Script (Statik JS yerine dinamik kategori isimleriyle çalışması için güncellendi) -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const filterBtns = document.querySelectorAll('.ref-filter-btn');
+                const refCards = document.querySelectorAll('.reference-card');
+
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        // Active class yönetimi
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+
+                        const filter = btn.getAttribute('data-filter');
+
+                        refCards.forEach(card => {
+                            const categoryAttr = card.getAttribute('data-category');
+                            const categories = categoryAttr ? categoryAttr.split(',').map(c => c.trim()) : [];
+
+                            if (filter === 'all' || categories.includes(filter)) {
+                                card.style.display = 'block';
+                                // Animasyon
+                                card.style.opacity = '0';
+                                card.style.transform = 'translateY(20px)';
+                                setTimeout(() => {
+                                    card.style.opacity = '1';
+                                    card.style.transform = 'translateY(0)';
+                                }, 50);
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+
+                        if (typeof AOS !== 'undefined') {
+                            setTimeout(() => AOS.refresh(), 100);
+                        }
+                    });
+                });
+            });
+        </script>
+        <span class="ref-tag">3D Görünüm</span>
+        <span class="ref-tag">AR</span>
+    </div>
+    </div>
+    </div>
+    </div>
     </div>
 </section>
 
@@ -911,42 +993,7 @@ include 'includes/header.php';
 </section>
 
 <!-- Filter Script -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const filterBtns = document.querySelectorAll('.ref-filter-btn');
-        const cards = document.querySelectorAll('.reference-card');
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', function () {
-                // Update active button
-                filterBtns.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-
-                const filter = this.dataset.filter;
-
-                // Filter cards
-                cards.forEach(card => {
-                    if (filter === 'all' || card.dataset.category === filter) {
-                        card.style.display = 'block';
-                        card.style.animation = 'fadeIn 0.5s ease';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            });
-        });
-    });
-
-    // Fade in animation
-    const style = document.createElement('style');
-    style.textContent = `
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-`;
-    document.head.appendChild(style);
-</script>
 
 <!-- AOS Script -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

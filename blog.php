@@ -6,10 +6,11 @@ $blogs = getPublishedBlogs();
 $categories = array_unique(array_column($blogs, 'category'));
 sort($categories);
 
-$category = $_GET['category'] ?? '';
-if ($category) {
-    $blogs = array_filter($blogs, fn($b) => $b['category'] === $category);
-}
+// Filtreleme artık JS ile yapıldığı için PHP filtreleme kaldırıldı
+// $category = $_GET['category'] ?? '';
+// if ($category) {
+//     $blogs = array_filter($blogs, fn($b) => $b['category'] === $category);
+// }
 
 include 'includes/header.php';
 ?>
@@ -110,6 +111,8 @@ include 'includes/header.php';
         border: 1px solid #e2e8f0;
         transition: all 0.25s ease;
         font-weight: 500;
+        cursor: pointer;
+        display: inline-block;
     }
 
     .category-btn:hover {
@@ -119,13 +122,13 @@ include 'includes/header.php';
 
     .category-btn:hover,
     .category-btn.active {
-        background: #14b8a6;
+        background: #3b82f6;
         color: white;
-        border-color: #14b8a6;
+        border-color: #3b82f6;
     }
 
     .category-btn.active {
-        box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
     }
 
     .blog-grid {
@@ -140,34 +143,48 @@ include 'includes/header.php';
         background: white;
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        /* Çok hafif başlangıç gölgesi */
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        /* Daha yumuşak easing */
         position: relative;
         cursor: pointer;
         border: 1px solid rgba(0, 0, 0, 0.04);
+        z-index: 1;
     }
 
-    .blog-card::before {
+    /* Sadece üstte değil, şık bir iç ışıltı efekti */
+    .blog-card::after {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #14b8a6, #6366f1, #8b5cf6);
+        inset: 0;
+        border-radius: 20px;
+        padding: 2px;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
         opacity: 0;
-        transition: opacity 0.4s;
-        z-index: 10;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+        z-index: 2;
     }
 
     .blog-card:hover {
-        transform: translateY(-12px) scale(1.02);
-        box-shadow: 0 25px 50px rgba(20, 184, 166, 0.15), 0 10px 30px rgba(0, 0, 0, 0.1);
-        border-color: rgba(20, 184, 166, 0.2);
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(59, 130, 246, 0.12), 0 5px 15px rgba(0, 0, 0, 0.05);
+        /* Soft ve yaygın gölge */
+        border-color: transparent;
+        /* Border yerine gradient ring gelecek */
     }
 
-    .blog-card:hover::before {
+    .blog-card:hover::after {
         opacity: 1;
+        /* Gradient border belirsin */
+    }
+
+    /* Eski before çizgisini kaldırıyorum, yerine full border geldi */
+    .blog-card::before {
+        display: none;
     }
 
     .blog-card-img-wrapper {
@@ -176,28 +193,33 @@ include 'includes/header.php';
     }
 
     .blog-card-img {
-        height: 220px;
-        background-size: cover;
-        background-position: center;
+        height: 240px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
         background-color: #e2e8f0;
         position: relative;
-        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        /* Yavaş çekim zoom */
+        image-rendering: -webkit-optimize-contrast;
     }
 
     .blog-card:hover .blog-card-img {
         transform: scale(1.08);
+        /* Biraz daha belirgin zoom */
     }
 
-    .blog-card-img::after {
-        content: '';
+    .blog-card-img-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.4) 100%);
+        background: linear-gradient(180deg, transparent 60%, rgba(0, 0, 0, 0.5) 100%);
         transition: all 0.4s;
+        pointer-events: none;
     }
 
-    .blog-card:hover .blog-card-img::after {
-        background: linear-gradient(180deg, rgba(20, 184, 166, 0.1) 0%, rgba(99, 102, 241, 0.3) 100%);
+    .blog-card:hover .blog-card-img-overlay {
+        background: linear-gradient(180deg, rgba(59, 130, 246, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+        /* Hafif mavi tint */
     }
 
     .blog-card-category {
@@ -206,7 +228,7 @@ include 'includes/header.php';
         left: 16px;
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
-        color: #14b8a6;
+        color: #2563eb;
         padding: 6px 14px;
         border-radius: 20px;
         font-size: 0.75rem;
@@ -231,7 +253,7 @@ include 'includes/header.php';
     }
 
     .blog-card:hover .blog-card-title {
-        color: #14b8a6;
+        color: #3b82f6;
     }
 
     .blog-card-excerpt {
@@ -269,16 +291,27 @@ include 'includes/header.php';
     .blog-card-arrow {
         width: 36px;
         height: 36px;
-        background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
+        background: white;
+        /* Logosu mavi olsun, arkası beyaz - daha clean */
+        color: #3b82f6;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-size: 0.85rem;
-        transition: all 0.3s;
+        font-size: 0.9rem;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         opacity: 0;
-        transform: translateX(-10px);
+        transform: translateX(-15px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-card:hover .blog-card-arrow {
+        opacity: 1;
+        transform: translateX(0);
+        background: #3b82f6;
+        /* Hoverda mavi olsun */
+        color: white;
+        box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
     }
 
     .blog-card:hover .blog-card-arrow {
@@ -335,10 +368,11 @@ include 'includes/header.php';
     <div class="container">
         <?php if (!empty($categories)): ?>
             <div class="category-filter" data-aos="fade-up">
-                <a href="blog.php" class="category-btn <?php echo empty($category) ? 'active' : ''; ?>">Tümü</a>
+                <button class="category-btn active" data-filter="all">Tümü</button>
                 <?php foreach ($categories as $cat): ?>
-                    <a href="blog.php?category=<?php echo urlencode($cat); ?>"
-                        class="category-btn <?php echo $category === $cat ? 'active' : ''; ?>"><?php echo htmlspecialchars($cat); ?></a>
+                    <button class="category-btn" data-filter="<?php echo htmlspecialchars($cat); ?>">
+                        <?php echo htmlspecialchars($cat); ?>
+                    </button>
                 <?php endforeach; ?>
             </div>
         <?php endif; ?>
@@ -352,11 +386,13 @@ include 'includes/header.php';
         <?php else: ?>
             <div class="blog-grid">
                 <?php foreach ($blogs as $blog): ?>
-                    <a href="blog-detail.php?slug=<?php echo $blog['slug']; ?>" class="blog-card" data-aos="fade-up">
+                    <a href="blog-detail.php?slug=<?php echo $blog['slug']; ?>" class="blog-card" data-aos="fade-up"
+                        data-category="<?php echo htmlspecialchars($blog['category']); ?>">
                         <div class="blog-card-img-wrapper">
-                            <div class="blog-card-img"
-                                style="background-image: url('<?php echo $blog['image'] ?: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400'; ?>');">
-                            </div>
+                            <img class="blog-card-img"
+                                src="<?php echo $blog['image'] ?: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=90'; ?>"
+                                alt="<?php echo htmlspecialchars($blog['title']); ?>" loading="lazy">
+                            <div class="blog-card-img-overlay"></div>
                             <span class="blog-card-category"><?php echo htmlspecialchars($blog['category']); ?></span>
                         </div>
                         <div class="blog-card-body">
@@ -380,5 +416,43 @@ include 'includes/header.php';
         <?php endif; ?>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.category-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                blogCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+
+                    if (filterValue === 'all' ||  filterValue === category) {
+                        card.style.display = 'block';
+                        // Add fade in animation
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                        }, 50);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Re-initialize AOS if needed or just trigger layout update
+                if(typeof AOS !== 'undefined') {
+                    setTimeout(() => AOS.refresh(), 100);
+                }
+            });
+        });
+    });
+</script>
 
 <?php include 'includes/footer.php'; ?>

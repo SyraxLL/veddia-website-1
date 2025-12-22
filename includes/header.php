@@ -127,8 +127,7 @@
                                             <i class="fas fa-bullhorn me-2"></i>Dijital Pazarlama
                                         </h6>
                                         <ul class="list-unstyled mega-menu-list">
-                                            <li><a href="#">Google Reklamı</a></li>
-                                            <li><a href="#">Youtube Reklamı</a></li>
+                                            <li><a href="google-reklami.php">Google Reklamı</a></li>
                                             <li><a href="#">Instagram Reklamı</a></li>
                                         </ul>
                                     </div>
@@ -164,7 +163,7 @@
 
                     <!-- Referans -->
                     <li class="nav-item">
-                        <a class="nav-link" href="referanslar.php">Referanslar</a>
+                        <a class="nav-link" href="referans.php">Referans</a>
                     </li>
 
                     <!-- Blog -->

@@ -56,28 +56,28 @@ include 'includes/header.php';
     <a href="blog-add.php" class="card"
         style="padding: 24px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
         <div
-            style="width: 56px; height: 56px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.1)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-            <i class="fas fa-pen-to-square" style="font-size: 1.4rem; color: #818cf8;"></i>
+            style="width: 56px; height: 56px; background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.08)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+            <i class="fas fa-pen-to-square" style="font-size: 1.4rem; color: #6366f1;"></i>
         </div>
-        <h4 style="color: #e2e8f0; font-size: 1rem; margin-bottom: 6px;">Yeni Yazı Oluştur</h4>
+        <h4 style="color: #1e293b; font-size: 1rem; margin-bottom: 6px;">Yeni Yazı Oluştur</h4>
         <p style="color: #64748b; font-size: 0.85rem;">Hemen yeni bir blog yazısı ekleyin</p>
     </a>
     <a href="blogs.php" class="card"
         style="padding: 24px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
         <div
-            style="width: 56px; height: 56px; background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(8, 145, 178, 0.1)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-            <i class="fas fa-list" style="font-size: 1.4rem; color: #2dd4bf;"></i>
+            style="width: 56px; height: 56px; background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(8, 145, 178, 0.08)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+            <i class="fas fa-list" style="font-size: 1.4rem; color: #14b8a6;"></i>
         </div>
-        <h4 style="color: #e2e8f0; font-size: 1rem; margin-bottom: 6px;">Tüm Yazılar</h4>
+        <h4 style="color: #1e293b; font-size: 1rem; margin-bottom: 6px;">Tüm Yazılar</h4>
         <p style="color: #64748b; font-size: 0.85rem;">Blog yazılarını görüntüle ve düzenle</p>
     </a>
     <a href="../index.php" target="_blank" class="card"
         style="padding: 24px; text-decoration: none; text-align: center; transition: all 0.3s ease;">
         <div
-            style="width: 56px; height: 56px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(234, 88, 12, 0.1)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
-            <i class="fas fa-globe" style="font-size: 1.4rem; color: #fbbf24;"></i>
+            style="width: 56px; height: 56px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(234, 88, 12, 0.08)); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+            <i class="fas fa-globe" style="font-size: 1.4rem; color: #f59e0b;"></i>
         </div>
-        <h4 style="color: #e2e8f0; font-size: 1rem; margin-bottom: 6px;">Siteyi Görüntüle</h4>
+        <h4 style="color: #1e293b; font-size: 1rem; margin-bottom: 6px;">Siteyi Görüntüle</h4>
         <p style="color: #64748b; font-size: 0.85rem;">Web sitenizi yeni sekmede açın</p>
     </a>
 </div>
@@ -150,7 +150,7 @@ include 'includes/header.php';
                     </tbody>
                 </table>
             </div>
-            <div style="padding: 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+            <div style="padding: 20px; text-align: center; border-top: 1px solid #f1f5f9;">
                 <a href="blogs.php" style="color: #6366f1; text-decoration: none; font-weight: 600; font-size: 0.9rem;">
                     Tüm Blog Yazılarını Görüntüle <i class="fas fa-arrow-right" style="margin-left: 6px;"></i>
                 </a>

@@ -70,7 +70,13 @@ function loadBlogs()
 function getPublishedBlogs()
 {
     $db = getDB();
-    $stmt = $db->query("SELECT * FROM blogs WHERE status = 'published' ORDER BY created_at DESC");
+    // Yayınlanmış ve planlanma zamanı geçmiş veya planlama yok blogları getir
+    $stmt = $db->query("
+        SELECT * FROM blogs 
+        WHERE status = 'published' 
+        AND (scheduled_at IS NULL OR scheduled_at <= NOW())
+        ORDER BY created_at DESC
+    ");
     return $stmt->fetchAll();
 }
 
@@ -115,34 +121,13 @@ function isSlugUnique($slug, $excludeId = null)
 function addBlog($data)
 {
     $db = getDB();
-    $stmt = $db->prepare("
-        INSERT INTO blogs (title, slug, excerpt, content, category, image, author, read_time, is_featured, status, created_at) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())
-    ");
-    $stmt->execute([
-        $data['title'],
-        $data['slug'],
-        $data['excerpt'] ?? '',
-        $data['content'] ?? '',
-        $data['category'] ?? 'Genel',
-        $data['image'] ?? '',
-        $data['author'] ?? 'Veddia Media',
-        $data['read_time'] ?? 5,
-        $data['is_featured'] ?? 0,
-        $data['status'] ?? 'published'
-    ]);
-    return $db->lastInsertId();
-}
 
-function updateBlog($id, $data)
-{
-    $db = getDB();
+    // Özel yayın tarihi varsa onu kullan, yoksa NOW()
+    $createdAt = !empty($data['created_at']) ? $data['created_at'] : date('Y-m-d H:i:s');
+
     $stmt = $db->prepare("
-        UPDATE blogs SET 
-            title = ?, slug = ?, excerpt = ?, content = ?, 
-            category = ?, image = ?, author = ?, read_time = ?, 
-            is_featured = ?, status = ?, updated_at = NOW()
-        WHERE id = ?
+        INSERT INTO blogs (title, slug, excerpt, content, category, image, author, read_time, is_featured, status, scheduled_at, created_at) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ");
     $stmt->execute([
         $data['title'],
@@ -155,8 +140,63 @@ function updateBlog($id, $data)
         $data['read_time'] ?? 5,
         $data['is_featured'] ?? 0,
         $data['status'] ?? 'published',
-        $id
+        $data['scheduled_at'] ?? null,
+        $createdAt
     ]);
+    return $db->lastInsertId();
+}
+
+function updateBlog($id, $data)
+{
+    $db = getDB();
+
+    // Özel yayın tarihi varsa created_at'ı da güncelle
+    if (!empty($data['created_at'])) {
+        $stmt = $db->prepare("
+            UPDATE blogs SET 
+                title = ?, slug = ?, excerpt = ?, content = ?, 
+                category = ?, image = ?, author = ?, read_time = ?, 
+                is_featured = ?, status = ?, scheduled_at = ?, created_at = ?, updated_at = NOW()
+            WHERE id = ?
+        ");
+        $stmt->execute([
+            $data['title'],
+            $data['slug'],
+            $data['excerpt'] ?? '',
+            $data['content'] ?? '',
+            $data['category'] ?? 'Genel',
+            $data['image'] ?? '',
+            $data['author'] ?? 'Veddia Media',
+            $data['read_time'] ?? 5,
+            $data['is_featured'] ?? 0,
+            $data['status'] ?? 'published',
+            $data['scheduled_at'] ?? null,
+            $data['created_at'],
+            $id
+        ]);
+    } else {
+        $stmt = $db->prepare("
+            UPDATE blogs SET 
+                title = ?, slug = ?, excerpt = ?, content = ?, 
+                category = ?, image = ?, author = ?, read_time = ?, 
+                is_featured = ?, status = ?, scheduled_at = ?, updated_at = NOW()
+            WHERE id = ?
+        ");
+        $stmt->execute([
+            $data['title'],
+            $data['slug'],
+            $data['excerpt'] ?? '',
+            $data['content'] ?? '',
+            $data['category'] ?? 'Genel',
+            $data['image'] ?? '',
+            $data['author'] ?? 'Veddia Media',
+            $data['read_time'] ?? 5,
+            $data['is_featured'] ?? 0,
+            $data['status'] ?? 'published',
+            $data['scheduled_at'] ?? null,
+            $id
+        ]);
+    }
 }
 
 function deleteBlog($id)
@@ -200,4 +240,74 @@ function formatDate($date)
     $months = [1 => 'Ocak', 2 => 'Şubat', 3 => 'Mart', 4 => 'Nisan', 5 => 'Mayıs', 6 => 'Haziran', 7 => 'Temmuz', 8 => 'Ağustos', 9 => 'Eylül', 10 => 'Ekim', 11 => 'Kasım', 12 => 'Aralık'];
     $ts = strtotime($date);
     return date('j', $ts) . ' ' . $months[(int) date('n', $ts)] . ' ' . date('Y', $ts);
+}
+
+
+// ==================== REFERANS (PROJECT) FONKSİYONLARI ====================
+
+function getProjects()
+{
+    $db = getDB();
+    $stmt = $db->query("SELECT * FROM projects ORDER BY created_at DESC");
+    return $stmt->fetchAll();
+}
+
+function getProjectById($id)
+{
+    $db = getDB();
+    $stmt = $db->prepare("SELECT * FROM projects WHERE id = ?");
+    $stmt->execute([$id]);
+    return $stmt->fetch();
+}
+
+function addProject($data)
+{
+    $db = getDB();
+    $stmt = $db->prepare("
+        INSERT INTO projects (title, description, category, image, url, tags) 
+        VALUES (?, ?, ?, ?, ?, ?)
+    ");
+    $stmt->execute([
+        $data['title'],
+        $data['description'] ?? '',
+        $data['category'],
+        $data['image'] ?? '',
+        $data['url'] ?? '',
+        $data['tags'] ?? ''
+    ]);
+    return $db->lastInsertId();
+}
+
+function updateProject($id, $data)
+{
+    $db = getDB();
+    $stmt = $db->prepare("
+        UPDATE projects SET 
+            title = ?, description = ?, category = ?, 
+            image = ?, url = ?, tags = ?
+        WHERE id = ?
+    ");
+    $stmt->execute([
+        $data['title'],
+        $data['description'] ?? '',
+        $data['category'],
+        $data['image'] ?? '',
+        $data['url'] ?? '',
+        $data['tags'] ?? '',
+        $id
+    ]);
+}
+
+function deleteProject($id)
+{
+    $db = getDB();
+    $stmt = $db->prepare("DELETE FROM projects WHERE id = ?");
+    $stmt->execute([$id]);
+}
+
+function getProjectStats()
+{
+    $db = getDB();
+    $stmt = $db->query("SELECT COUNT(*) FROM projects");
+    return $stmt->fetchColumn();
 }
