@@ -164,7 +164,7 @@
 
                     <!-- Referans -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#references">Referans</a>
+                        <a class="nav-link" href="referanslar.php">Referanslar</a>
                     </li>
 
                     <!-- Blog -->

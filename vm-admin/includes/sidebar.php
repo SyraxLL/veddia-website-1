@@ -1,12 +1,20 @@
 <aside class="admin-sidebar">
     <div class="sidebar-brand">
-        <h2><i class="fas fa-shield-halved"></i> Veddia Admin</h2>
+        <div class="sidebar-brand-icon">
+            <i class="fas fa-shield-halved"></i>
+        </div>
+        <div class="sidebar-brand-text">
+            <h2>Veddia Admin</h2>
+            <span>Yönetim Paneli</span>
+        </div>
     </div>
+
     <ul class="sidebar-menu">
+        <li class="sidebar-menu-label">Ana Menü</li>
         <li>
             <a href="dashboard.php"
                 class="<?php echo basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : ''; ?>">
-                <i class="fas fa-home"></i> Dashboard
+                <i class="fas fa-th-large"></i> Dashboard
             </a>
         </li>
         <li>
@@ -15,20 +23,26 @@
                 <i class="fas fa-newspaper"></i> Blog Yazıları
             </a>
         </li>
+
+        <li class="sidebar-menu-label">Hızlı İşlemler</li>
         <li>
             <a href="blog-add.php">
                 <i class="fas fa-plus-circle"></i> Yeni Blog Ekle
             </a>
         </li>
-        <li style="margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+
+        <hr class="menu-divider">
+
+        <li>
             <a href="../index.php" target="_blank">
                 <i class="fas fa-external-link-alt"></i> Siteyi Görüntüle
             </a>
         </li>
-        <li>
-            <a href="logout.php">
-                <i class="fas fa-sign-out-alt"></i> Çıkış Yap
-            </a>
-        </li>
     </ul>
+
+    <div class="sidebar-footer">
+        <a href="logout.php">
+            <i class="fas fa-sign-out-alt"></i> Çıkış Yap
+        </a>
+    </div>
 </aside>
