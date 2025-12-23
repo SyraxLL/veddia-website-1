@@ -144,10 +144,10 @@
                                             <i class="fas fa-share-nodes me-2"></i>Sosyal Medya
                                         </h6>
                                         <ul class="list-unstyled mega-menu-list">
-                                            <li><a href="#">Facebook Yönetimi</a></li>
-                                            <li><a href="#">Instagram Yönetimi</a></li>
-                                            <li><a href="#">X (Twitter) Yönetimi</a></li>
-                                            <li><a href="#">LinkedIn Yönetimi</a></li>
+                                            <li><a href="facebook-yonetimi.php">Facebook Yönetimi</a></li>
+                                            <li><a href="instagram-yonetimi.php">Instagram Yönetimi</a></li>
+                                            <li><a href="twitter-yonetimi.php">X (Twitter) Yönetimi</a></li>
+                                            <li><a href="linkedin-yonetimi.php">LinkedIn Yönetimi</a></li>
                                         </ul>
                                     </div>
 

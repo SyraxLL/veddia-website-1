@@ -1,0 +1,484 @@
+/* ========================================
+   SOCIAL MEDIA MANAGEMENT - SHARED STYLES
+   Light Premium Theme
+   ======================================== */
+
+:root {
+    /* Platform Colors */
+    --fb-color: #1877F2;
+    --fb-bg: #f0f9ff;
+
+    --insta-color: #E1306C;
+    /* Main Pink/Purple */
+    --insta-bg: #fff5f8;
+    --insta-gradient: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+
+    --twitter-color: #000000;
+    --twitter-bg: #f8fafc;
+    /* Very light grey */
+
+    --linkedin-color: #0077b5;
+    --linkedin-bg: #f0f7fe;
+}
+
+/* Global Spacing Override */
+.section-padding {
+    padding: 120px 0 !important;
+}
+
+/* ========================================
+   COMMON HERO SECTION
+   ======================================== */
+.mgmt-hero {
+    padding: 180px 0 120px;
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+.mgmt-hero.facebook {
+    background: linear-gradient(180deg, #f8fcff 0%, var(--fb-bg) 100%);
+}
+
+.mgmt-hero.instagram {
+    background: linear-gradient(180deg, #fff9fc 0%, var(--insta-bg) 100%);
+}
+
+.mgmt-hero.twitter {
+    background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+.mgmt-hero.linkedin {
+    background: linear-gradient(180deg, #fAfDff 0%, var(--linkedin-bg) 100%);
+}
+
+.mgmt-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.facebook .mgmt-badge {
+    color: var(--fb-color);
+    border: 1px solid rgba(24, 119, 242, 0.2);
+}
+
+.instagram .mgmt-badge {
+    color: var(--insta-color);
+    border: 1px solid rgba(225, 48, 108, 0.2);
+}
+
+.twitter .mgmt-badge {
+    color: var(--twitter-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.linkedin .mgmt-badge {
+    color: var(--linkedin-color);
+    border: 1px solid rgba(0, 119, 181, 0.2);
+}
+
+.mgmt-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.mgmt-desc {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #64748b;
+    margin-bottom: 50px;
+    max-width: 600px;
+}
+
+/* Platform Specific Text Gradients */
+.text-gradient-fb {
+    background: linear-gradient(90deg, #1877F2, #00C6FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-insta {
+    background: var(--insta-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-twitter {
+    background: linear-gradient(90deg, #000000, #333333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-linkedin {
+    background: linear-gradient(90deg, #0077b5, #00a0dc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Visual Cards (Mockups) */
+.mgmt-visual-card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 10;
+    transition: transform 0.4s ease;
+}
+
+.mgmt-visual-card:hover {
+    text-align: left;
+    transform: translateY(-8px);
+}
+
+/* ========================================
+   ADVANCED FB MOCKUP (DASHBOARD)
+   ======================================== */
+.fb-dashboard-mockup {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 40px 80px -20px rgba(24, 119, 242, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+.dash-header {
+    background: #fff;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dash-sidebar {
+    width: 70px;
+    background: #f8fafc;
+    border-right: 1px solid #f1f5f9;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.dash-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #e2e8f0;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.dash-icon.active {
+    background: var(--fb-color);
+    color: white;
+    box-shadow: 0 4px 10px rgba(24, 119, 242, 0.3);
+}
+
+.dash-card {
+    background: white;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.dash-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dash-graph-line {
+    height: 5px;
+    width: 100%;
+    background: #e2e8f0;
+    border-radius: 3px;
+    margin-top: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dash-graph-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--fb-color);
+    border-radius: 3px;
+    animation: loadGraph 1.5s ease-out forwards 0.5s;
+}
+
+@keyframes loadGraph {
+    to {
+        width: 75%;
+    }
+}
+
+/* Floating Elements */
+.dash-float {
+    position: absolute;
+    background: white;
+    padding: 14px 20px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: floatDash 5s ease-in-out infinite;
+    z-index: 20;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dash-float-1 {
+    top: 25%;
+    right: -30px;
+    animation-delay: 0s;
+}
+
+.dash-float-2 {
+    bottom: 15%;
+    left: -30px;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatDash {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* ========================================
+   BENTO GRID (SERVICES)
+   ======================================== */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 32px;
+}
+
+.bento-card {
+    background: white;
+    border-radius: 28px;
+    padding: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.bento-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(24, 119, 242, 0.12);
+    border-color: rgba(24, 119, 242, 0.2);
+}
+
+.bento-large {
+    grid-column: span 2;
+}
+
+.bento-icon {
+    width: 56px;
+    height: 3px;
+    background: rgba(24, 119, 242, 0.1);
+    /* Visible on colored bg */
+    z-index: 0;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--fb-color);
+    margin-bottom: 24px;
+    transition: all 0.3s;
+}
+
+.bento-card:hover .bento-icon {
+    background: var(--fb-color);
+    color: white;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.bento-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 14px;
+}
+
+.bento-desc {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   PIPELINE PROCESS - REDESIGNED
+   ======================================== */
+.pipeline-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+    margin-top: 60px;
+    counter-reset: pipe-counter;
+}
+
+.pipeline-step {
+    flex: 1;
+    background: white;
+    border-radius: 24px;
+    padding: 32px 24px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.pipeline-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--fb-color);
+}
+
+/* Icons */
+.p-icon-box {
+    width: 70px;
+    height: 70px;
+    background: var(--fb-bg);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 1.5rem;
+    color: var(--fb-color);
+    transition: all 0.3s;
+}
+
+.pipeline-step:hover .p-icon-box {
+    background: var(--fb-color);
+    color: white;
+    transform: rotate(10deg);
+}
+
+/* Connector Arrow (Desktop) */
+.pipeline-step:not(:last-child)::after {
+    content: '\f054';
+    /* fa-chevron-right */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Typography */
+.pipeline-step h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.pipeline-step p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   FAQ OVERRIDES (Platform Specific)
+   ======================================== */
+.facebook .faq-accordion .accordion-button:not(.collapsed) .faq-icon {
+    background: linear-gradient(135deg, #1877F2, #00C6FF) !important;
+}
+
+.facebook .faq-accordion .accordion-button:not(.collapsed) {
+    color: var(--fb-color) !important;
+    background: rgba(24, 119, 242, 0.05) !important;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 991px) {
+    .mgmt-hero {
+        padding: 120px 0 60px;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .bento-large {
+        grid-column: span 1;
+    }
+
+    .pipeline-wrap {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .pipeline-step:not(:last-child)::after {
+        content: '\f078';
+        /* fa-chevron-down */
+        right: 50%;
+        bottom: -35px;
+        top: auto;
+        transform: translateX(50%);
+    }
+}
