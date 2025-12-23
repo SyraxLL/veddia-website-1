@@ -134,7 +134,7 @@
                                         <ul class="list-unstyled mega-menu-list">
                                             <li><a href="google-reklami.php">Google Reklamı</a></li>
                                             <li><a href="instagram-reklami.php">Instagram Reklamı</a></li>
-                                            <li><a href="#">Facebook Reklamı</a></li>
+                                            <li><a href="facebook-reklami.php">Facebook Reklamı</a></li>
                                         </ul>
                                     </div>
 
