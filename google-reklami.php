@@ -286,6 +286,247 @@
             bottom: 0;
             background: radial-gradient(circle at top right, rgba(66, 133, 244, 0.2), transparent 50%);
         }
+
+        /* New Button Styles */
+        /* Homepage Button Styles Replica */
+        .btn-google-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            gap: 10px;
+            font-size: 1rem;
+
+            background: linear-gradient(135deg, #14b8a6, #0ea5e9, #6366f1);
+            background-size: 200% auto;
+            color: #ffffff;
+            border: none;
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-google-primary:hover {
+            background-position: right center;
+            box-shadow: 0 15px 35px rgba(99, 102, 241, 0.4);
+            transform: translateY(-2px);
+            color: #ffffff;
+        }
+
+        .btn-google-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            gap: 10px;
+            font-size: 1rem;
+
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            color: #1e293b;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-google-outline::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50px;
+            padding: 2px;
+            background: linear-gradient(135deg, #14b8a6, #0ea5e9, #6366f1);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
+        }
+
+        .btn-google-outline:hover {
+            background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(99, 102, 241, 0.1));
+            color: #1e293b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Image Positioning & Premium Animation */
+        .hero-image-wrapper {
+            margin-left: auto;
+            display: block;
+            margin-right: -40px;
+            position: relative;
+        }
+
+        .hero-image-wrapper img {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-image-wrapper:hover img {
+            transform: scale(1.03) translateY(-8px);
+            box-shadow: 0 30px 60px rgba(66, 133, 244, 0.25), 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Decorative Elements */
+        .hero-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(66, 133, 244, 0.2), rgba(52, 168, 83, 0.2));
+            border-radius: 20px;
+            z-index: 1;
+            transition: all 0.5s ease;
+        }
+
+        .hero-image-wrapper:hover::before {
+            transform: translate(10px, 10px);
+            background: linear-gradient(135deg, rgba(66, 133, 244, 0.3), rgba(251, 188, 5, 0.3));
+        }
+
+        .hero-image-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #FBBC05, #EA4335);
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 0.6;
+            animation: floatBubble 4s ease-in-out infinite;
+        }
+
+        @keyframes floatBubble {
+
+            0%,
+            100% {
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                transform: translateY(-15px) scale(1.1);
+            }
+        }
+
+        /* Floating badge on hero image */
+        .hero-badge-float {
+            position: absolute;
+            top: 20px;
+            left: -40px;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            animation: floatBadge 3s ease-in-out infinite;
+        }
+
+        .hero-badge-float i {
+            color: #34A853;
+            font-size: 1.2rem;
+        }
+
+        @keyframes floatBadge {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero-badge-float-bottom {
+            position: absolute;
+            bottom: 40px;
+            right: -30px;
+            background: linear-gradient(135deg, #4285F4, #34A853);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(66, 133, 244, 0.3);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            animation: floatBadge 3.5s ease-in-out infinite 0.5s;
+        }
+
+        /* Problem/Solution Section Premium Styles */
+        .prob-sol-section {
+            padding: 100px 0;
+            background: #fcfefe;
+        }
+
+        .problem-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .problem-list li {
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+        }
+
+        .problem-list li::before {
+            content: '\f00d';
+            /* Fa-times */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            background: #fee2e2;
+            color: #ef4444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+        }
+
+        .solution-box {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            border-left: 5px solid #3b82f6;
+            /* Accent color */
+            box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.15);
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .solution-box:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 
@@ -309,11 +550,8 @@
                     </p>
 
                     <div class="d-flex gap-3 flex-wrap mb-4">
-                        <a href="contact.php" class="btn btn-primary btn-lg rounded-pill px-4 shadow-sm">
-                            Ücretsiz Reklam Analizi
-                        </a>
-                        <a href="#services" class="btn btn-outline-primary btn-lg rounded-pill px-4">
-                            Teklif Al
+                        <a href="contact.php" class="btn-google-primary">
+                            Hemen Teklif Alın <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
 
@@ -325,9 +563,20 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6" data-aos="fade-left">
-                    <img src="assets/img/google-ads-hero.jpg" alt="Google Ads Dashboard"
-                        class="img-fluid rounded-4 shadow-lg" style="border: 8px solid white;">
+                <div class="col-lg-6 text-end" data-aos="fade-left">
+                    <div class="hero-image-wrapper">
+                        <!-- Floating Badges -->
+                        <div class="hero-badge-float">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Google Partner</span>
+                        </div>
+                        <div class="hero-badge-float-bottom">
+                            <i class="fas fa-chart-line"></i>
+                            <span>+250% ROAS</span>
+                        </div>
+                        <img src="assets/img/google-ads-hero.jpg" alt="Google Ads Dashboard"
+                            class="img-fluid rounded-4 shadow-lg" style="border: 8px solid white;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -338,7 +587,7 @@
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-5" data-aos="fade-right">
-                    <h3 class="fw-bold mb-4">Yaşadığınız Sorunlar Bunlar mı?</h3>
+                    <h3 class="fw-bold mb-4 text-dark display-6">Yaşadığınız Sorunlar Bunlar mı?</h3>
                     <div class="problem-list">
                         <ul>
                             <li>Reklam bütçesi var, sonuç yok</li>
@@ -350,14 +599,18 @@
                     </div>
                 </div>
                 <div class="col-lg-7" data-aos="fade-left">
-                    <div class="solution-box shadow-sm">
-                        <h3 class="text-primary fw-bold mb-3">Çözüm Yaklaşımımız</h3>
-                        <p class="mb-3 lead text-dark">Biz Google Ads’i sadece “tıklama” almak için değil, satış ve lead
-                            (form/çağrı) kazanmak için yönetiyoruz.</p>
-                        <p class="text-secondary m-0">Her kampanya; bulunduğunuz sektörün dinamiklerine, hedef
+                    <div class="solution-box">
+                        <h3 class="text-primary fw-bold mb-4 display-6">Çözüm Yaklaşımımız</h3>
+                        <p class="mb-4 lead text-dark" style="font-weight: 500;">
+                            Biz Google Ads’i sadece “tıklama” almak için değil, satış ve lead
+                            (form/çağrı) kazanmak için yönetiyoruz.
+                        </p>
+                        <p class="text-secondary m-0" style="line-height: 1.8;">
+                            Her kampanya; bulunduğunuz sektörün dinamiklerine, hedef
                             kitlenizin arama alışkanlıklarına ve hedeflediğiniz dönüşüm başına maliyet (CPA) analizine
                             göre özel olarak kurgulanır. Veriye dayalı optimizasyon ile bütçenizin her kuruşunun geri
-                            dönüşünü hesaplıyoruz.</p>
+                            dönüşünü hesaplıyoruz.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -519,71 +772,173 @@
         </div>
     </section>
 
-    <!-- FAQ Section (Accordion) -->
-    <section class="py-5 bg-light">
+    <!-- FAQ Section (Premium Design) -->
+    <section class="faq-section-premium">
         <div class="container py-5">
-            <div class="text-center mb-5">
-                <h3 class="fw-bold">Sık Sorulan Sorular</h3>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="faq-badge">SSS</span>
+                <h2 class="display-5 fw-bold mt-3">Sık Sorulan Sorular</h2>
+                <p class="text-muted lead">Google Ads hakkında merak ettikleriniz</p>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="accordion" id="adsFaq">
-                        <div class="accordion-item border-0 mb-3 rounded-3 shadow-sm bg-white overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-medium" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q1">
-                                    Google Ads bütçesi ne kadar olmalı?
-                                </button>
-                            </h2>
-                            <div id="q1" class="accordion-collapse collapse" data-bs-parent="#adsFaq">
-                                <div class="accordion-body text-secondary">
-                                    Bütçe tamamen sizin hedeflerinize ve sektör rekabetine bağlıdır. Sabit bir alt sınır
-                                    yoktur. Küçük bütçelerle testlere başlayıp, verim aldıkça bütçeyi artırma
-                                    stratejisini uyguluyoruz.
+            <div class="row g-4 justify-content-center">
+                <!-- Left Column (4 Questions) -->
+                <div class="col-lg-6">
+                    <div class="accordion faq-accordion" id="adsFaqLeft">
+                        <!-- Question 1 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#q1">
+                                        <span class="faq-icon"><i class="fas fa-coins"></i></span>
+                                        Google Ads bütçesi ne kadar olmalı?
+                                    </button>
+                                </h2>
+                                <div id="q1" class="accordion-collapse collapse" data-bs-parent="#adsFaqLeft">
+                                    <div class="accordion-body">
+                                        Bütçe tamamen sizin hedeflerinize ve sektör rekabetine bağlıdır. Sabit bir alt
+                                        sınır yoktur. Küçük bütçelerle testlere başlayıp, verim aldıkça bütçeyi artırma
+                                        stratejisini uyguluyoruz.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item border-0 mb-3 rounded-3 shadow-sm bg-white overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-medium" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q2">
-                                    Ne kadar sürede sonuç alırım?
-                                </button>
-                            </h2>
-                            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#adsFaq">
-                                <div class="accordion-body text-secondary">
-                                    Google Ads, SEO'nun aksine anında trafik sağlar. Kampanya yayına girdiği an gösterim
-                                    başlar. Ancak kampanyanın "öğrenme süreci" ve tam optimizasyonu genellikle ilk 2-4
-                                    hafta içinde oturur.
+                        <!-- Question 2 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#q2">
+                                        <span class="faq-icon"><i class="fas fa-clock"></i></span>
+                                        Ne kadar sürede sonuç alırım?
+                                    </button>
+                                </h2>
+                                <div id="q2" class="accordion-collapse collapse" data-bs-parent="#adsFaqLeft">
+                                    <div class="accordion-body">
+                                        Google Ads, SEO'nun aksine anında trafik sağlar. Kampanya yayına girdiği an
+                                        gösterim başlar. Ancak kampanyanın "öğrenme süreci" ve tam optimizasyonu
+                                        genellikle ilk 2-4 hafta içinde oturur.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item border-0 mb-3 rounded-3 shadow-sm bg-white overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-medium" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q3">
-                                    Hesap bana mı ait oluyor?
-                                </button>
-                            </h2>
-                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#adsFaq">
-                                <div class="accordion-body text-secondary">
-                                    Evet, %100 şeffaflık ilkesiyle çalışıyoruz. Reklam hesabı sizin adınıza açılır veya
-                                    mevcut hesabınız kullanılır. Tüm verileri ve harcamaları kendi panelinizden şeffafça
-                                    görebilirsiniz.
+                        <!-- Question 3 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#q3">
+                                        <span class="faq-icon"><i class="fas fa-user-shield"></i></span>
+                                        Hesap bana mı ait oluyor?
+                                    </button>
+                                </h2>
+                                <div id="q3" class="accordion-collapse collapse" data-bs-parent="#adsFaqLeft">
+                                    <div class="accordion-body">
+                                        Evet, %100 şeffaflık ilkesiyle çalışıyoruz. Reklam hesabı sizin adınıza açılır
+                                        veya mevcut hesabınız kullanılır. Tüm verileri ve harcamaları kendi panelinizden
+                                        şeffafça görebilirsiniz.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item border-0 mb-3 rounded-3 shadow-sm bg-white overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-medium" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#q4">
-                                    Aylık sözleşme veya taahhüt var mı?
-                                </button>
-                            </h2>
-                            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#adsFaq">
-                                <div class="accordion-body text-secondary">
-                                    Hayır, uzun vadeli bağlayıcı sözleşmelerle değil, her ay memnuniyetinizle çalışmayı
-                                    hedefleriz. İstediğiniz zaman hizmeti durdurabilir veya ara verebilirsiniz.
+                        <!-- Question 4 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#q4">
+                                        <span class="faq-icon"><i class="fas fa-file-contract"></i></span>
+                                        Aylık sözleşme veya taahhüt var mı?
+                                    </button>
+                                </h2>
+                                <div id="q4" class="accordion-collapse collapse" data-bs-parent="#adsFaqLeft">
+                                    <div class="accordion-body">
+                                        Hayır, uzun vadeli bağlayıcı sözleşmelerle değil, her ay memnuniyetinizle
+                                        çalışmayı hedefleriz. İstediğiniz zaman hizmeti durdurabilir veya ara
+                                        verebilirsiniz.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column (4 Questions) -->
+                <div class="col-lg-6">
+                    <div class="accordion faq-accordion" id="adsFaqRight">
+                        <!-- Question 5 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#q5">
+                                        <span class="faq-icon"><i class="fas fa-chart-pie"></i></span>
+                                        Raporlama nasıl yapılıyor?
+                                    </button>
+                                </h2>
+                                <div id="q5" class="accordion-collapse collapse" data-bs-parent="#adsFaqRight">
+                                    <div class="accordion-body">
+                                        Her ay detaylı bir performans raporu sunuyoruz. Tıklama, gösterim, dönüşüm,
+                                        maliyet ve ROAS gibi tüm metrikleri anlaşılır grafiklerle paylaşıyoruz. Ayrıca
+                                        canlı dashboard erişimi de sağlıyoruz.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 6 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#q6">
+                                        <span class="faq-icon"><i class="fas fa-bullseye"></i></span>
+                                        Hangi sektörlere hizmet veriyorsunuz?
+                                    </button>
+                                </h2>
+                                <div id="q6" class="accordion-collapse collapse" data-bs-parent="#adsFaqRight">
+                                    <div class="accordion-body">
+                                        E-ticaret, hizmet sektörü, SaaS, eğitim, sağlık, gayrimenkul ve daha birçok
+                                        alanda deneyimimiz var. Her sektöre özel strateji geliştiriyor, rakip analizi
+                                        yapıyor ve sektörel dinamiklere göre kampanya kurgusu oluşturuyoruz.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 7 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#q7">
+                                        <span class="faq-icon"><i class="fas fa-tools"></i></span>
+                                        Mevcut kampanyalarımı optimize edebilir misiniz?
+                                    </button>
+                                </h2>
+                                <div id="q7" class="accordion-collapse collapse" data-bs-parent="#adsFaqRight">
+                                    <div class="accordion-body">
+                                        Elbette! Öncelikle mevcut hesabınızı ücretsiz analiz ediyoruz. Harcanan bütçe,
+                                        anahtar kelime performansı, reklam metinleri ve açılış sayfalarını inceliyoruz.
+                                        Ardından iyileştirme önerileri sunuyor, onayınızla optimizasyona başlıyoruz.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 8 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#q8">
+                                        <span class="faq-icon"><i class="fas fa-headset"></i></span>
+                                        Destek ve iletişim nasıl sağlanıyor?
+                                    </button>
+                                </h2>
+                                <div id="q8" class="accordion-collapse collapse" data-bs-parent="#adsFaqRight">
+                                    <div class="accordion-body">
+                                        Size özel bir hesap yöneticisi atanır. WhatsApp, e-posta veya telefon üzerinden
+                                        hafta içi her gün ulaşabilirsiniz. Acil durumlarda aynı gün içinde geri dönüş
+                                        yapıyoruz. Aylık görüşmelerle de kampanya stratejisini birlikte
+                                        değerlendiriyoruz.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -596,15 +951,21 @@
     <!-- Final CTA -->
     <section class="py-5 bg-white">
         <div class="container mb-5">
-            <div class="cta-final" data-aos="zoom-in">
-                <div class="position-relative z-2">
-                    <h2 class="display-5 fw-bold mb-3">Reklam Bütçenizi Kontrole Alın</h2>
-                    <p class="lead mb-4 op-08">Google Ads’i denediniz ama sonuç alamadıysanız, sorun bütçe değil
-                        stratejidir.</p>
-                    <a href="contact.php"
-                        class="btn btn-light text-primary btn-lg rounded-pill px-5 fw-bold shadow-lg icon-link-hover">
-                        Ücretsiz Analiz Talep Et <i class="fas fa-arrow-right ms-2"></i>
-                    </a>
+            <div class="cta-modern p-5 rounded-5 position-relative overflow-hidden" data-aos="zoom-in">
+                <div class="cta-glow-bg"></div>
+                <div class="row align-items-center position-relative z-2">
+                    <div class="col-lg-8 text-lg-start text-center mb-4 mb-lg-0">
+                        <h3 class="display-6 fw-bold text-white mb-3">Reklam Bütçenizi Kontrole Alın</h3>
+                        <p class="lead text-white-50 mb-0">
+                            Google Ads'i denediniz ama sonuç alamadıysanız, sorun bütçe değil stratejidir. Hemen bizimle
+                            iletişime geçin.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end text-center">
+                        <a href="contact.php" class="btn btn-gradient btn-xl shadow-lg">
+                            Hemen Başlayın <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

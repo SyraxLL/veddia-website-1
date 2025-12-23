@@ -587,7 +587,7 @@
             <div class="cta-box-premium text-center" data-aos="zoom-in">
                 <div class="cta-content">
                     <div class="cta-icon mb-4">
-                        <i class="fas fa-rocket"></i>
+                        <i class=""></i>
                     </div>
                     <h3 class="cta-title mb-3">Ekibimize Katılmak İster Misiniz?</h3>
                     <p class="cta-text mb-4">

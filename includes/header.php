@@ -41,6 +41,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/topbar.css">
+    <link rel="stylesheet" href="assets/css/mobile-menu.css">
 </head>
 
 <body>
@@ -76,9 +77,14 @@
             <a class="navbar-brand" href="index.php">
                 <img src="assets/img/logo.png" alt="Veddia Media" class="logo-img">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+
+            <!-- Custom Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle d-lg-none" type="button" id="mobileMenuToggle" aria-label="Menü">
+                <span class="hamburger-line line-1"></span>
+                <span class="hamburger-line line-2"></span>
+                <span class="hamburger-line line-3"></span>
             </button>
+
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav align-items-center">
                     <!-- Anasayfa -->
@@ -88,8 +94,7 @@
 
                     <!-- Kurumsal (Dropdown) -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
                             Kurumsal
                         </a>
                         <div class="dropdown-menu" style="min-width: 200px; padding: 1rem;">
@@ -101,7 +106,7 @@
                     </li>
 
                     <!-- Hizmetlerimiz (Mega Menu) -->
-                    <li class="nav-item dropdown position-static">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
                             Hizmetlerimiz
                         </a>
@@ -128,7 +133,8 @@
                                         </h6>
                                         <ul class="list-unstyled mega-menu-list">
                                             <li><a href="google-reklami.php">Google Reklamı</a></li>
-                                            <li><a href="#">Instagram Reklamı</a></li>
+                                            <li><a href="instagram-reklami.php">Instagram Reklamı</a></li>
+                                            <li><a href="#">Facebook Reklamı</a></li>
                                         </ul>
                                     </div>
 
@@ -184,3 +190,186 @@
             </div>
         </div>
     </nav>
+
+    <!-- Fullscreen Mobile Menu -->
+    <div class="mobile-menu-fullscreen" id="mobileMenuFullscreen">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-logo">
+                <a href="index.php"><img src="assets/img/logo.png" alt="Veddia Media"></a>
+            </div>
+            <button class="mobile-menu-close" id="mobileMenuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="mobile-menu-content">
+            <ul class="mobile-menu-nav">
+                <!-- Anasayfa -->
+                <li class="mobile-menu-item">
+                    <a href="index.php" class="mobile-menu-link">
+                        <span>Anasayfa</span>
+                    </a>
+                </li>
+
+                <!-- Kurumsal -->
+                <li class="mobile-menu-item has-submenu" data-submenu="simple">
+                    <a href="#" class="mobile-menu-link">
+                        <span>Kurumsal</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="mobile-submenu-simple">
+                        <ul class="simple-submenu">
+                            <li><a href="about.php"><i class="fas fa-info-circle"></i> Hakkımızda</a></li>
+                            <li><a href="team.php"><i class="fas fa-users"></i> Ekibimiz</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Hizmetlerimiz - Opens Fullscreen -->
+                <li class="mobile-menu-item" data-submenu="fullscreen">
+                    <a href="#" class="mobile-menu-link" id="openServicesMenu">
+                        <span>Hizmetlerimiz</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </li>
+
+                <!-- Referans -->
+                <li class="mobile-menu-item">
+                    <a href="referans.php" class="mobile-menu-link">
+                        <span>Referans</span>
+                    </a>
+                </li>
+
+                <!-- Blog -->
+                <li class="mobile-menu-item">
+                    <a href="blog.php" class="mobile-menu-link">
+                        <span>Blog</span>
+                    </a>
+                </li>
+
+                <!-- İletişim -->
+                <li class="mobile-menu-item">
+                    <a href="contact.php" class="mobile-menu-link">
+                        <span>İletişim</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Wheel-Style Services Panel (Slides from Left) -->
+    <div class="services-wheel-panel" id="servicesWheelPanel">
+        <!-- Decorative Background -->
+        <div class="wheel-bg-decoration circle-1"></div>
+        <div class="wheel-bg-decoration circle-2"></div>
+
+        <!-- Panel Header -->
+        <div class="wheel-panel-header">
+            <h3 class="wheel-panel-title">
+                <span>Hizmetlerimiz</span>
+            </h3>
+            <button class="wheel-panel-close" id="closeWheelPanel">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Wheel Container -->
+        <div class="wheel-container">
+            <div class="wheel-categories">
+                <!-- Web Tasarım -->
+                <div class="wheel-category" data-category="web">
+                    <div class="wheel-category-header">
+                        <div class="wheel-category-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="wheel-category-info">
+                            <h4 class="wheel-category-title">Web Tasarım</h4>
+                            <span class="wheel-category-count">4 hizmet</span>
+                        </div>
+                        <div class="wheel-category-arrow">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="wheel-category-links">
+                        <ul>
+                            <li><a href="kurumsal-web-sitesi.php">Kurumsal Web Sitesi</a></li>
+                            <li><a href="e-ticaret-web.php">E-Ticaret Sitesi</a></li>
+                            <li><a href="kisisel-web-sitesi.php">Kişisel Web Sitesi</a></li>
+                            <li><a href="urun-tanitim-sitesi.php">Ürün Tanıtım Sitesi</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Dijital Pazarlama -->
+                <div class="wheel-category" data-category="marketing">
+                    <div class="wheel-category-header">
+                        <div class="wheel-category-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="wheel-category-info">
+                            <h4 class="wheel-category-title">Dijital Pazarlama</h4>
+                            <span class="wheel-category-count">3 hizmet</span>
+                        </div>
+                        <div class="wheel-category-arrow">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="wheel-category-links">
+                        <ul>
+                            <li><a href="google-reklami.php">Google Reklamı</a></li>
+                            <li><a href="instagram-reklami.php">Instagram Reklamı</a></li>
+                            <li><a href="#">Facebook Reklamı</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sosyal Medya -->
+                <div class="wheel-category" data-category="social">
+                    <div class="wheel-category-header">
+                        <div class="wheel-category-icon">
+                            <i class="fas fa-share-nodes"></i>
+                        </div>
+                        <div class="wheel-category-info">
+                            <h4 class="wheel-category-title">Sosyal Medya</h4>
+                            <span class="wheel-category-count">4 hizmet</span>
+                        </div>
+                        <div class="wheel-category-arrow">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="wheel-category-links">
+                        <ul>
+                            <li><a href="#">Facebook Yönetimi</a></li>
+                            <li><a href="#">Instagram Yönetimi</a></li>
+                            <li><a href="#">X (Twitter) Yönetimi</a></li>
+                            <li><a href="#">LinkedIn Yönetimi</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Grafik Tasarım -->
+                <div class="wheel-category" data-category="design">
+                    <div class="wheel-category-header">
+                        <div class="wheel-category-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <div class="wheel-category-info">
+                            <h4 class="wheel-category-title">Grafik Tasarım</h4>
+                            <span class="wheel-category-count">3 hizmet</span>
+                        </div>
+                        <div class="wheel-category-arrow">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="wheel-category-links">
+                        <ul>
+                            <li><a href="#">Logo Tasarımı</a></li>
+                            <li><a href="#">Broşür Tasarımı</a></li>
+                            <li><a href="#">Katalog Tasarımı</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

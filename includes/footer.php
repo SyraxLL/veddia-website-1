@@ -200,6 +200,121 @@
             behavior: 'smooth'
         });
     });
+
+    // ========================================
+    // FULLSCREEN MOBILE MENU WITH WHEEL PANEL
+    // ========================================
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.getElementById('mobileMenuToggle');
+        const menuClose = document.getElementById('mobileMenuClose');
+        const menuFullscreen = document.getElementById('mobileMenuFullscreen');
+        const servicesBtn = document.getElementById('openServicesMenu');
+        const wheelPanel = document.getElementById('servicesWheelPanel');
+        const wheelPanelClose = document.getElementById('closeWheelPanel');
+
+        if (!menuToggle || !menuFullscreen) return;
+
+        // Open main menu
+        menuToggle.addEventListener('click', function () {
+            this.classList.add('active');
+            menuFullscreen.classList.add('active');
+            document.body.classList.add('mobile-menu-open');
+        });
+
+        // Close main menu
+        if (menuClose) {
+            menuClose.addEventListener('click', function () {
+                closeAllMenus();
+            });
+        }
+
+        function closeAllMenus() {
+            menuToggle.classList.remove('active');
+            menuFullscreen.classList.remove('active');
+            if (wheelPanel) wheelPanel.classList.remove('active');
+            document.body.classList.remove('mobile-menu-open');
+            // Close all wheel categories
+            document.querySelectorAll('.wheel-category.expanded').forEach(function (cat) {
+                cat.classList.remove('expanded');
+            });
+        }
+
+        // Open wheel panel (services)
+        if (servicesBtn && wheelPanel) {
+            servicesBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                wheelPanel.classList.add('active');
+            });
+        }
+
+        // Close wheel panel
+        if (wheelPanelClose && wheelPanel) {
+            wheelPanelClose.addEventListener('click', function () {
+                wheelPanel.classList.remove('active');
+                // Close all wheel categories
+                document.querySelectorAll('.wheel-category.expanded').forEach(function (cat) {
+                    cat.classList.remove('expanded');
+                });
+            });
+        }
+
+        // Wheel category accordion toggle
+        const wheelCategories = document.querySelectorAll('.wheel-category');
+        wheelCategories.forEach(function (category) {
+            const header = category.querySelector('.wheel-category-header');
+            header.addEventListener('click', function () {
+                // Close other categories
+                wheelCategories.forEach(function (other) {
+                    if (other !== category) {
+                        other.classList.remove('expanded');
+                    }
+                });
+                // Toggle current
+                category.classList.toggle('expanded');
+            });
+        });
+
+        // Close all menus when clicking wheel category links
+        const wheelLinks = document.querySelectorAll('.wheel-category-links a');
+        wheelLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                setTimeout(closeAllMenus, 100);
+            });
+        });
+
+        // Kurumsal accordion toggle
+        const kurumsalItem = document.querySelector('.mobile-menu-item.has-submenu[data-submenu="simple"]');
+        if (kurumsalItem) {
+            const kurumsalLink = kurumsalItem.querySelector('.mobile-menu-link');
+            kurumsalLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                kurumsalItem.classList.toggle('open');
+            });
+        }
+
+        // Close menu when clicking simple submenu links
+        const simpleLinks = document.querySelectorAll('.simple-submenu a');
+        simpleLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                setTimeout(closeAllMenus, 100);
+            });
+        });
+
+        // Close menu when clicking regular menu links
+        const regularLinks = document.querySelectorAll('.mobile-menu-item:not(.has-submenu):not([data-submenu="fullscreen"]) .mobile-menu-link');
+        regularLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                closeAllMenus();
+            });
+        });
+
+        // Close on resize to desktop
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 992) {
+                closeAllMenus();
+            }
+        });
+    });
 </script>
 
 </body>

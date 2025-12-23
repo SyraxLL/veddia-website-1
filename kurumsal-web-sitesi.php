@@ -30,151 +30,11 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/topbar.css">
     <link rel="stylesheet" href="assets/css/product-hero.css">
+    <link rel="stylesheet" href="assets/css/mobile-menu.css">
 </head>
 
 <body>
-    <!-- Top Bar -->
-    <header class="topbar">
-        <div class="container">
-            <div class="topbar-inner">
-                <div class="topbar-left">
-                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a>
-                </div>
-                <div class="topbar-right">
-                    <a href="tel:05325906804" class="contact-item">
-                        <i class="fas fa-phone-alt"></i> 0 532 590 68 04
-                    </a>
-                    <a href="mailto:info@veddia.com" class="contact-item">
-                        <i class="fas fa-envelope"></i> info@veddia.com
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.php">
-                <img src="assets/img/logo.png" alt="Veddia Media" class="logo-img">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center">
-                    <!-- Anasayfa -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.php">Anasayfa</a>
-                    </li>
-
-                    <!-- Kurumsal (Dropdown) -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Kurumsal
-                        </a>
-                        <div class="dropdown-menu" style="min-width: 200px; padding: 1rem;">
-                            <ul class="list-unstyled mega-menu-list mb-0">
-                                <li><a href="about.php">Hakkımızda</a></li>
-                                <li><a href="team.php">Ekibimiz</a></li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <!-- Hizmetlerimiz (Mega Menu) -->
-                    <li class="nav-item dropdown position-static">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
-                            Hizmetlerimiz
-                        </a>
-                        <div class="dropdown-menu mega-menu">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <!-- Column 1: Web Tasarım -->
-                                    <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
-                                        <h6 class="mega-menu-title gradient-text-main">
-                                            <i class="fas fa-laptop-code me-2"></i>Web Tasarım
-                                        </h6>
-                                        <ul class="list-unstyled mega-menu-list">
-                                            <li><a href="kurumsal-web-sitesi.php">Kurumsal Web Sitesi</a></li>
-                                            <li><a href="e-ticaret-web.php">E-Ticaret Sitesi</a></li>
-                                            <li><a href="kisisel-web-sitesi.php">Kişisel Web Sitesi</a></li>
-                                            <li><a href="urun-tanitim-sitesi.php">Ürün Tanıtım Sitesi</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Column 2: Dijital Pazarlama -->
-                                    <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
-                                        <h6 class="mega-menu-title gradient-text-main">
-                                            <i class="fas fa-bullhorn me-2"></i>Dijital Pazarlama
-                                        </h6>
-                                        <ul class="list-unstyled mega-menu-list">
-                                            <li><a href="#">Google Reklamı</a></li>
-                                            <li><a href="#">Youtube Reklamı</a></li>
-                                            <li><a href="#">Instagram Reklamı</a></li>
-                                            <li><a href="#">X (Twitter) Reklamı</a></li>
-                                            <li><a href="#">TikTok Reklamı</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Column 3: Sosyal Medya -->
-                                    <div class="col-lg-3 col-md-6 mb-3 mb-lg-0">
-                                        <h6 class="mega-menu-title gradient-text-main">
-                                            <i class="fas fa-share-nodes me-2"></i>Sosyal Medya
-                                        </h6>
-                                        <ul class="list-unstyled mega-menu-list">
-                                            <li><a href="#">Facebook Yönetimi</a></li>
-                                            <li><a href="#">Instagram Yönetimi</a></li>
-                                            <li><a href="#">X (Twitter) Yönetimi</a></li>
-                                            <li><a href="#">LinkedIn Yönetimi</a></li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- Column 4: Grafik Tasarım -->
-                                    <div class="col-lg-3 col-md-6">
-                                        <h6 class="mega-menu-title gradient-text-main">
-                                            <i class="fas fa-pen-nib me-2"></i>Grafik Tasarım
-                                        </h6>
-                                        <ul class="list-unstyled mega-menu-list">
-                                            <li><a href="#">Logo Tasarımı</a></li>
-                                            <li><a href="#">Broşür Tasarımı Ve Basımı</a></li>
-                                            <li><a href="#">Katalog Tasarımı Ve Basımı</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <!-- Referans -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="references.php">Referans</a>
-                    </li>
-
-                    <!-- Blog -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-
-                    <!-- İletişim -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.php">İletişim</a>
-                    </li>
-
-                    <!-- CTA Button -->
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-gradient" href="#contact">Hemen Teklif Al</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include 'includes/header.php'; ?>
 
     <!-- Premium Hero Slider - Light Corporate Theme -->
     <section class="hero-premium-kurumsal" id="hero-premium">
@@ -637,103 +497,127 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section py-5">
-        <div class="container">
+    <!-- FAQ Section (Premium Design) -->
+    <section class="faq-section-premium">
+        <div class="container py-5">
             <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="section-title gradient-text-main">Sıkça Sorulan Sorular</h2>
-                <p class="section-subtitle">Kurumsal web sitesi hakkında merak edilenler</p>
+                <span class="faq-badge">SSS</span>
+                <h2 class="display-5 fw-bold mt-3">Sıkça Sorulan Sorular</h2>
+                <p class="text-muted lead">Kurumsal web sitesi hakkında merak edilenler</p>
             </div>
-
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="row g-4">
-                        <!-- Sol Sütun -->
-                        <div class="col-lg-6">
-                            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="100">
-                                <div class="faq-item">
-                                    <button class="faq-question"
-                                        onclick="this.parentElement.classList.toggle('active')">
-                                        <div class="faq-icon"><i class="fas fa-clock"></i></div>
-                                        <span>Kurumsal web sitesi ne kadar sürede tamamlanır?</span>
-                                        <i class="fas fa-chevron-down faq-arrow"></i>
+            <div class="row g-4 justify-content-center">
+                <!-- Left Column (3 Questions) -->
+                <div class="col-lg-6">
+                    <div class="accordion faq-accordion" id="kurumsalFaqLeft">
+                        <!-- Question 1 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#kq1">
+                                        <span class="faq-icon"><i class="fas fa-clock"></i></span>
+                                        Kurumsal web sitesi ne kadar sürede tamamlanır?
                                     </button>
-                                    <div class="faq-answer">
-                                        <p>Projenin kapsamına göre değişmekle birlikte, standart bir kurumsal web sitesi
-                                            2-4 hafta içinde tamamlanır. Daha kapsamlı projeler 6-8 hafta sürebilir.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="200">
-                                <div class="faq-item">
-                                    <button class="faq-question"
-                                        onclick="this.parentElement.classList.toggle('active')">
-                                        <div class="faq-icon"><i class="fas fa-edit"></i></div>
-                                        <span>İçerikleri kendim güncelleyebilir miyim?</span>
-                                        <i class="fas fa-chevron-down faq-arrow"></i>
-                                    </button>
-                                    <div class="faq-answer">
-                                        <p>Evet, kullanımı kolay yönetim paneli sayesinde teknik bilgi gerektirmeden tüm
-                                            içeriklerinizi güncelleyebilirsiniz. Ayrıca kullanım eğitimi de veriyoruz.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="300">
-                                <div class="faq-item">
-                                    <button class="faq-question"
-                                        onclick="this.parentElement.classList.toggle('active')">
-                                        <div class="faq-icon"><i class="fas fa-globe"></i></div>
-                                        <span>Çok dilli web sitesi yapılabilir mi?</span>
-                                        <i class="fas fa-chevron-down faq-arrow"></i>
-                                    </button>
-                                    <div class="faq-answer">
-                                        <p>Evet, kurumsal web sitenizi Türkçe, İngilizce ve istediğiniz diğer dillerde
-                                            hazırlayabiliriz. Dil geçişleri kullanıcı dostu şekilde tasarlanır.</p>
+                                </h2>
+                                <div id="kq1" class="accordion-collapse collapse" data-bs-parent="#kurumsalFaqLeft">
+                                    <div class="accordion-body">
+                                        Projenin kapsamına göre değişmekle birlikte, standart bir kurumsal web sitesi
+                                        2-4 hafta içinde tamamlanır. Daha kapsamlı projeler 6-8 hafta sürebilir.
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Sağ Sütun -->
-                        <div class="col-lg-6">
-                            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="150">
-                                <div class="faq-item">
-                                    <button class="faq-question"
-                                        onclick="this.parentElement.classList.toggle('active')">
-                                        <div class="faq-icon"><i class="fas fa-shield-alt"></i></div>
-                                        <span>Hosting ve güvenlik dahil mi?</span>
-                                        <i class="fas fa-chevron-down faq-arrow"></i>
+                        <!-- Question 2 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#kq2">
+                                        <span class="faq-icon"><i class="fas fa-edit"></i></span>
+                                        İçerikleri kendim güncelleyebilir miyim?
                                     </button>
-                                    <div class="faq-answer">
-                                        <p>Evet, SSL sertifikası, güvenlik duvarı, günlük yedekleme ve yüksek
-                                            performanslı hosting hizmeti paketlerimize dahildir.</p>
+                                </h2>
+                                <div id="kq2" class="accordion-collapse collapse" data-bs-parent="#kurumsalFaqLeft">
+                                    <div class="accordion-body">
+                                        Evet, kullanımı kolay yönetim paneli sayesinde teknik bilgi gerektirmeden tüm
+                                        içeriklerinizi güncelleyebilirsiniz. Ayrıca kullanım eğitimi de veriyoruz.
                                     </div>
                                 </div>
                             </div>
-                            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="250">
-                                <div class="faq-item">
-                                    <button class="faq-question"
-                                        onclick="this.parentElement.classList.toggle('active')">
-                                        <div class="faq-icon"><i class="fas fa-headset"></i></div>
-                                        <span>Yayın sonrası destek var mı?</span>
-                                        <i class="fas fa-chevron-down faq-arrow"></i>
+                        </div>
+                        <!-- Question 3 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#kq3">
+                                        <span class="faq-icon"><i class="fas fa-globe"></i></span>
+                                        Çok dilli web sitesi yapılabilir mi?
                                     </button>
-                                    <div class="faq-answer">
-                                        <p>Evet, 7/24 teknik destek hizmeti sunuyoruz. Sorunlarınız en kısa sürede
-                                            çözülür, güncellemeler ve bakım düzenli olarak yapılır.</p>
+                                </h2>
+                                <div id="kq3" class="accordion-collapse collapse" data-bs-parent="#kurumsalFaqLeft">
+                                    <div class="accordion-body">
+                                        Evet, kurumsal web sitenizi Türkçe, İngilizce ve istediğiniz diğer dillerde
+                                        hazırlayabiliriz. Dil geçişleri kullanıcı dostu şekilde tasarlanır.
                                     </div>
                                 </div>
                             </div>
-                            <div class="faq-accordion" data-aos="fade-up" data-aos-delay="350">
-                                <div class="faq-item">
-                                    <button class="faq-question"
-                                        onclick="this.parentElement.classList.toggle('active')">
-                                        <div class="faq-icon"><i class="fas fa-search"></i></div>
-                                        <span>SEO çalışması dahil mi?</span>
-                                        <i class="fas fa-chevron-down faq-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column (3 Questions) -->
+                <div class="col-lg-6">
+                    <div class="accordion faq-accordion" id="kurumsalFaqRight">
+                        <!-- Question 4 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="50">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#kq4">
+                                        <span class="faq-icon"><i class="fas fa-shield-alt"></i></span>
+                                        Hosting ve güvenlik dahil mi?
                                     </button>
-                                    <div class="faq-answer">
-                                        <p>Temel SEO altyapısı tüm paketlere dahildir. İleri düzey SEO çalışması için
-                                            ayrı hizmet paketlerimiz mevcuttur.</p>
+                                </h2>
+                                <div id="kq4" class="accordion-collapse collapse" data-bs-parent="#kurumsalFaqRight">
+                                    <div class="accordion-body">
+                                        Evet, SSL sertifikası, güvenlik duvarı, günlük yedekleme ve yüksek performanslı
+                                        hosting hizmeti paketlerimize dahildir.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 5 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#kq5">
+                                        <span class="faq-icon"><i class="fas fa-headset"></i></span>
+                                        Yayın sonrası destek var mı?
+                                    </button>
+                                </h2>
+                                <div id="kq5" class="accordion-collapse collapse" data-bs-parent="#kurumsalFaqRight">
+                                    <div class="accordion-body">
+                                        Evet, 7/24 teknik destek hizmeti sunuyoruz. Sorunlarınız en kısa sürede çözülür,
+                                        güncellemeler ve bakım düzenli olarak yapılır.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 6 -->
+                        <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#kq6">
+                                        <span class="faq-icon"><i class="fas fa-search"></i></span>
+                                        SEO çalışması dahil mi?
+                                    </button>
+                                </h2>
+                                <div id="kq6" class="accordion-collapse collapse" data-bs-parent="#kurumsalFaqRight">
+                                    <div class="accordion-body">
+                                        Temel SEO altyapısı tüm paketlere dahildir. İleri düzey SEO çalışması için ayrı
+                                        hizmet paketlerimiz mevcuttur.
                                     </div>
                                 </div>
                             </div>
@@ -766,161 +650,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer-section">
-        <div class="footer-gradient-line"></div>
-
-        <!-- Main Footer Content -->
-        <div class="container pt-5 pb-4">
-            <div class="row gy-4">
-                <!-- Company Info -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="footer-widget">
-                        <img src="assets/img/logo.png" alt="Veddia Media" class="footer-logo mb-3">
-                        <p class="footer-desc">Veddia Media ile web tasarım, yazılım geliştirme ve dijital pazarlamada
-                            profesyonel çözümler. Dijital dünyada fark yaratıyoruz!</p>
-
-                        <!-- Social Links -->
-                        <div class="social-links mt-4">
-                            <a href="#" class="social-link" title="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-link" title="Instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="social-link" title="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-link" title="LinkedIn">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="#" class="social-link" title="TikTok">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                            <a href="#" class="social-link" title="YouTube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="col-lg-2 col-md-6">
-                    <div class="footer-widget">
-                        <h5 class="footer-title">
-                            Hızlı Linkler
-                        </h5>
-                        <ul class="footer-links">
-                            <li><a href="index.php"><i class="fas fa-chevron-right me-2"></i>Ana Sayfa</a></li>
-                            <li><a href="about.php"><i class="fas fa-chevron-right me-2"></i>Hakkımızda</a></li>
-                            <li><a href="team.php"><i class="fas fa-chevron-right me-2"></i>Ekibimiz</a></li>
-                            <li><a href="#services"><i class="fas fa-chevron-right me-2"></i>Hizmetler</a></li>
-                            <li><a href="#portfolio"><i class="fas fa-chevron-right me-2"></i>Portfolyo</a></li>
-                            <li><a href="contact.php"><i class="fas fa-chevron-right me-2"></i>İletişim</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Services -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h5 class="footer-title">
-                            Hizmetlerimiz
-                        </h5>
-                        <ul class="footer-links">
-                            <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Web Tasarım</a></li>
-                            <li><a href="#"><i class="fas fa-chevron-right me-2"></i>E-Ticaret</a></li>
-                            <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Dijital Pazarlama</a></li>
-                            <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Sosyal Medya</a></li>
-                            <li><a href="#"><i class="fas fa-chevron-right me-2"></i>Grafik Tasarım</a></li>
-                            <li><a href="#"><i class="fas fa-chevron-right me-2"></i>SEO Hizmetleri</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Contact Info -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h5 class="footer-title">
-                            İletişim
-                        </h5>
-                        <ul class="footer-contact">
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <span class="contact-label">Adres</span>
-                                    <span class="contact-value">İstanbul, Türkiye</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <span class="contact-label">Telefon</span>
-                                    <a href="tel:+905551234567" class="contact-value">+90 555 123 4567</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <span class="contact-label">E-posta</span>
-                                    <a href="mailto:info@veddia.com" class="contact-value">info@veddia.com</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="contact-icon">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                                <div class="contact-info">
-                                    <span class="contact-label">WhatsApp</span>
-                                    <a href="https://wa.me/905551234567" class="contact-value">+90 555 123 4567</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom mt-5 pt-4 border-top border-light-subtle">
-                <div class="row align-items-center">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <p class="mb-0">
-                            &copy; 2025 <strong>Veddia Media</strong>. Tüm hakları saklıdır.
-                        </p>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <ul class="footer-legal">
-                            <li><a href="#" class="me-3">Gizlilik Politikası</a></li>
-                            <li><a href="#" class="me-3">Kullanım Şartları</a></li>
-                            <li><a href="#">KVKK</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-12 text-center">
-                        <p class="mb-0 small">
-                            Tasarlandı ve Geliştirildi <i class="fas fa-heart text-gradient"></i> ile
-                            <strong>Veddia Team</strong> tarafından
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" title="Yukarı Çık">
-        <img src="assets/img/favicon.png" alt="YukarÄ± Ã‡Ä±k">
+        <img src="assets/img/favicon.png" alt="Yukarı Çık">
     </button>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
@@ -929,37 +662,4 @@
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Custom Scripts -->
-    <script src="assets/js/main.js"></script>
-
-    <!-- Footer Scripts -->
-    <script>
-        // AOS Init
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-        // Back to Top Button
-        const backToTopBtn = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-
-</body>
-
-</html>
+    <?php include 'includes/footer.php'; ?>
