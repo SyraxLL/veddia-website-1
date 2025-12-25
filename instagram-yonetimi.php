@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Hesap Yönetimi - Veddia Media</title>
     <meta name="description"
-        content="Profesyonel Instagram yönetimi. Reels üretimi, post tasarımı, hikaye stratejisi ve organik büyüme hizmetleri.">
+        content="Profesyonel Instagram yönetimi. Post tasarımı, hikaye stratejisi ve organik büyüme hizmetleri.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/topbar.css">
     <link rel="stylesheet" href="assets/css/social-management.css">
+    <link rel="stylesheet" href="assets/css/instagram-management.css">
 </head>
 
 <body class="instagram">
@@ -39,9 +40,9 @@
                         <span class="text-gradient-insta">Görsel Vitrini</span>
                     </h1>
                     <p class="mgmt-desc">
-                        Instagram artık sadece fotoğraf değil; Reels, Hikayeler ve Canlı Yayınlarla yaşayan bir
-                        platform.
-                        Markanızın estetiğini koruyarak, takipçilerinizi sadık müşterilere dönüştürüyoruz.
+                        Instagram, markanızın en prestijli görsel vitrinidir. Profesyonel gönderi tasarımları, hikayeler
+                        ve
+                        etkili içerik stratejileriyle takipçilerinizi sadık müşterilere dönüştürüyoruz.
                     </p>
                     <div class="d-flex gap-3">
                         <a href="contact.php" class="btn text-white rounded-pill px-4 py-3 fw-bold"
@@ -52,30 +53,66 @@
                 </div>
                 <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
                     <div class="mgmt-visual-card">
-                        <!-- Mock Insta Profile -->
-                        <div class="d-flex align-items-center mb-4">
-                            <div class="rounded-circle p-1" style="background: var(--insta-gradient);">
-                                <div class="bg-white rounded-circle p-1">
-                                    <div class="bg-light rounded-circle" style="width: 60px; height: 60px;"></div>
+                        <!-- Instagram Profile Mockup -->
+                        <div class="insta-profile-header">
+                            <div class="insta-avatar">
+                                <div class="insta-avatar-inner">
+                                    <div class="insta-avatar-placeholder"></div>
                                 </div>
                             </div>
-                            <div class="ms-3 flex-grow-1">
-                                <h5 class="mb-1 fw-bold">marka_adi</h5>
-                                <div class="d-flex gap-4 text-small">
-                                    <span><b>12.4K</b> Takipçi</span>
-                                    <span><b>450</b> Gönderi</span>
+                            <div class="flex-grow-1">
+                                <h5 class="mb-1 fw-bold" style="font-size: 1rem;">marka_adi</h5>
+                                <div class="d-flex gap-3 text-secondary" style="font-size: 0.8rem;">
+                                    <span><b class="text-dark">12.4K</b> Takipçi</span>
+                                    <span><b class="text-dark">450</b> Gönderi</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="row g-2">
-                            <div class="col-4">
-                                <div class="bg-light rounded-3 ratio ratio-1x1"></div>
+
+                        <!-- Story Highlights -->
+                        <div class="story-highlights">
+                            <div class="story-item">
+                                <div class="story-circle">
+                                    <div class="story-circle-inner">
+                                        <div class="story-circle-content"></div>
+                                    </div>
+                                </div>
+                                <span class="story-label">Ürünler</span>
                             </div>
-                            <div class="col-4">
-                                <div class="bg-light rounded-3 ratio ratio-1x1"></div>
+                            <div class="story-item">
+                                <div class="story-circle">
+                                    <div class="story-circle-inner">
+                                        <div class="story-circle-content"></div>
+                                    </div>
+                                </div>
+                                <span class="story-label">Kampanya</span>
                             </div>
-                            <div class="col-4">
-                                <div class="bg-light rounded-3 ratio ratio-1x1"></div>
+                            <div class="story-item">
+                                <div class="story-circle">
+                                    <div class="story-circle-inner">
+                                        <div class="story-circle-content"></div>
+                                    </div>
+                                </div>
+                                <span class="story-label">Ekip</span>
+                            </div>
+                        </div>
+
+                        <!-- Feed Grid -->
+                        <div class="insta-feed-grid">
+                            <div class="feed-item">
+                                <div class="engagement-overlay">
+                                    <span class="engagement-stat"><i class="fas fa-heart"></i> 1.2K</span>
+                                </div>
+                            </div>
+                            <div class="feed-item">
+                                <div class="engagement-overlay">
+                                    <span class="engagement-stat"><i class="fas fa-heart"></i> 856</span>
+                                </div>
+                            </div>
+                            <div class="feed-item">
+                                <div class="engagement-overlay">
+                                    <span class="engagement-stat"><i class="fas fa-heart"></i> 2.1K</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -95,9 +132,9 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4" data-aos="fade-up">
                     <div class="mgmt-card">
-                        <i class="fas fa-video mgmt-icon"></i>
-                        <h3>Reels Prodüksiyonu</h3>
-                        <p>Trend müzikler ve akımlarla uyumlu, yüksek izlenme potansiyelli dikey videolar kurguluyoruz.
+                        <i class="fas fa-palette mgmt-icon"></i>
+                        <h3>Gönderi Tasarımı</h3>
+                        <p>Markanızın kimliğine uygun, profesyonel ve dikkat çekici gönderi tasarımları hazırlıyoruz.
                         </p>
                     </div>
                 </div>
@@ -189,38 +226,130 @@
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section-padding bg-white">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h2 class="text-center fw-bold mb-5">Sıkça Sorulanlar</h2>
-                    <div class="accordion accordion-flush" id="instaFaq">
-                        <div class="accordion-item border-0 mb-3 bg-light rounded-3">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    Reels videolarını siz mi çekiyorsunuz?
-                                </button>
-                            </h2>
-                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#instaFaq">
-                                <div class="accordion-body text-secondary">
-                                    Evet, profesyonel ekipmanlarımızla ürün veya hizmet çekimlerinizi yapıp
-                                    kurguluyoruz. Dilerseniz sizin gönderdiğiniz ham görüntüleri de kurgulayabiliriz.
+    <!-- FAQ Section (Premium Design - 2 Column) -->
+    <section class="insta-faq-section">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="insta-faq-badge">SSS</span>
+                <h2 class="display-5 fw-bold mt-3">Sıkça Sorulan Sorular</h2>
+                <p class="text-muted lead">Instagram yönetimi hakkında merak edilenler</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <!-- Left Column -->
+                <div class="col-lg-6">
+                    <div class="accordion insta-faq-accordion" id="instaFaqLeft">
+                        <!-- Question 1 -->
+                        <div class="insta-faq-item" data-aos="fade-up" data-aos-delay="0">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#ifq1">
+                                        <span class="insta-faq-icon"><i class="fas fa-palette"></i></span>
+                                        Gönderi tasarımlarını siz mi yapıyorsunuz?
+                                    </button>
+                                </h2>
+                                <div id="ifq1" class="accordion-collapse collapse" data-bs-parent="#instaFaqLeft">
+                                    <div class="accordion-body">
+                                        Evet, profesyonel grafik tasarım ekibimiz markanızın kimliğine uygun gönderi
+                                        tasarımları hazırlıyor. Tüm tasarımlar onayınıza sunulduktan sonra yayınlanıyor.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item border-0 mb-3 bg-light rounded-3">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed bg-transparent" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    Takipçi satın alma yapıyor musunuz?
-                                </button>
-                            </h2>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#instaFaq">
-                                <div class="accordion-body text-secondary">
-                                    Hayır, kesinlikle bot veya sahte takipçi işlemi yapmıyoruz. Bu işlem hesabınıza
-                                    zarar verir. Biz %100 organik ve gerçek kitle büyümesi üzerine çalışıyoruz.
+                        <!-- Question 2 -->
+                        <div class="insta-faq-item" data-aos="fade-up" data-aos-delay="50">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#ifq2">
+                                        <span class="insta-faq-icon"><i class="fas fa-users"></i></span>
+                                        Takipçi satın alma yapıyor musunuz?
+                                    </button>
+                                </h2>
+                                <div id="ifq2" class="accordion-collapse collapse" data-bs-parent="#instaFaqLeft">
+                                    <div class="accordion-body">
+                                        Hayır, kesinlikle bot veya sahte takipçi işlemi yapmıyoruz. Bu işlem hesabınıza
+                                        zarar verir. Biz %100 organik ve gerçek kitle büyümesi üzerine çalışıyoruz.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 3 -->
+                        <div class="insta-faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#ifq3">
+                                        <span class="insta-faq-icon"><i class="fas fa-calendar-alt"></i></span>
+                                        Haftada kaç paylaşım yapıyorsunuz?
+                                    </button>
+                                </h2>
+                                <div id="ifq3" class="accordion-collapse collapse" data-bs-parent="#instaFaqLeft">
+                                    <div class="accordion-body">
+                                        Seçtiğiniz pakete göre haftada 4-7 arası paylaşım yapıyoruz. Ayrıca günlük story
+                                        paylaşımları ve özel gün içerikleri de dahildir.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="col-lg-6">
+                    <div class="accordion insta-faq-accordion" id="instaFaqRight">
+                        <!-- Question 4 -->
+                        <div class="insta-faq-item" data-aos="fade-up" data-aos-delay="50">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#ifq4">
+                                        <span class="insta-faq-icon"><i class="fas fa-hashtag"></i></span>
+                                        Hashtag stratejisi nasıl belirleniyor?
+                                    </button>
+                                </h2>
+                                <div id="ifq4" class="accordion-collapse collapse" data-bs-parent="#instaFaqRight">
+                                    <div class="accordion-body">
+                                        Sektörünüze özel hashtag araştırması yapıyoruz. Hem popüler hem de niş etiketler
+                                        kullanarak keşfet sayfasına düşme olasılığınızı artırıyoruz.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 5 -->
+                        <div class="insta-faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#ifq5">
+                                        <span class="insta-faq-icon"><i class="fas fa-chart-line"></i></span>
+                                        Raporlama nasıl yapılıyor?
+                                    </button>
+                                </h2>
+                                <div id="ifq5" class="accordion-collapse collapse" data-bs-parent="#instaFaqRight">
+                                    <div class="accordion-body">
+                                        Her ay sonunda detaylı performans raporu gönderiyoruz. Erişim, etkileşim,
+                                        takipçi
+                                        artışı ve en iyi performans gösteren içerikler raporlanır.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question 6 -->
+                        <div class="insta-faq-item" data-aos="fade-up" data-aos-delay="150">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#ifq6">
+                                        <span class="insta-faq-icon"><i class="fas fa-key"></i></span>
+                                        Hesap şifremi paylaşmam gerekiyor mu?
+                                    </button>
+                                </h2>
+                                <div id="ifq6" class="accordion-collapse collapse" data-bs-parent="#instaFaqRight">
+                                    <div class="accordion-body">
+                                        Hayır, Creator Studio veya Meta Business Suite üzerinden yönetici yetkisi
+                                        vererek
+                                        güvenli bir şekilde çalışıyoruz. Şifrenizi paylaşmanız gerekmez.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -255,6 +384,7 @@
 
     <?php include 'includes/footer.php'; ?>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });

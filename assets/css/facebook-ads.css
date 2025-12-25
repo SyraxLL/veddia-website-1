@@ -345,3 +345,24 @@
         font-size: 1rem;
     }
 }
+
+/* Scope Card Fix */
+.scope-card-light {
+    transition: all 0.3s ease;
+}
+
+.scope-card-light:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--fb-shadow);
+    background: white;
+    /* Ensure it stays white */
+    border-color: rgba(24, 119, 242, 0.3) !important;
+}
+
+.scope-card-light:hover .text-primary {
+    color: var(--fb-blue) !important;
+    /* Force visible color */
+    transform: scale(1.1);
+    display: inline-block;
+    transition: transform 0.3s ease;
+}

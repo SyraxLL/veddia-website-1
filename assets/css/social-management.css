@@ -315,7 +315,7 @@
 
 .bento-icon {
     width: 56px;
-    height: 3px;
+    height: 56px;
     background: rgba(24, 119, 242, 0.1);
     /* Visible on colored bg */
     z-index: 0;
@@ -332,7 +332,7 @@
 .bento-card:hover .bento-icon {
     background: var(--fb-color);
     color: white;
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1);
 }
 
 .bento-title {
@@ -480,5 +480,200 @@
         bottom: -35px;
         top: auto;
         transform: translateX(50%);
+    }
+}
+
+/* ========================================
+   MODERN TIMELINE METHODOLOGY - YATAY TASARIM
+   ======================================== */
+.methodology-modern {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #f8fcff 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.method-label {
+    display: inline-block;
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #1877F2, #00C6FF);
+    border-radius: 50px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.method-heading {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.method-subtext {
+    font-size: 1.1rem;
+    color: #64748b;
+}
+
+/* Timeline Container */
+.timeline-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 80px;
+    padding: 0 20px;
+}
+
+/* Gradient Line */
+.timeline-line {
+    position: absolute;
+    top: 35px;
+    left: 10%;
+    right: 10%;
+    height: 4px;
+    background: linear-gradient(90deg, #1877F2, #00C6FF, #1877F2);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+/* Timeline Item */
+.timeline-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    max-width: 320px;
+}
+
+/* Number Dot */
+.timeline-dot {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #1877F2 0%, #00C6FF 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(24, 119, 242, 0.3);
+    margin-bottom: 30px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 3px solid rgba(24, 119, 242, 0.2);
+    border-radius: 50%;
+    animation: pulseRing 2s ease-out infinite;
+}
+
+@keyframes pulseRing {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.timeline-dot span {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(24, 119, 242, 0.4);
+}
+
+/* Timeline Card */
+.timeline-card {
+    background: white;
+    border-radius: 24px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(24, 119, 242, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
+}
+
+.timeline-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(24, 119, 242, 0.12);
+    border-color: rgba(24, 119, 242, 0.2);
+}
+
+.timeline-card .card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(24, 119, 242, 0.1), rgba(0, 198, 255, 0.1));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.timeline-card .card-icon i {
+    font-size: 1.5rem;
+    color: #1877F2 !important;
+    display: block;
+}
+
+.timeline-card:hover .card-icon {
+    background: linear-gradient(135deg, #1877F2, #00C6FF);
+    transform: scale(1.1);
+}
+
+.timeline-card:hover .card-icon i {
+    color: white !important;
+}
+
+.timeline-card h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+.timeline-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .timeline-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .timeline-line {
+        display: none;
+    }
+
+    .timeline-item {
+        max-width: 100%;
+    }
+
+    .method-heading {
+        font-size: 2rem;
     }
 }

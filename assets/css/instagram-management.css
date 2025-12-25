@@ -1,0 +1,794 @@
+/* ========================================
+   INSTAGRAM MANAGEMENT PAGE STYLES
+   Premium, Modern, Visual-First Design
+   ======================================== */
+
+:root {
+    --insta-pink: #E1306C;
+    --insta-purple: #833AB4;
+    --insta-orange: #F77737;
+    --insta-yellow: #FCAF45;
+    --insta-gradient: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    --insta-gradient-soft: linear-gradient(135deg, rgba(225, 48, 108, 0.1), rgba(131, 58, 180, 0.1));
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --bg-light: #fffafc;
+}
+
+/* ========================================
+   HERO SECTION - INSTAGRAM STYLE
+   ======================================== */
+.mgmt-hero.instagram {
+    padding: 130px 0 80px;
+    background: linear-gradient(180deg, #fff5f8 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.mgmt-hero.instagram::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 80%;
+    height: 150%;
+    background: radial-gradient(ellipse, rgba(225, 48, 108, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.mgmt-hero.instagram::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(0deg, white 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Instagram Badge */
+.instagram .mgmt-badge {
+    background: white;
+    border: 1px solid rgba(225, 48, 108, 0.2);
+    color: var(--insta-pink);
+    box-shadow: 0 8px 25px rgba(225, 48, 108, 0.1);
+}
+
+.instagram .mgmt-badge i {
+    background: var(--insta-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Instagram Title Gradient */
+.text-gradient-insta {
+    background: var(--insta-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ========================================
+   INSTAGRAM PROFILE MOCKUP
+   ======================================== */
+.mgmt-visual-card {
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 20px 50px rgba(225, 48, 108, 0.12);
+    border: 1px solid rgba(225, 48, 108, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.mgmt-visual-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--insta-gradient);
+}
+
+/* Profile Header in Mockup */
+.insta-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.insta-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--insta-gradient);
+    padding: 2px;
+    flex-shrink: 0;
+}
+
+.insta-avatar-inner {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.insta-avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 50%;
+}
+
+/* Story Highlights */
+.story-highlights {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.story-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--insta-gradient);
+    padding: 2px;
+}
+
+.story-circle-inner {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.story-circle-content {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+    border-radius: 50%;
+}
+
+.story-label {
+    font-size: 0.7rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+/* Feed Grid */
+.insta-feed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+
+.feed-item {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.feed-item:hover {
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.feed-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--insta-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feed-item:hover::before {
+    opacity: 0.3;
+}
+
+/* Engagement Stats Overlay */
+.engagement-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feed-item:hover .engagement-overlay {
+    opacity: 1;
+}
+
+.engagement-stat {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating Elements */
+.insta-float-badge {
+    position: absolute;
+    background: white;
+    padding: 14px 20px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(225, 48, 108, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: floatInsta 4s ease-in-out infinite;
+    z-index: 10;
+    border: 1px solid rgba(225, 48, 108, 0.1);
+}
+
+.insta-float-1 {
+    top: 10%;
+    right: -25px;
+}
+
+.insta-float-2 {
+    bottom: 15%;
+    left: -25px;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatInsta {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.insta-float-badge i {
+    font-size: 1.5rem;
+    background: var(--insta-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.insta-float-badge strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.insta-float-badge small {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* ========================================
+   SERVICE CARDS - INSTAGRAM THEME
+   ======================================== */
+.mgmt-card {
+    background: white;
+    border-radius: 24px;
+    padding: 40px 30px;
+    height: 100%;
+    border: 1px solid rgba(225, 48, 108, 0.08);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.mgmt-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: var(--insta-gradient);
+    transition: height 0.4s ease;
+}
+
+.mgmt-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(225, 48, 108, 0.15);
+    border-color: transparent;
+}
+
+.mgmt-card:hover::before {
+    height: 4px;
+}
+
+.mgmt-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--insta-gradient-soft);
+    border-radius: 20px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--insta-pink);
+    margin: 0 auto 24px;
+    transition: all 0.4s ease;
+}
+
+.mgmt-card:hover .mgmt-icon {
+    background: var(--insta-gradient);
+    color: white;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 35px rgba(225, 48, 108, 0.3);
+}
+
+.mgmt-card h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+.mgmt-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+    text-align: center;
+}
+
+/* ========================================
+   PROCESS SECTION - INSTAGRAM THEME
+   ======================================== */
+.mgmt-process {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mgmt-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    background: white;
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid rgba(225, 48, 108, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mgmt-step::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--insta-gradient);
+    transition: width 0.4s ease;
+}
+
+.mgmt-step:hover {
+    transform: translateX(10px);
+    box-shadow: 0 20px 50px rgba(225, 48, 108, 0.12);
+    border-color: transparent;
+}
+
+.mgmt-step:hover::before {
+    width: 4px;
+}
+
+.mgmt-step .step-number {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    background: var(--insta-gradient);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    box-shadow: 0 10px 25px rgba(225, 48, 108, 0.25);
+    transition: all 0.3s ease;
+}
+
+.mgmt-step:hover .step-number {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(225, 48, 108, 0.35);
+}
+
+/* ========================================
+   FAQ SECTION - INSTAGRAM PREMIUM THEME
+   ======================================== */
+.insta-faq-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #fff5f8 0%, #ffffff 100%);
+    position: relative;
+}
+
+.insta-faq-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(225, 48, 108, 0.2), transparent);
+}
+
+.insta-faq-badge {
+    display: inline-block;
+    padding: 10px 24px;
+    background: var(--insta-gradient);
+    border-radius: 50px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 30px rgba(225, 48, 108, 0.25);
+}
+
+.insta-faq-item {
+    margin-bottom: 16px;
+}
+
+.insta-faq-accordion .accordion-item {
+    background: white;
+    border: 1px solid rgba(225, 48, 108, 0.08) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.insta-faq-accordion .accordion-item:hover {
+    box-shadow: 0 15px 40px rgba(225, 48, 108, 0.1);
+    transform: translateY(-3px);
+    border-color: rgba(225, 48, 108, 0.15) !important;
+}
+
+.insta-faq-accordion .accordion-button {
+    padding: 24px 28px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background: white;
+    border-radius: 20px !important;
+    gap: 16px;
+}
+
+.insta-faq-accordion .accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, rgba(225, 48, 108, 0.05), rgba(131, 58, 180, 0.05));
+    color: var(--insta-pink);
+    box-shadow: none;
+}
+
+.insta-faq-accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.insta-faq-accordion .accordion-button::after {
+    background-size: 14px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E1306C'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* FAQ Icon */
+.insta-faq-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: var(--insta-gradient-soft);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--insta-pink);
+    transition: all 0.3s ease;
+}
+
+.insta-faq-accordion .accordion-button:not(.collapsed) .insta-faq-icon {
+    background: var(--insta-gradient);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(225, 48, 108, 0.25);
+}
+
+.insta-faq-accordion .accordion-body {
+    padding: 0 28px 24px 88px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* Legacy FAQ overrides for body.instagram */
+.instagram .accordion-item {
+    background: white;
+    border: 1px solid rgba(225, 48, 108, 0.08) !important;
+    border-radius: 16px !important;
+    margin-bottom: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.instagram .accordion-item:hover {
+    box-shadow: 0 10px 30px rgba(225, 48, 108, 0.08);
+}
+
+.instagram .accordion-button {
+    padding: 22px 28px;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: white;
+    border-radius: 16px !important;
+}
+
+.instagram .accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, rgba(225, 48, 108, 0.05), rgba(131, 58, 180, 0.05));
+    color: var(--insta-pink);
+}
+
+.instagram .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(225, 48, 108, 0.2);
+}
+
+.instagram .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23E1306C'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.instagram .accordion-body {
+    padding: 0 28px 24px;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+/* ========================================
+   CTA SECTION - INSTAGRAM THEME
+   ======================================== */
+.cta-modern.instagram-cta {
+    background: linear-gradient(135deg, #2D082A 0%, #300A1C 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-modern.instagram-cta::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 80%;
+    height: 200%;
+    background: radial-gradient(ellipse, rgba(225, 48, 108, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.cta-modern.instagram-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -50%;
+    left: -30%;
+    width: 80%;
+    height: 200%;
+    background: radial-gradient(ellipse, rgba(131, 58, 180, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* ========================================
+   BUTTONS - INSTAGRAM THEME
+   ======================================== */
+.btn-insta-primary {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 32px;
+    background: var(--insta-gradient);
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(225, 48, 108, 0.3);
+    border: none;
+}
+
+.btn-insta-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(225, 48, 108, 0.4);
+    color: white;
+}
+
+.btn-insta-outline {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 32px;
+    background: white;
+    color: var(--text-dark);
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.btn-insta-outline:hover {
+    border-color: var(--insta-pink);
+    color: var(--insta-pink);
+}
+
+/* Instagram Page All Buttons Hover Effects */
+.instagram .btn,
+body.instagram .btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.instagram .btn:hover,
+body.instagram .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(225, 48, 108, 0.3);
+}
+
+/* Specific button with insta-gradient background */
+.instagram .btn[style*="--insta-gradient"],
+body.instagram .btn[style*="--insta-gradient"],
+body.instagram a.btn[style*="background: var(--insta-gradient)"] {
+    transition: all 0.3s ease;
+}
+
+.instagram .btn[style*="--insta-gradient"]:hover,
+body.instagram .btn[style*="--insta-gradient"]:hover,
+body.instagram a.btn[style*="background: var(--insta-gradient)"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(225, 48, 108, 0.35);
+    filter: brightness(1.05);
+}
+
+/* Hero and CTA buttons */
+.mgmt-hero.instagram .btn,
+.instagram .cta-modern .btn {
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mgmt-hero.instagram .btn:hover,
+.instagram .cta-modern .btn:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(225, 48, 108, 0.4);
+}
+
+/* ========================================
+   SECTION HEADERS - INSTAGRAM THEME
+   ======================================== */
+.instagram .section-badge,
+.insta-section-badge {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--insta-gradient);
+    border-radius: 50px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+/* ========================================
+   STATS SECTION
+   ======================================== */
+.insta-stats-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.insta-stat-item {
+    text-align: center;
+}
+
+.insta-stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--insta-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.insta-stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 991px) {
+    .mgmt-hero.instagram {
+        padding: 100px 0 60px;
+    }
+
+    .mgmt-process {
+        gap: 20px;
+    }
+
+    .mgmt-step {
+        padding: 24px;
+    }
+
+    .insta-stats-row {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .insta-stat-item {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .insta-float-1,
+    .insta-float-2 {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .mgmt-card {
+        padding: 30px 24px;
+    }
+
+    .mgmt-step {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .mgmt-step .step-number {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        font-size: 1.2rem;
+    }
+
+    .story-highlights {
+        gap: 12px;
+    }
+
+    .story-circle {
+        width: 52px;
+        height: 52px;
+    }
+}

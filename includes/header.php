@@ -74,7 +74,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="index">
                 <img src="assets/img/logo.png" alt="Veddia Media" class="logo-img">
             </a>
 
@@ -89,7 +89,7 @@
                 <ul class="navbar-nav align-items-center">
                     <!-- Anasayfa -->
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Anasayfa</a>
+                        <a class="nav-link" href="index">Anasayfa</a>
                     </li>
 
                     <!-- Kurumsal (Dropdown) -->
@@ -99,8 +99,8 @@
                         </a>
                         <div class="dropdown-menu" style="min-width: 200px; padding: 1rem;">
                             <ul class="list-unstyled mega-menu-list mb-0">
-                                <li><a href="about.php">Hakkımızda</a></li>
-                                <li><a href="team.php">Ekibimiz</a></li>
+                                <li><a href="about">Hakkımızda</a></li>
+                                <li><a href="team">Ekibimiz</a></li>
                             </ul>
                         </div>
                     </li>
@@ -119,10 +119,10 @@
                                             <i class="fas fa-laptop-code me-2"></i>Web Tasarım
                                         </h6>
                                         <ul class="list-unstyled mega-menu-list">
-                                            <li><a href="kurumsal-web-sitesi.php">Kurumsal Web Sitesi</a></li>
-                                            <li><a href="e-ticaret-web.php">E-Ticaret Sitesi</a></li>
-                                            <li><a href="kisisel-web-sitesi.php">Kişisel Web Sitesi</a></li>
-                                            <li><a href="urun-tanitim-sitesi.php">Ürün Tanıtım Sitesi</a></li>
+                                            <li><a href="kurumsal-web-sitesi">Kurumsal Web Sitesi</a></li>
+                                            <li><a href="e-ticaret-web">E-Ticaret Sitesi</a></li>
+                                            <li><a href="kisisel-web-sitesi">Kişisel Web Sitesi</a></li>
+                                            <li><a href="urun-tanitim-sitesi">Ürün Tanıtım Sitesi</a></li>
                                         </ul>
                                     </div>
 
@@ -132,9 +132,9 @@
                                             <i class="fas fa-bullhorn me-2"></i>Dijital Pazarlama
                                         </h6>
                                         <ul class="list-unstyled mega-menu-list">
-                                            <li><a href="google-reklami.php">Google Reklamı</a></li>
-                                            <li><a href="instagram-reklami.php">Instagram Reklamı</a></li>
-                                            <li><a href="facebook-reklami.php">Facebook Reklamı</a></li>
+                                            <li><a href="google-reklami">Google Reklamı</a></li>
+                                            <li><a href="instagram-reklami">Instagram Reklamı</a></li>
+                                            <li><a href="facebook-reklami">Facebook Reklamı</a></li>
                                         </ul>
                                     </div>
 
@@ -144,10 +144,10 @@
                                             <i class="fas fa-share-nodes me-2"></i>Sosyal Medya
                                         </h6>
                                         <ul class="list-unstyled mega-menu-list">
-                                            <li><a href="facebook-yonetimi.php">Facebook Yönetimi</a></li>
-                                            <li><a href="instagram-yonetimi.php">Instagram Yönetimi</a></li>
-                                            <li><a href="twitter-yonetimi.php">X (Twitter) Yönetimi</a></li>
-                                            <li><a href="linkedin-yonetimi.php">LinkedIn Yönetimi</a></li>
+                                            <li><a href="facebook-yonetimi">Facebook Yönetimi</a></li>
+                                            <li><a href="instagram-yonetimi">Instagram Yönetimi</a></li>
+                                            <li><a href="twitter-yonetimi">X (Twitter) Yönetimi</a></li>
+                                            <li><a href="linkedin-yonetimi">LinkedIn Yönetimi</a></li>
                                         </ul>
                                     </div>
 
@@ -169,22 +169,22 @@
 
                     <!-- Referans -->
                     <li class="nav-item">
-                        <a class="nav-link" href="referans.php">Referans</a>
+                        <a class="nav-link" href="referans">Referans</a>
                     </li>
 
                     <!-- Blog -->
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.php">Blog</a>
+                        <a class="nav-link" href="blog">Blog</a>
                     </li>
 
                     <!-- İletişim -->
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php">İletişim</a>
+                        <a class="nav-link" href="contact">İletişim</a>
                     </li>
 
                     <!-- CTA Button -->
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-gradient" href="contact.php">Hemen Teklif Al</a>
+                        <a class="btn btn-gradient" href="contact">Hemen Teklif Al</a>
                     </li>
                 </ul>
             </div>
@@ -195,7 +195,7 @@
     <div class="mobile-menu-fullscreen" id="mobileMenuFullscreen">
         <div class="mobile-menu-header">
             <div class="mobile-menu-logo">
-                <a href="index.php"><img src="assets/img/logo.png" alt="Veddia Media"></a>
+                <a href="index"><img src="assets/img/logo.png" alt="Veddia Media"></a>
             </div>
             <button class="mobile-menu-close" id="mobileMenuClose">
                 <i class="fas fa-times"></i>

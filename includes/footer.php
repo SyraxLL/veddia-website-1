@@ -44,12 +44,12 @@
                         Hızlı Linkler
                     </h5>
                     <ul class="footer-links">
-                        <li><a href="index.php"><i class="fas fa-chevron-right me-2"></i>Ana Sayfa</a></li>
-                        <li><a href="about.php"><i class="fas fa-chevron-right me-2"></i>Hakkımızda</a></li>
-                        <li><a href="team.php"><i class="fas fa-chevron-right me-2"></i>Ekibimiz</a></li>
+                        <li><a href="index"><i class="fas fa-chevron-right me-2"></i>Ana Sayfa</a></li>
+                        <li><a href="about"><i class="fas fa-chevron-right me-2"></i>Hakkımızda</a></li>
+                        <li><a href="team"><i class="fas fa-chevron-right me-2"></i>Ekibimiz</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right me-2"></i>Hizmetler</a></li>
                         <li><a href="#portfolio"><i class="fas fa-chevron-right me-2"></i>Portfolyo</a></li>
-                        <li><a href="contact.php"><i class="fas fa-chevron-right me-2"></i>İletişim</a></li>
+                        <li><a href="contact"><i class="fas fa-chevron-right me-2"></i>İletişim</a></li>
                     </ul>
                 </div>
             </div>
