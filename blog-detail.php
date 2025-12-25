@@ -673,7 +673,7 @@ include 'includes/header.php';
                 <div class="sidebar-card">
                     <h3><i class="fas fa-link"></i> Hızlı Linkler</h3>
                     <div class="contact-links">
-                        <a href="contact.php" class="contact-link">
+                        <a href="contact" class="contact-link">
                             <i class="fas fa-envelope"></i>
                             <span>Bize Ulaşın</span>
                         </a>
@@ -692,7 +692,7 @@ include 'includes/header.php';
                 <div class="cta-sidebar">
                     <h3>Projeniz mi var?</h3>
                     <p>Dijital dünyada fark yaratmaya hazır mısınız?</p>
-                    <a href="contact.php" class="btn">
+                    <a href="contact" class="btn">
                         <i class="far fa-paper-plane"></i> Hemen Teklif Alın
                     </a>
                 </div>

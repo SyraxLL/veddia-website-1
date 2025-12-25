@@ -45,7 +45,7 @@
                         etkili içerik stratejileriyle takipçilerinizi sadık müşterilere dönüştürüyoruz.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="contact.php" class="btn text-white rounded-pill px-4 py-3 fw-bold"
+                        <a href="contact" class="btn text-white rounded-pill px-4 py-3 fw-bold"
                             style="background: var(--insta-gradient); border:none;">
                             Keşfetmeye Başla
                         </a>
@@ -189,7 +189,7 @@
                     <h2 class="fw-bold mb-4">Görsel Dünyanızı İnşa Edelim.</h2>
                     <p class="text-secondary lead">Instagram, markanızın en prestijli vitrinidir. Onu rastgele
                         yönetmeyin.</p>
-                    <a href="contact.php" class="btn text-white rounded-pill px-4 py-2 mt-3"
+                    <a href="contact" class="btn text-white rounded-pill px-4 py-2 mt-3"
                         style="background: var(--insta-gradient); border:none;">
                         İletişime Geç <i class="fas fa-arrow-right ms-2"></i>
                     </a>
@@ -372,7 +372,7 @@
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end text-center">
-                        <a href="contact.php" class="btn text-white btn-xl shadow-lg border-0"
+                        <a href="contact" class="btn text-white btn-xl shadow-lg border-0"
                             style="background: var(--insta-gradient);">
                             Teklif Alın <i class="fas fa-arrow-right ms-2"></i>
                         </a>

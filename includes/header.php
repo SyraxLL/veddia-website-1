@@ -206,7 +206,7 @@
             <ul class="mobile-menu-nav">
                 <!-- Anasayfa -->
                 <li class="mobile-menu-item">
-                    <a href="index.php" class="mobile-menu-link">
+                    <a href="index" class="mobile-menu-link">
                         <span>Anasayfa</span>
                     </a>
                 </li>
@@ -219,8 +219,8 @@
                     </a>
                     <div class="mobile-submenu-simple">
                         <ul class="simple-submenu">
-                            <li><a href="about.php"><i class="fas fa-info-circle"></i> Hakkımızda</a></li>
-                            <li><a href="team.php"><i class="fas fa-users"></i> Ekibimiz</a></li>
+                            <li><a href="about"><i class="fas fa-info-circle"></i> Hakkımızda</a></li>
+                            <li><a href="team"><i class="fas fa-users"></i> Ekibimiz</a></li>
                         </ul>
                     </div>
                 </li>
@@ -235,21 +235,21 @@
 
                 <!-- Referans -->
                 <li class="mobile-menu-item">
-                    <a href="referans.php" class="mobile-menu-link">
+                    <a href="referans" class="mobile-menu-link">
                         <span>Referans</span>
                     </a>
                 </li>
 
                 <!-- Blog -->
                 <li class="mobile-menu-item">
-                    <a href="blog.php" class="mobile-menu-link">
+                    <a href="blog" class="mobile-menu-link">
                         <span>Blog</span>
                     </a>
                 </li>
 
                 <!-- İletişim -->
                 <li class="mobile-menu-item">
-                    <a href="contact.php" class="mobile-menu-link">
+                    <a href="contact" class="mobile-menu-link">
                         <span>İletişim</span>
                     </a>
                 </li>
@@ -292,10 +292,10 @@
                     </div>
                     <div class="wheel-category-links">
                         <ul>
-                            <li><a href="kurumsal-web-sitesi.php">Kurumsal Web Sitesi</a></li>
-                            <li><a href="e-ticaret-web.php">E-Ticaret Sitesi</a></li>
-                            <li><a href="kisisel-web-sitesi.php">Kişisel Web Sitesi</a></li>
-                            <li><a href="urun-tanitim-sitesi.php">Ürün Tanıtım Sitesi</a></li>
+                            <li><a href="kurumsal-web-sitesi">Kurumsal Web Sitesi</a></li>
+                            <li><a href="e-ticaret-web">E-Ticaret Sitesi</a></li>
+                            <li><a href="kisisel-web-sitesi">Kişisel Web Sitesi</a></li>
+                            <li><a href="urun-tanitim-sitesi">Ürün Tanıtım Sitesi</a></li>
                         </ul>
                     </div>
                 </div>
@@ -316,8 +316,8 @@
                     </div>
                     <div class="wheel-category-links">
                         <ul>
-                            <li><a href="google-reklami.php">Google Reklamı</a></li>
-                            <li><a href="instagram-reklami.php">Instagram Reklamı</a></li>
+                            <li><a href="google-reklami">Google Reklamı</a></li>
+                            <li><a href="instagram-reklami">Instagram Reklamı</a></li>
                             <li><a href="#">Facebook Reklamı</a></li>
                         </ul>
                     </div>

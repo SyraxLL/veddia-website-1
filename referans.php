@@ -983,7 +983,7 @@ include 'includes/header.php';
             <div class="ref-cta-content">
                 <h2>Sıradaki Başarı Hikayesi Sizin Olsun</h2>
                 <p>Projenizi birlikte başarıya taşıyalım. Ücretsiz danışmanlık için hemen iletişime geçin.</p>
-                <a href="contact.php" class="ref-cta-btn">
+                <a href="contact" class="ref-cta-btn">
                     <i class="fas fa-rocket"></i>
                     Ücretsiz Teklif Alın
                 </a>

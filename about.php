@@ -538,7 +538,7 @@
                                 güçlendirmek ve dijital dünyada fark yaratmak için doğru adımı atmış olacaksınız.</p>
                         </div>
                         <div class="col-lg-4 text-lg-end text-center">
-                            <a href="contact.php" class="btn btn-gradient btn-xl shadow-lg">
+                            <a href="contact" class="btn btn-gradient btn-xl shadow-lg">
                                 Hemen Başlayın <i class="fas fa-arrow-right ms-2"></i>
                             </a>
                         </div>

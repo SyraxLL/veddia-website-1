@@ -64,7 +64,7 @@
                         <a href="#analiz" class="btn-gradient btn-xl shadow">
                             <i class="fas fa-chart-line me-2"></i> Analiz Talep Et
                         </a>
-                        <a href="contact.php" class="btn-outline-gradient btn-xl">
+                        <a href="contact" class="btn-outline-gradient btn-xl">
                             İletişime Geç
                         </a>
                     </div>
@@ -405,7 +405,7 @@
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end text-center">
-                        <a href="contact.php" class="btn btn-gradient btn-xl shadow-lg">
+                        <a href="contact" class="btn btn-gradient btn-xl shadow-lg">
                             Hemen Başlayın <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>

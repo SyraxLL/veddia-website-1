@@ -43,7 +43,7 @@
                         Şirket sayfanızı yönetiyor, sektörünüzde "düşünce lideri" olmanızı sağlıyoruz.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="contact.php" class="btn btn-primary rounded-pill px-4 py-3 fw-bold"
+                        <a href="contact" class="btn btn-primary rounded-pill px-4 py-3 fw-bold"
                             style="background-color: var(--linkedin-color); border:none;">
                             Profesyonel Destek Alın
                         </a>
@@ -140,7 +140,7 @@
                     <h2 class="fw-bold mb-4">Profesyonel Duruş.</h2>
                     <p class="text-secondary lead">İş dünyasında ilk izlenim çok önemlidir. LinkedIn profiliniz sizin
                         dijital kartvizitinizdir.</p>
-                    <a href="contact.php" class="btn btn-primary rounded-pill px-4 py-2 mt-3"
+                    <a href="contact" class="btn btn-primary rounded-pill px-4 py-2 mt-3"
                         style="background-color: var(--linkedin-color); border:none;">
                         Danışmanlık Alın <i class="fas fa-arrow-right ms-2"></i>
                     </a>
@@ -190,7 +190,7 @@
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end text-center">
-                        <a href="contact.php" class="btn btn-light btn-xl shadow-lg border-0 text-primary fw-bold">
+                        <a href="contact" class="btn btn-light btn-xl shadow-lg border-0 text-primary fw-bold">
                             Hemen Başlayın <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>

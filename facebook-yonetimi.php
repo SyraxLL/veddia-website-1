@@ -46,7 +46,7 @@
                         Veri odaklı yaklaşımımızla sayfanızı yaşayan, büyüyen bir organizmaya dönüştürüyoruz.
                     </p>
                     <div class="d-flex gap-3 flex-wrap">
-                        <a href="contact.php" class="btn-primary-fb">
+                        <a href="contact" class="btn-primary-fb">
                             Analiz İste <i class="fas fa-chart-pie ms-2"></i>
                         </a>
                         <a href="#hizmetler" class="btn-outline-fb">
@@ -405,7 +405,7 @@
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end text-center">
-                        <a href="contact.php" class="btn btn-gradient btn-xl shadow-lg">
+                        <a href="contact" class="btn btn-gradient btn-xl shadow-lg">
                             Teklif İste <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>

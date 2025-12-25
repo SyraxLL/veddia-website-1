@@ -43,7 +43,7 @@
                         Gündemi yakalayan, zekice kurgulanmış ve etkileşimi yüksek içeriklerle markanızı konuşturuyoruz.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="contact.php" class="btn btn-dark rounded-pill px-4 py-3 fw-bold">
+                        <a href="contact" class="btn btn-dark rounded-pill px-4 py-3 fw-bold">
                             Hemen Başlayalım
                         </a>
                     </div>
@@ -146,7 +146,7 @@
                     <h2 class="fw-bold mb-4">Anı Yakalayın.</h2>
                     <p class="text-secondary lead">X'te dün yoktur, sadece "şu an" vardır. Hızlı ve zeki olmalısınız.
                     </p>
-                    <a href="contact.php" class="btn btn-dark rounded-pill px-4 py-2 mt-3">
+                    <a href="contact" class="btn btn-dark rounded-pill px-4 py-2 mt-3">
                         Bize Ulaşın <i class="fas fa-arrow-right ms-2"></i>
                     </a>
                 </div>
@@ -194,7 +194,7 @@
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end text-center">
-                        <a href="contact.php" class="btn btn-light btn-xl shadow-lg border-0 text-dark">
+                        <a href="contact" class="btn btn-light btn-xl shadow-lg border-0 text-dark">
                             Teklif İste <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>

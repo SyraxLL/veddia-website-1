@@ -594,7 +594,7 @@
                         Yetenekli ve tutkulu profesyonelleri arıyoruz. <br>Bizimle birlikte geleceği inşa etmek için
                         hemen başvurun!
                     </p>
-                    <a href="contact.php" class="btn btn-premium-cta btn-lg">
+                    <a href="contact" class="btn btn-premium-cta btn-lg">
                         <span class="btn-text">İletişime Geçin</span>
                         <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
                     </a>

@@ -550,7 +550,7 @@
                     </p>
 
                     <div class="d-flex gap-3 flex-wrap mb-4">
-                        <a href="contact.php" class="btn-google-primary">
+                        <a href="contact" class="btn-google-primary">
                             Hemen Teklif Alın <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -962,7 +962,7 @@
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end text-center">
-                        <a href="contact.php" class="btn btn-gradient btn-xl shadow-lg">
+                        <a href="contact" class="btn btn-gradient btn-xl shadow-lg">
                             Hemen Başlayın <i class="fas fa-arrow-right ms-2"></i>
                         </a>
                     </div>
