@@ -386,7 +386,7 @@ include 'includes/header.php';
         <?php else: ?>
             <div class="blog-grid">
                 <?php foreach ($blogs as $blog): ?>
-                    <a href="blog-detail.php?slug=<?php echo $blog['slug']; ?>" class="blog-card" data-aos="fade-up"
+                    <a href="blog-detail?slug=<?php echo $blog['slug']; ?>" class="blog-card" data-aos="fade-up"
                         data-category="<?php echo htmlspecialchars($blog['category']); ?>">
                         <div class="blog-card-img-wrapper">
                             <img class="blog-card-img"

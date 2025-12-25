@@ -571,9 +571,9 @@ include 'includes/header.php';
     <div class="container" style="padding: 130px 0 50px;">
         <!-- Breadcrumb -->
         <div class="blog-breadcrumb">
-            <a href="index.php"><i class="fas fa-home"></i></a>
+            <a href="index"><i class="fas fa-home"></i></a>
             <span>/</span>
-            <a href="blog.php">Blog</a>
+            <a href="blog">Blog</a>
             <span>/</span>
             <span class="current"><?php echo htmlspecialchars(mb_substr($blog['title'], 0, 30)); ?>...</span>
         </div>
@@ -624,7 +624,7 @@ include 'includes/header.php';
 
 <section class="blog-content-section">
     <div class="container">
-        <a href="blog.php" class="back-btn"><i class="fas fa-arrow-left"></i> Tüm Yazılar</a>
+        <a href="blog" class="back-btn"><i class="fas fa-arrow-left"></i> Tüm Yazılar</a>
 
         <div class="blog-layout">
             <!-- Main Content -->
@@ -660,7 +660,7 @@ include 'includes/header.php';
                     <div class="sidebar-card">
                         <h3><i class="fas fa-newspaper"></i> Diğer Yazılar</h3>
                         <?php foreach ($otherBlogs as $otherBlog): ?>
-                            <a href="blog-detail.php?slug=<?php echo $otherBlog['slug']; ?>" class="other-blog-item">
+                            <a href="blog-detail?slug=<?php echo $otherBlog['slug']; ?>" class="other-blog-item">
                                 <h4><?php echo htmlspecialchars($otherBlog['title']); ?></h4>
                                 <span><i class="fas fa-clock"></i> <?php echo $otherBlog['read_time']; ?> dk •
                                     <?php echo formatDate($otherBlog['created_at']); ?></span>
@@ -681,7 +681,7 @@ include 'includes/header.php';
                             <i class="fas fa-briefcase"></i>
                             <span>Hizmetlerimiz</span>
                         </a>
-                        <a href="referans.php" class="contact-link">
+                        <a href="referans" class="contact-link">
                             <i class="fas fa-star"></i>
                             <span>Referans</span>
                         </a>
